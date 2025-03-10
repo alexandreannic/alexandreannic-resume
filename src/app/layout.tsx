@@ -1,8 +1,11 @@
 import type {Metadata} from 'next'
 import {Ubuntu, Ubuntu_Mono} from 'next/font/google'
 import {AppRouterCacheProvider} from '@mui/material-nextjs/v15-appRouter'
-import {ThemeProvider} from '@mui/material'
-import {theme} from '@/app/theme'
+import {CssBaseline, ThemeProvider} from '@mui/material'
+import {defaultTheme} from '@/app/theme'
+import {ReactNode} from 'react'
+import {AppThemeProvider} from '@/app/theme2'
+// import {I18nContextProvider} from '@/app/i18n/I18nContext'
 
 
 const ubuntu = Ubuntu({
@@ -26,7 +29,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -34,10 +37,13 @@ export default function RootLayout({
     <AppRouterCacheProvider
       options={{key: 'css'}}
     >
-      <ThemeProvider theme={theme}>
-        {children}
+      <ThemeProvider theme={defaultTheme}>
+        <AppThemeProvider>
+          <CssBaseline>
+            {children}
+          </CssBaseline>
+        </AppThemeProvider>
       </ThemeProvider>
-
     </AppRouterCacheProvider>
     </body>
     </html>

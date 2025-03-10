@@ -1,0 +1,39 @@
+@page {
+  size: A4 portrait; /* can use also 'landscape' for orientation */
+}
+
+@media print {
+  body {
+    background-color: white !important;
+  }
+
+  body * {
+    visibility: hidden;
+    /*height: 0;*/
+  }
+
+  #printable-cv * {
+    visibility: visible;
+    /*height: auto;*/
+  }
+
+  #printable-cv {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+  }
+
+  .Article_title {
+    font-size: 15px !important;
+  }
+
+  .Article_text {
+    margin-top: 4px !important;
+  }
+}

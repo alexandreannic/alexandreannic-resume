@@ -1,12 +1,9 @@
-import {Button} from '@mui/material'
+import {Body} from '@/app/Cv/Body'
 
 export default function Home() {
   return (
     <div>
-      Hello World!
-      <Button variant="contained" color="primary">
-        Click Me
-      </Button>
+      <Body/>
     </div>
   )
 }
