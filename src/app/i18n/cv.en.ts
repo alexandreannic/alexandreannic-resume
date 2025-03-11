@@ -151,7 +151,13 @@ export const cvEn: Cv = {
   projects: {
     label: 'Projects',
     articles: [
-
+      {
+        title: 'MX - MUI Extension',
+        content: '',
+        links: [
+          {url: 'https://github.com/alexandreannic/mui-extension'}
+        ],
+      }
     ]
   },
   skills: {
@@ -231,7 +237,7 @@ export const cvEn: Cv = {
             },
             title: 'Scala',
             // logoFa: 'fa-solid fa-lambda',
-            rate: 3,
+            rate: 4,
           },
           {
             icon: {

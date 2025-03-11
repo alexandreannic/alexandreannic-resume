@@ -74,7 +74,7 @@ export const MixIcon = ({
     )
   if (iconImgSrc)
     return (
-      <Logo src={iconImgSrc} size={size} sx={common}/>
+      <Logo src={iconImgSrc} size={typeof size === 'number' ? size : undefined} sx={common}/>
     )
   return <></>
 }

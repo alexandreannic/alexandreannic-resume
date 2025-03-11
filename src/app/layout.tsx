@@ -34,9 +34,8 @@ export default function RootLayout(props: {children: React.ReactNode}) {
     <body className={`${ubuntu.variable} ${ubuntu_Mono.variable}`}>
     <InitColorSchemeScript attribute="class"/>
     <AppRouterCacheProvider options={{enableCssLayer: true}}>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline/>
+      <ThemeProvider defaultMode="dark" theme={theme}>
+        <CssBaseline enableColorScheme/>
         <ModeSwitch/>
         {props.children}
       </ThemeProvider>

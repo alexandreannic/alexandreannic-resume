@@ -8,6 +8,7 @@ import Box from '@mui/material/Box'
 import {Skill} from '@/app/Cv/Aside/Skill'
 import {Tag} from '@/app/Cv/Tag'
 import {Link} from '@/app/Cv/Link'
+import {Animated} from '@/app/Cv/Animated'
 
 export const Body = () => {
   const {m} = useI18n()
@@ -24,34 +25,40 @@ export const Body = () => {
           <Box sx={{display: 'flex'}}>
             <Box sx={{mr: 1, flex: 1}}>
               {m.skills.articles.filter(_ => _.title === 'Framework').map(((s, i) =>
-                  <Panel title={s.title} key={i} sx={{mb: 2}}>
-                    {s.content.map((c, j) => (
-                      <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
-                        {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
-                      </Skill>
-                    ))}
-                  </Panel>
+                  <Animated key={i}>
+                    <Panel title={s.title} sx={{mb: 2}}>
+                      {s.content.map((c, j) => (
+                        <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
+                          {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
+                        </Skill>
+                      ))}
+                    </Panel>
+                  </Animated>
               ))}
               {m.skills.articles.filter(_ => _.title === 'Persistence').map(((s, i) =>
-                  <Panel title={s.title} key={i}>
-                    {s.content.map((c, j) => (
-                      <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
-                        {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
-                      </Skill>
-                    ))}
-                  </Panel>
+                  <Animated delay={100} key={i}>
+                    <Panel title={s.title}>
+                      {s.content.map((c, j) => (
+                        <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
+                          {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
+                        </Skill>
+                      ))}
+                    </Panel>
+                  </Animated>
               ))}
             </Box>
 
             <Box sx={{ml: 1, flex: 1}}>
               {m.skills.articles.filter(_ => _.title === 'Languages').map(((s, i) =>
-                  <Panel title={s.title} key={i}>
-                    {s.content.map((c, j) => (
-                      <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
-                        {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
-                      </Skill>
-                    ))}
-                  </Panel>
+                  <Animated delay={200} key={i}>
+                    <Panel title={s.title}>
+                      {s.content.map((c, j) => (
+                        <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
+                          {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
+                        </Skill>
+                      ))}
+                    </Panel>
+                  </Animated>
               ))}
             </Box>
           </Box>
@@ -59,19 +66,21 @@ export const Body = () => {
 
         <Section title={m.work.label}>
           {m.work.articles.map((e, i) => (
-            <Panel isFirst={i === 0} step={e.period} key={i} honor={e.honor} title={e.title} subTitle={e.location} logo={e.logo}>
-              <Box dangerouslySetInnerHTML={{__html: e.content}}/>
-              <Box sx={{mt: 1, fontSize: cssMixins.fontMedium}}>
-                {e.links?.map(_ =>
-                  <Link key={_.url} url={_.url} icon={_.icon} label={_.label}/>
-                )}
-              </Box>
-              <Box sx={{mt: 1}}>
-                {e.tags?.map(_ =>
-                  <Tag key={_} label={_}/>
-                )}
-              </Box>
-            </Panel>
+            <Animated delay={100 + i * 50} key={i}>
+              <Panel isFirst={i === 0} step={e.period} honor={e.honor} title={e.title} subTitle={e.location} logo={e.logo}>
+                <Box dangerouslySetInnerHTML={{__html: e.content}}/>
+                <Box sx={{mt: 1, fontSize: cssMixins.fontMedium}}>
+                  {e.links?.map(_ =>
+                    <Link key={_.url} url={_.url} icon={_.icon} label={_.label}/>
+                  )}
+                </Box>
+                <Box sx={{mt: 1}}>
+                  {e.tags?.map((_, i) =>
+                    <Tag key={_} label={_} index={i}/>
+                  )}
+                </Box>
+              </Panel>
+            </Animated>
           ))}
         </Section>
 

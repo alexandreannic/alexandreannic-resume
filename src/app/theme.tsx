@@ -25,6 +25,7 @@ const darkBackground = '#0A192F'
 
 export const theme = createTheme({
   // colorSchemes: {dark: true, light: false},
+  defaultColorScheme: 'dark',
   cssVariables: {
     colorSchemeSelector: 'class',
   },
@@ -78,26 +79,6 @@ export const theme = createTheme({
       },
     },
   },
-  // palette: {
-  //   primary: {
-  //     main: '#64FFDA',
-  //     light: '#A7FFE4',
-  //     dark: '#1DE9B6',
-  //     contrastText: '#0A192F',
-  //   },
-  //   secondary: {
-  //     main: '#2979FF',
-  //     light: '#75A7FF',
-  //     dark: '#004EC6',
-  //     contrastText: '#FFFFFF',
-  //   },
-  //   text: {
-  //     secondary: '#ff0000',
-  //   },
-  //   background: {
-  //     default: backgroundStartColor,
-  //   }
-  // },
   typography: {
     fontSize: 15,
     fontFamily: 'var(--font-ubuntu)',
