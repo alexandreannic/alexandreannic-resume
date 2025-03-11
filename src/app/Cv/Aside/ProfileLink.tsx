@@ -3,18 +3,24 @@ import Box from '@mui/material/Box'
 import Icon from '@mui/material/Icon'
 import {cssMixins} from '../../utils/style'
 
-const iconSize = 19
-
-export const Link = ({
+export const ProfileLink = ({
   icon,
   iconFa,
+  size = 19,
   children,
+  href,
+  target,
+  rel,
 }: {
+  size?: number
+  target?: string
+  href?: string
+  rel?: string
   icon?: string;
   iconFa?: string;
-  children: ReactNode;
+  children?: ReactNode;
 }) => {
-  return (
+  const body = (
     <Box
       sx={{
         fontSize: cssMixins.fontMedium,
@@ -29,11 +35,11 @@ export const Link = ({
         <Icon
           sx={{
             mr: 1.5,
-            fontSize: `${iconSize}px !important`,
-            minWidth: iconSize,
+            fontSize: `${size}px !important`,
+            minWidth: size,
             textAlign: 'center',
             display: 'inline-block',
-            color: 'primary.main',
+            color: 'text.secondary',
           }}
         >
           {icon}
@@ -44,15 +50,19 @@ export const Link = ({
           className={`fab fa-${iconFa}`}
           sx={{
             mr: 1.5,
-            fontSize: `${iconSize}px !important`,
-            minWidth: iconSize,
+            fontSize: `${size}px !important`,
+            minWidth: size,
             textAlign: 'center',
             display: 'inline-block',
-            color: 'primary.main',
+            color: 'text.secondary',
           }}
         />
       )}
       {children}
     </Box>
   )
+  if (href) return (
+    <a href={href} rel={rel} target={target} style={{textDecoration: 'none'}}>{body}</a>
+  )
+  return body
 }

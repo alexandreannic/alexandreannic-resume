@@ -13,7 +13,7 @@ export const Rate = ({rate}: {rate: number}) => {
   )
 
   return (
-    <Box sx={{color: '#fbbc04', display: 'flex'}}>
+    <Box sx={{color: 'primary.main', display: 'flex'}}>
       {mapFor(integer, icon('star'))}
       {hasHalf && icon('star_half')(1)}
       {mapFor(5 - integer - (hasHalf ? 1 : 0), icon('star_border'))}

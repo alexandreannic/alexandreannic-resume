@@ -10,11 +10,11 @@ const Logo = ({
 }: {
   className?: string,
   src: string
-  size: string | number
+  size?: number
   sx?: SxProps
 }) => {
   return (
-    <Box className={className} sx={sx} style={{
+    <Box className={className} sx={{
       backgroundImage: `url(/logo/${src})`,
       height: size,
       width: size,
@@ -22,6 +22,7 @@ const Logo = ({
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center center',
+      ...sx
     }}/>
   )
 }

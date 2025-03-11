@@ -1,40 +1,45 @@
 import React, {ReactNode} from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import {cssMixins} from '../../utils/style'
+import {cssMixins, makeSx} from '../../utils/style'
 import Logo from '../../utils/Logo'
 import {Rate} from './Rate'
+import {MixIcon, IconRef} from '@/app/Cv/MixIcon'
 
-const logoSize = 18
+const logoSize = 22
+
+const sx = makeSx({
+  root: {
+    '&:not(:last-of-type) .skill-text': {
+      mb: 1,
+      borderBottom: '1px solid',
+      borderColor: 'divider',
+    },
+  },
+  head: {
+    display: 'flex', alignItems: 'center'
+  },
+})
 
 export const Skill = ({
-  logo,
+  icon,
   title,
   rate,
   children,
 }: {
-  logo?: string;
+  icon: IconRef
   title: string;
   rate: number;
   children: ReactNode;
 }) => {
   return (
-    <Box
-      sx={{
-        '&:not(:last-of-type) .skill-text': {
-          mb: 1,
-          borderBottom: '1px solid',
-          borderColor: 'divider',
-        },
-      }}
-    >
-      <Box sx={{display: 'flex', alignItems: 'center'}}>
-        {logo && (
-          <Logo src={logo} size={logoSize} sx={{mr: 1}}/>
-        )}
+    <Box sx={sx.root}>
+      <Box sx={sx.head}>
+        <MixIcon icon={icon} size={logoSize} sxColor="secondary.main"/>
         <Box
           sx={{
             display: 'flex',
+            color: 'text.primary',
             justifyContent: 'space-between',
             alignItems: 'center',
             flex: 1,
@@ -46,15 +51,15 @@ export const Skill = ({
           <Rate rate={rate}/>
         </Box>
       </Box>
-      <Box sx={{flex: 1}}>
+      <Box>
         <Typography
           className="skill-text"
           sx={{
-            ml: 1 + logoSize,
+            ml: (12 + logoSize) + 'px',
             fontSize: cssMixins.fontSmall,
             mt: 0.25,
-            pb: 1,
             color: 'text.secondary',
+            pb: 1,
           }}
         >
           {children}

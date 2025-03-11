@@ -1,25 +1,22 @@
 import React, {ReactNode} from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import {Theme} from '@mui/system'
+import {SxProps, Theme} from '@mui/system'
 import {cssMixins} from '../utils/style'
 
-export const sectionMargin = (t: Theme, mult: number = 1) => t.spacing(2 * mult)
-
-const Section = ({title, icon, noSeparator, children}: {
+const Section = ({title, icon, noSeparator, children, sx}: {
   title: string;
-  icon: string;
+  icon?: string;
   noSeparator?: boolean;
   children: ReactNode;
+  sx?: SxProps
 }) => {
   return (
     <Box
       sx={{
-        border: '1px solid',
-        borderColor: 'divider',
-        padding: 2,
-        mb: (t) => sectionMargin(t, 1.5),
-        borderRadius: cssMixins.radius,
+        width: '100%',
+        mb: 4,
+        ...sx
       }}
     >
       {title && (

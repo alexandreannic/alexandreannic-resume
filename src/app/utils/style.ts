@@ -1,17 +1,13 @@
-const rem = (ratio: number) => 10 * ratio
-const fontSmall = rem(1.2)
-const fontBig = rem(1.5)
-const fontTitle = rem(1.8)
-const fontMedium = rem(1.3)
-const fontMainTitle = rem(2.2)
+import {SxProps, Theme} from '@mui/system'
 
 export const cssMixins = {
-  rem,
-  fontSmall,
-  fontBig,
-  fontTitle,
-  fontMedium,
-  fontMainTitle,
+  fontSmall: '0.875rem',
+  fontBig: '1.1rem',
+  fontTitle: '1.4rem',
+  fontMedium: '1rem',
+  fontMainTitle: '1.5rem',
   lineHeight: 1.48,
-  radius: 6,
+  radius: 16,
 }
+
+export const makeSx = <T>(_: {[key in keyof T]: SxProps<Theme>}) => _

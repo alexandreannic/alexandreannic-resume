@@ -1,3 +1,5 @@
+import {IconRef} from '@/app/Cv/MixIcon'
+
 export type Cv = Cv.Cv
 export namespace Cv {
   export type Cv = {
@@ -5,7 +7,8 @@ export namespace Cv {
     location: string
     education: Education
     work: {label: string, articles: Article[]}
-    skills: Skills[]
+    projects: {label: string, articles: Article[]}
+    skills: {label: string, articles: Skills[]}
     various: {label: string, articles: string[]}
   }
 
@@ -20,7 +23,7 @@ export namespace Cv {
   }
 
   export type Skill = {
-    logo: Article['logo']
+    icon: IconRef
     title: Article['title']
     content?: Article['content']
     rate: number
@@ -30,8 +33,16 @@ export namespace Cv {
     title: string
     honor?: string
     period: string
+    tags?: string[]
     location: string
     logo?: string
     content: string
+    links?: Link[]
+  }
+
+  export type Link = {
+    icon?: IconRef,
+    label?: string
+    url: string
   }
 }
