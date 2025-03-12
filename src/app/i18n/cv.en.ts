@@ -155,7 +155,8 @@ export const cvEn: Cv = {
         content: '',
         imgName: 'mx.png',
         links: [
-          {url: 'https://github.com/alexandreannic/mui-extension'}
+          {url: 'https://github.com/alexandreannic/mui-extension'},
+          {label: 'Demo', url: 'https://mui-extension.firebaseapp.com/'},
         ],
       },
       {
@@ -163,7 +164,8 @@ export const cvEn: Cv = {
         content: '',
         imgName: 'form-editor.png',
         links: [
-          {url: 'https://github.com/alexandreannic/form-editor'}
+          {url: 'https://github.com/alexandreannic/form-editor'},
+          {label: 'Demo', url: 'https://angular-form-editor.firebaseapp.com/'},
         ],
       },
       {
@@ -171,7 +173,8 @@ export const cvEn: Cv = {
         content: '',
         imgName: 'periodic-review.png',
         links: [
-          {url: 'https://github.com/alexandreannic/form-editor'}
+          {url: 'https://github.com/alexandreannic/periodic-review-survey'},
+          {label: 'Demo', url: 'https://drc-periodic-review.web.app/'},
         ],
       },
       {
@@ -179,7 +182,8 @@ export const cvEn: Cv = {
         content: '',
         imgName: 'redux-dt.png',
         links: [
-          {url: 'https://github.com/alexandreannic/redux-datatable'}
+          {url: 'https://github.com/alexandreannic/redux-datatable'},
+          {label: 'Demo', url: 'https://redux-datatable.web.app/'},
         ],
       },
       {
@@ -197,13 +201,13 @@ export const cvEn: Cv = {
           {url: 'https://github.com/alexandreannic/react-hooks-lib'}
         ]
       },
-      {
-        title: 'React TypeScript Interview',
-        content: 'React interview tests for evaluating candidates in recruitment.',
-        links: [
-          {url: 'https://github.com/alexandreannic/drc-react-ts-interview'}
-        ]
-      },
+      // {
+      //   title: 'React TypeScript Interview',
+      //   content: 'React interview tests for evaluating candidates in recruitment.',
+      //   links: [
+      //     {url: 'https://github.com/alexandreannic/drc-react-ts-interview'}
+      //   ]
+      // },
       {
         title: 'KoboToolbox SDK',
         content: 'A TypeScript SDK for seamlessly interacting with the KoboToolbox API, abstracting its complexities and bypassing his bugs.',

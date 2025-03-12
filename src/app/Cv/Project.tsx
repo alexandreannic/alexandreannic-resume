@@ -22,7 +22,8 @@ export const Project = ({
           marginRight: -1,
           marginLeft: -1,
           mb: 2,
-          opacity: .7,
+          opacity: .5,
+          transition: 'all 300ms ease-in-out',
           height: 220,
           // width: 280,
           maxWidth: 'calc(100% + 16px)',
@@ -30,6 +31,9 @@ export const Project = ({
           backgroundSize: 'cover',
           borderRadius: (cssMixins.radius - 4) + 'px',
           backgroundImage: `url(/project/${imgName})`,
+          '&:hover': {
+            opacity: 1,
+          }
         }}/>
       )}
       <PanelTitle title={title}/>
