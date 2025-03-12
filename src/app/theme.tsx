@@ -2,6 +2,7 @@
 
 import {createTheme} from '@mui/material/styles'
 import {darken, lighten} from '@mui/material'
+import {alpha} from '@mui/system'
 
 // const backgroundStartColor = '#001a3a'// darken('#031525', .4)
 // const backgroundEndColor = '#002a5e'//lighten('#031525', .1)
@@ -17,11 +18,11 @@ const darkBackground = '#0A192F'
 
 // const backgroundStartColor = darken('#0f172a', .4)
 // const backgroundEndColor = lighten('#0f172a', .1)
-// const hexagonColor = '66ccff'
+const hexagonColor = '66ccff'
 // const hexagonOpacity = 0.12
-// const generateHexagonSvgUrl = (color: string) => {
-//   return `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z' fill='none' stroke='%23${color}' stroke-width='1'/%3E%3C/svg%3E")`
-// }
+const generateHexagonSvgUrl = (color: string) => {
+  return `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z' fill='none' stroke='%23${color}' stroke-width='1'/%3E%3C/svg%3E")`
+}
 
 export const theme = createTheme({
   // colorSchemes: {dark: true, light: false},
@@ -74,7 +75,7 @@ export const theme = createTheme({
         },
         background: {
           default: backgroundStartColor,
-          paper: 'rgba(255, 255, 255, 0.08)',
+          paper: 'rgba(255, 255, 255, 0.06)',
         },
       },
     },
@@ -91,6 +92,10 @@ export const theme = createTheme({
     },
     MuiCssBaseline: {
       styleOverrides: t => ({
+        '*, *::before, *::after': {
+          // box-sizing: inherit;
+          boxSizing: 'border-box',
+        },
         '@font-face': {
           fontFamily: 'Material Icons',
           fontStyle: 'normal',
@@ -119,15 +124,42 @@ export const theme = createTheme({
         ':focus': {
           outline: 0,
         },
+
         body: {
-          // background: `radial-gradient(circle,${lighten(backgroundStartColor, 0.14)} 1px,transparent 1px), transparent`,
-          // backgroundSize: '16px 16px',
-          // backgroundImage: generateHexagonSvgUrl(hexagonColor),
-          background: t.palette.mode === 'dark'
-            ? `linear-gradient(to bottom, ${backgroundStartColor}, ${backgroundEndColor})`
-            : `linear-gradient(to bottom, #fff, #fff)`,
+          margin: 0,
+          padding: 0,
+          height: '100%',
+          backgroundColor: '#050a14',
+          backgroundImage: `linear-gradient(rgba(50, 85, 140, 0.3) 1px, transparent 1px), 
+                    linear-gradient(90deg, rgba(50, 85, 140, 0.3) 1px, transparent 1px)`, // Fixed function name
+          backgroundSize: '20px 20px',
+          position: 'relative',
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: `linear-gradient(to bottom, ${alpha(backgroundStartColor, .7)}, ${alpha(backgroundEndColor, .2)})`,
+            // background: `linear-gradient(135deg, rgba(30, 50, 100, 0.4) 0%, rgba(10, 20, 40, 0.1) 100%)`, // Fixed function name
+          },
         },
+
+
+// body: {
+//           background: `radial-gradient(circle,${lighten(backgroundStartColor, 0.14)} 1px,transparent 1px), transparent`,
+//           // backgroundSize: '16px 16px',
+//           // backgroundImage: generateHexagonSvgUrl(hexagonColor),
+//           // background: t.palette.mode === 'dark'
+//           //   ? `linear-gradient(to bottom, ${backgroundStartColor}, ${backgroundEndColor})`
+//           //   : `linear-gradient(to bottom, #fff, #fff)`,
+//         },
         html: {
+          display: 'block',
+          margin: 0,
+          padding: 0,
+          height: '100%',
           fontSize: 15,
           fontFamily: '--font-ubuntu',
         },
