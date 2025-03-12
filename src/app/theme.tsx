@@ -1,8 +1,7 @@
 'use client'
 
 import {createTheme} from '@mui/material/styles'
-import {darken, lighten} from '@mui/material'
-import {alpha} from '@mui/system'
+import {darken} from '@mui/material'
 
 // const backgroundStartColor = '#001a3a'// darken('#031525', .4)
 // const backgroundEndColor = '#002a5e'//lighten('#031525', .1)
@@ -75,7 +74,7 @@ export const theme = createTheme({
         },
         background: {
           default: backgroundStartColor,
-          paper: 'rgba(255, 255, 255, 0.06)',
+          paper: 'rgba(255, 255, 255, 0.08)',
         },
       },
     },
@@ -128,22 +127,25 @@ export const theme = createTheme({
         body: {
           margin: 0,
           padding: 0,
-          height: '100%',
-          backgroundColor: '#050a14',
-          backgroundImage: `linear-gradient(rgba(50, 85, 140, 0.3) 1px, transparent 1px), 
-                    linear-gradient(90deg, rgba(50, 85, 140, 0.3) 1px, transparent 1px)`, // Fixed function name
-          backgroundSize: '20px 20px',
+          background: 'none',
           position: 'relative',
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            background: `linear-gradient(to bottom, ${alpha(backgroundStartColor, .7)}, ${alpha(backgroundEndColor, .3)})`,
-            // background: `linear-gradient(135deg, rgba(30, 50, 100, 0.4) 0%, rgba(10, 20, 40, 0.1) 100%)`, // Fixed function name
-          },
+          zIndex: 4,
+          // height: '100%',
+          // backgroundColor: '#050a14',
+          // backgroundImage: `linear-gradient(rgba(50, 85, 140, 0.3) 1px, transparent 1px),
+          //           linear-gradient(90deg, rgba(50, 85, 140, 0.3) 1px, transparent 1px)`, // Fixed function name
+          // backgroundSize: '20px 20px',
+          // position: 'relative',
+          // '&::before': {
+          //   content: '""',
+          //   position: 'absolute',
+          //   top: 0,
+          //   left: 0,
+          //   width: '100%',
+          //   height: '100%',
+          //   background: `linear-gradient(to bottom, ${alpha(backgroundStartColor, .7)}, ${alpha(backgroundEndColor, .3)})`,
+          //   // background: `linear-gradient(135deg, rgba(30, 50, 100, 0.4) 0%, rgba(10, 20, 40, 0.1) 100%)`, // Fixed function name
+          // },
         },
 
 
@@ -156,10 +158,33 @@ export const theme = createTheme({
 //           //   : `linear-gradient(to bottom, #fff, #fff)`,
 //         },
         html: {
-          display: 'block',
-          margin: 0,
-          padding: 0,
-          height: '100%',
+          background: 'none',
+          '&::before': {
+            zIndex: 1,
+            content: '""',
+            position: 'fixed',
+            top: 0,
+            right: 0,
+            left: 0,
+            bottom: 0,
+            display: 'block',
+            margin: 0,
+            padding: 0,
+            backgroundImage: 'url(/bg.jpeg)',
+            backgroundSize: 'cover',
+          },
+          '&::after': {
+            zIndex: 2,
+            content: '""',
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'rgba(0, 0, 0, 0.5)',
+            pointerEvents: 'none',
+          },
+          zIndex: 3,
           fontSize: 15,
           fontFamily: '--font-ubuntu',
         },

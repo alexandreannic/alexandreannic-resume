@@ -41,15 +41,18 @@ export const Panel = ({
           padding: 2,
           borderRadius: cssMixins.radius + 'px',
           backgroundColor: 'background.paper',
-          backdropFilter: 'blur(5px)',
+          backdropFilter: 'blur(15px)',
           boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
           transition: 'all 300ms ease-in-out',
+          border: '2px solid transparent',
           '&:hover': {
+            borderColor: 'primary.main',
+            backdropFilter: 'blur(30px)',
             transform: 'scale(1.015)',
-            boxShadow: `
-              0 8px 30px rgba(0, 70, 200, 0.4),
-              0 0 0 1px rgba(100, 150, 255, 0.2),
-              inset 0 1px 1px rgba(255, 255, 255, 0.1)`
+            // boxShadow: `
+            //   0 8px 30px rgba(0, 70, 200, 0.4),
+            //   0 0 0 1px rgba(100, 150, 255, 0.2),
+            //   inset 0 1px 1px rgba(255, 255, 255, 0.1)`
           },
           fontSize: cssMixins.fontMedium,
           '&:not(:last-of-type)': {
@@ -61,7 +64,7 @@ export const Panel = ({
             fontWeight: 500,
           },
           // borderBottom: '1px solid',
-          borderColor: 'divider',
+          // borderColor: 'divider',
           ...sx,
         }}
       >
