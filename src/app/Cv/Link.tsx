@@ -6,6 +6,7 @@ import Icon from '@mui/material/Icon'
 export const Link = ({url, label, icon}: Cv.Link) => {
   if (url.includes('github')) {
     icon = {iconFa: 'fab fa-github'}
+    if (!label) label = 'GitHub'
   }
   if (!icon) {
     icon = {iconFa: 'fa-solid fa-link'}

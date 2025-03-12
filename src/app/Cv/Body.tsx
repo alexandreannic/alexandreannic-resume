@@ -9,11 +9,14 @@ import {Skill} from '@/app/Cv/Aside/Skill'
 import {Tag} from '@/app/Cv/Tag'
 import {Link} from '@/app/Cv/Link'
 import {Animated} from '@/app/Cv/Animated'
+import {Project} from '@/app/Cv/Project'
+import {Grid2} from '@mui/material'
 
 export const Body = () => {
   const {m} = useI18n()
   return (
     <Box sx={{
+      position: 'relative',
       // background: defaultTheme.palette.background.paper,
       padding: 2,
       lineHeight: cssMixins.lineHeight,
@@ -86,8 +89,26 @@ export const Body = () => {
 
         <Section icon="school" title={m.education.label}>
           {m.education.articles.map((e, i) => (
-            <Panel isFirst={i === 0} key={i} title={e.title} honor={e.honor} step={e.period} subTitle={e.location} logo={e.logo}/>
+            <Panel
+              isFirst={i === 0}
+              key={i}
+              title={e.title}
+              honor={e.honor}
+              step={e.period}
+              subTitle={e.location}
+              logo={e.logo}
+            />
           ))}
+        </Section>
+
+        <Section title={m.projects.label}>
+          <Grid2 container spacing={2}>
+            {m.projects.articles.map((_, i) =>
+              <Grid2 size={{xs: 12, md: 6}} key={i}>
+                <Project project={_} sx={{flex: '33%'}}/>
+              </Grid2>
+            )}
+          </Grid2>
         </Section>
       </Box>
     </Box>

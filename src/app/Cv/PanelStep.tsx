@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import React from 'react'
+import {AnimatedText} from '@/app/Cv/AnimatedText'
 
 export const PanelStep = ({isFirst, label}: {label: string, isFirst?: boolean}) => {
   return (
@@ -18,7 +19,7 @@ export const PanelStep = ({isFirst, label}: {label: string, isFirst?: boolean}) 
         background: `linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08))`,
       }}/>
       <Typography fontWeight={500} fontFamily="monospace" fontSize="small" color="textSecondary" sx={{p: .5}}>
-        {label}
+        <AnimatedText text={label}/>
       </Typography>
     </Box>
   )

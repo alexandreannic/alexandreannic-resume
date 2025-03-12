@@ -141,7 +141,7 @@ export const theme = createTheme({
             left: 0,
             width: '100%',
             height: '100%',
-            background: `linear-gradient(to bottom, ${alpha(backgroundStartColor, .7)}, ${alpha(backgroundEndColor, .2)})`,
+            background: `linear-gradient(to bottom, ${alpha(backgroundStartColor, .7)}, ${alpha(backgroundEndColor, .3)})`,
             // background: `linear-gradient(135deg, rgba(30, 50, 100, 0.4) 0%, rgba(10, 20, 40, 0.1) 100%)`, // Fixed function name
           },
         },

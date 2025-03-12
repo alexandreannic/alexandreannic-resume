@@ -1,9 +1,8 @@
 import {Cv} from '@/app/i18n/Cv'
-import {MixIcon} from '@/app/Cv/MixIcon'
 
 export const cvEn: Cv = {
-  job: 'Full-stack engineer',
-  location: 'Paris Area, France',
+  job: 'Full-stack Engineer',
+  location: 'Bogotá, Colombia',
   education: {
     label: 'Education',
     articles: [
@@ -154,10 +153,70 @@ export const cvEn: Cv = {
       {
         title: 'MX - MUI Extension',
         content: '',
+        imgName: 'mx.png',
         links: [
           {url: 'https://github.com/alexandreannic/mui-extension'}
         ],
-      }
+      },
+      {
+        title: 'Form Editor',
+        content: '',
+        imgName: 'form-editor.png',
+        links: [
+          {url: 'https://github.com/alexandreannic/form-editor'}
+        ],
+      },
+      {
+        title: 'DRC Periodic Review',
+        content: '',
+        imgName: 'periodic-review.png',
+        links: [
+          {url: 'https://github.com/alexandreannic/form-editor'}
+        ],
+      },
+      {
+        title: 'Redux DataTable',
+        content: '',
+        imgName: 'redux-dt.png',
+        links: [
+          {url: 'https://github.com/alexandreannic/redux-datatable'}
+        ],
+      },
+      {
+        title: 'TypeScript Utils',
+        content: '',
+        links: [
+          {url: 'https://github.com/alexandreannic/ts-utils'}
+        ]
+      },
+      {
+        title: 'React Hooks Lib',
+        content: '',
+        links: [
+          {url: 'https://github.com/alexandreannic/react-hooks-lib'}
+        ]
+      },
+      {
+        title: 'React TypeScript Interview',
+        content: '',
+        links: [
+          {url: 'https://github.com/alexandreannic/drc-react-ts-interview'}
+        ]
+      },
+      {
+        title: 'KoboToolbox SDK',
+        content: '',
+        links: [
+          {url: 'https://github.com/alexandreannic/kobo-sdk'}
+        ]
+      },
+      {
+        title: 'ActivityInfo SDK',
+        content: '',
+        links: [
+          {url: 'https://github.com/alexandreannic/activityinfo-sdk'}
+        ]
+      },
     ]
   },
   skills: {
@@ -206,7 +265,7 @@ export const cvEn: Cv = {
             title: 'Play framework',
             rate: 4,
             content: `
-            Used both versions to create SaaS applications, REST and <code>GraphQL</code> API
+            Used <code>Scala</code> and <code>Java</code> versions to create SaaS applications, REST and <code>GraphQL</code> API
           `
           }
         ]
@@ -307,7 +366,7 @@ export const cvEn: Cv = {
             // logoFa: 'fa-solid fa-brackets-curly',
             title: 'NoSQL',
             rate: 3,
-            // content: `Used document-oriented databases mainly during studies projects`
+            // content: `Used document-oriented databases mainly during studies project`
           },
         ]
       }

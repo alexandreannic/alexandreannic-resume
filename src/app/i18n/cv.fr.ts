@@ -224,7 +224,7 @@ export const cvFr = {
           logo: 'dev/nosql.png',
           title: 'NoSQL',
           rate: 3,
-          // content: `Used document-oriented databases mainly during studies projects`
+          // content: `Used document-oriented databases mainly during studies project`
         },
       ]
     }

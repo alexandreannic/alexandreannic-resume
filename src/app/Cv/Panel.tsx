@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography'
 import {cssMixins} from '../utils/style'
 import {SxProps} from '@mui/system'
 import {PanelStep} from '@/app/Cv/PanelStep'
+import {PanelTitle} from '@/app/Cv/PanelTitle'
 
 export const Panel = ({
   title,
@@ -18,7 +19,7 @@ export const Panel = ({
   isFirst,
 }: {
   step?: string
-  title: string;
+  title?: string;
   tag?: string;
   subTitle?: string;
   logo?: string;
@@ -40,8 +41,16 @@ export const Panel = ({
           padding: 2,
           borderRadius: cssMixins.radius + 'px',
           backgroundColor: 'background.paper',
-          backdropFilter: 'blur(8px)',
-          // boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+          backdropFilter: 'blur(5px)',
+          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+          transition: 'all 300ms ease-in-out',
+          '&:hover': {
+            transform: 'scale(1.015)',
+            boxShadow: `
+              0 8px 30px rgba(0, 70, 200, 0.4),
+              0 0 0 1px rgba(100, 150, 255, 0.2),
+              inset 0 1px 1px rgba(255, 255, 255, 0.1)`
+          },
           fontSize: cssMixins.fontMedium,
           '&:not(:last-of-type)': {
             pb: dense ? 1 : 1.5,
@@ -51,28 +60,14 @@ export const Panel = ({
             color: 'text.primary',
             fontWeight: 500,
           },
-          borderBottom: '1px solid',
+          // borderBottom: '1px solid',
           borderColor: 'divider',
           ...sx,
         }}
       >
-        <Box sx={{display: 'flex', alignItems: 'center'}}>
-          <Typography
-            variant="h6"
-            sx={{flex: 1, fontSize: cssMixins.fontBig, lineHeight: 1, mb: 1}}
-          >
-            {title}
-            {honor && (
-              <Typography component="span">
-                {' '}
-                - {honor.toLowerCase()}
-              </Typography>
-            )}
-          </Typography>
-          <Typography sx={{float: 'right', color: 'text.disabled'}}>
-            {tag}
-          </Typography>
-        </Box>
+        {title && (
+          <PanelTitle title={title} honor={honor} tag={tag}/>
+        )}
         {subTitle && (
           <Typography
             sx={{

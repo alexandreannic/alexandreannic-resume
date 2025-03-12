@@ -7,7 +7,7 @@ export namespace Cv {
     location: string
     education: Education
     work: {label: string, articles: Article[]}
-    projects: {label: string, articles: Article[]}
+    projects: {label: string, articles: Project[]}
     skills: {label: string, articles: Skills[]}
     various: {label: string, articles: string[]}
   }
@@ -20,6 +20,14 @@ export namespace Cv {
   export type Skills = {
     title: string
     content: Skill[]
+  }
+
+  export type Project = Pick<Article,
+    'title' |
+    'content' |
+    'links'
+  > & {
+    imgName?: string
   }
 
   export type Skill = {
