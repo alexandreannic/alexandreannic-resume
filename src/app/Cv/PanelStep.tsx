@@ -11,12 +11,12 @@ export const PanelStep = ({isFirst, label}: {label: string, isFirst?: boolean}) 
       ml: 5,
     }}>
       <Box sx={{
-        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+        // boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
         mr: 1,
         visibility: isFirst ? 'hidden' : undefined,
         height: isFirst ? undefined : 36,
         width: 3,
-        background: `linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08))`,
+        backgroundColor: `background.paper`,
       }}/>
       <Typography fontWeight={500} fontFamily="monospace" fontSize="small" color="textSecondary" sx={{p: .5}}>
         <AnimatedText text={label}/>

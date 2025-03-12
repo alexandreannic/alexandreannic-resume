@@ -15,7 +15,7 @@ export const Project = ({
 }) => {
   const {content, title, imgName, links} = project
   return (
-    <Panel>
+    <Panel sx={sx}>
       {imgName && (
         <Box sx={{
           marginTop: -1.5,

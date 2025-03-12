@@ -42,17 +42,17 @@ export const Panel = ({
           borderRadius: cssMixins.radius + 'px',
           backgroundColor: 'background.paper',
           backdropFilter: 'blur(15px)',
-          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+          // boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
           transition: 'all 300ms ease-in-out',
-          border: '2px solid transparent',
+          // border: '1px solid transparent',
           '&:hover': {
             borderColor: 'primary.main',
-            backdropFilter: 'blur(30px)',
+            backdropFilter: 'blur(35px)',
             transform: 'scale(1.015)',
-            // boxShadow: `
-            //   0 8px 30px rgba(0, 70, 200, 0.4),
-            //   0 0 0 1px rgba(100, 150, 255, 0.2),
-            //   inset 0 1px 1px rgba(255, 255, 255, 0.1)`
+            boxShadow: `
+              0 8px 30px color-mix(in srgb, var(--mui-palette-secondary-main) 40%, transparent),
+              0 0 0 1px color-mix(in srgb, var(--mui-palette-secondary-main) 20%, transparent),
+              inset 0 1px 1px rgba(255, 255, 255, 0.1)`
           },
           fontSize: cssMixins.fontMedium,
           '&:not(:last-of-type)': {

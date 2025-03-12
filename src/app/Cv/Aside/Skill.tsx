@@ -55,7 +55,7 @@ export const Skill = ({
         <Typography
           className="skill-text"
           sx={{
-            ml: (12 + logoSize) + 'px',
+            ml: 12 + (logoSize * 1.5) + 'px',
             fontSize: cssMixins.fontSmall,
             mt: 0.25,
             color: 'text.secondary',

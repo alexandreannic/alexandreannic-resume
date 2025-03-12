@@ -5,6 +5,7 @@ import {Icon as MuiIcon} from '@mui/material'
 import {SxProps} from '@mui/system'
 
 export type IconRef = {
+  iconSizeRation?: number
   iconImgSrc?: string
   iconMat?: string
   iconFa?: string
@@ -12,21 +13,26 @@ export type IconRef = {
 }
 
 export const MixIcon = ({
-  size,
+  size = 22,
   sx,
   sxColor = 'primary.main',
+  sizeInherit,
   icon
 }: {
   sx?: SxProps
   sxColor?: string
   icon: IconRef
-  size?: string | number
+  size?: number
+  sizeInherit?: boolean
 }) => {
   const common: SxProps = {
     mr: 1.5,
     textAlign: 'center',
+    fontFamily: 'monospace',
     display: 'inline-block',
+    minWidth: size * 1.5,
     color: sxColor,
+    fontSize: sizeInherit ? `inherit` : `${size * (icon.iconSizeRation ?? 1)}px !important`,
     ...sx,
   }
 
@@ -43,8 +49,6 @@ export const MixIcon = ({
         className={iconFa}
         sx={{
           ...common,
-          fontSize: `${size}px !important`,
-          minWidth: size,
         }}
       />
     )
@@ -54,9 +58,6 @@ export const MixIcon = ({
       <Box
         sx={{
           ...common,
-          fontFamily: 'monospace',
-          fontSize: `${size}px !important`,
-          minWidth: size,
         }}
       >{iconText}</Box>
     )
@@ -65,8 +66,6 @@ export const MixIcon = ({
       <MuiIcon
         sx={{
           ...common,
-          fontSize: `${size}px !important`,
-          minWidth: size,
         }}
       >
         {iconMat}
@@ -74,7 +73,7 @@ export const MixIcon = ({
     )
   if (iconImgSrc)
     return (
-      <Logo src={iconImgSrc} size={typeof size === 'number' ? size : undefined} sx={common}/>
+      <Logo src={iconImgSrc} sx={common}/>
     )
   return <></>
 }

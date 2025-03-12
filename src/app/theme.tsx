@@ -6,6 +6,7 @@ import {darken} from '@mui/material'
 // const backgroundStartColor = '#001a3a'// darken('#031525', .4)
 // const backgroundEndColor = '#002a5e'//lighten('#031525', .1)
 // material
+const fontSize = 16
 const backgroundStartColor = darken('#031525', .4)
 // const backgroundEndColor = lighten('#031525', .1)
 const backgroundEndColor = 'rgb(15, 23, 42)'
@@ -80,7 +81,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontSize: 15,
+    fontSize: fontSize,
     fontFamily: 'var(--font-ubuntu)',
   },
   components: {
@@ -158,6 +159,7 @@ export const theme = createTheme({
 //           //   : `linear-gradient(to bottom, #fff, #fff)`,
 //         },
         html: {
+          fontSize: fontSize,
           background: 'none',
           '&::before': {
             zIndex: 1,
@@ -170,22 +172,21 @@ export const theme = createTheme({
             display: 'block',
             margin: 0,
             padding: 0,
-            backgroundImage: 'url(/bg.jpeg)',
+            backgroundImage: t.palette.mode === 'dark' ? 'url(/bg4.jpeg)' : t.palette.background.default,
             backgroundSize: 'cover',
           },
           '&::after': {
             zIndex: 2,
-            content: '""',
+            content: t.palette.mode === 'dark' ? '""' : undefined,
             position: 'fixed',
             top: 0,
             left: 0,
             width: '100%',
             height: '100%',
-            background: 'rgba(0, 0, 0, 0.5)',
+            background: 'rgba(0, 0, 0, 0.6)',
             pointerEvents: 'none',
           },
           zIndex: 3,
-          fontSize: 15,
           fontFamily: '--font-ubuntu',
         },
       })

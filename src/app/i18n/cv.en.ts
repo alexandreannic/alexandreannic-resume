@@ -7,7 +7,7 @@ export const cvEn: Cv = {
     label: 'Education',
     articles: [
       {
-        title: 'Master Science and Software Technology',
+        title: `Master's Degree - Science and Software Technology`,
         honor: 'With high honours',
         period: '2016',
         location: 'UPMC (University Pierre et Marie Curie) - Paris',
@@ -78,7 +78,7 @@ export const cvEn: Cv = {
         location: 'beta.gouv, French Ministry of Economics - Paris',
         period: '2020 - 2022 (2 years)',
         content: `
-          Developed SignalConso application related to Consumer Affairs and Fraud Prevention.
+          Developed SignalConso application related to Consumer Affairs and Fraud Prevention. Revamped client app from scratch.
           Built on a <code>Scala</code> Rest API, <code>Node</code> and <code>React</code> applications.
         `,
         links: [
@@ -148,7 +148,7 @@ export const cvEn: Cv = {
     ]
   },
   projects: {
-    label: 'Projects',
+    label: 'Side Projects',
     articles: [
       {
         title: 'MX - MUI Extension',
@@ -184,7 +184,8 @@ export const cvEn: Cv = {
       },
       {
         title: 'TypeScript Utils',
-        content: '',
+        content: 'Lightweight TypeScript utility library offering a collection of essential functions to simplify common coding tasks.' +
+          'Designed for type-safety, efficiency, readability, and maintainability.',
         links: [
           {url: 'https://github.com/alexandreannic/ts-utils'}
         ]
@@ -198,21 +199,21 @@ export const cvEn: Cv = {
       },
       {
         title: 'React TypeScript Interview',
-        content: '',
+        content: 'React interview tests for evaluating candidates in recruitment.',
         links: [
           {url: 'https://github.com/alexandreannic/drc-react-ts-interview'}
         ]
       },
       {
         title: 'KoboToolbox SDK',
-        content: '',
+        content: 'A TypeScript SDK for seamlessly interacting with the KoboToolbox API, abstracting its complexities and bypassing his bugs.',
         links: [
-          {url: 'https://github.com/alexandreannic/kobo-sdk'}
+          {url: 'https://github.com/DRC-UA/kobo-sdk'}
         ]
       },
       {
         title: 'ActivityInfo SDK',
-        content: '',
+        content: 'TypeScript SDK for interacting with the ActivityInfo API. Features a TypeScript interface builder that simplifies unintelligible request bodies and enables data submission in a human-readable format.',
         links: [
           {url: 'https://github.com/alexandreannic/activityinfo-sdk'}
         ]
@@ -277,6 +278,7 @@ export const cvEn: Cv = {
             icon: {
               iconImgSrc: 'dev/ts.png',
               iconText: 'TS',
+              iconSizeRation: .8,
             },
             title: 'TypeScript',
             rate: 5,
@@ -337,7 +339,7 @@ export const cvEn: Cv = {
             icon: {
               iconImgSrc: 'dev/perl.png',
               iconFa: 'fa-solid fa-code',
-
+              iconSizeRation: .8,
             },
             title: 'Perl',
             rate: 3.5,
@@ -362,6 +364,7 @@ export const cvEn: Cv = {
             icon: {
               iconImgSrc: 'dev/nosql.png',
               iconText: '{}',
+              iconSizeRation: .8,
             },
             // logoFa: 'fa-solid fa-brackets-curly',
             title: 'NoSQL',

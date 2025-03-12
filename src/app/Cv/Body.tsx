@@ -105,7 +105,7 @@ export const Body = () => {
           <Grid2 container spacing={2}>
             {m.projects.articles.map((_, i) =>
               <Grid2 size={{xs: 12, md: 6}} key={i}>
-                <Project project={_} sx={{flex: '33%'}}/>
+                <Project project={_} sx={{flex: '33%', height: '100%'}}/>
               </Grid2>
             )}
           </Grid2>
