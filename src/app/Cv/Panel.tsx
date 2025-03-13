@@ -5,6 +5,7 @@ import {cssMixins} from '../utils/style'
 import {SxProps} from '@mui/system'
 import {PanelStep} from '@/app/Cv/PanelStep'
 import {PanelTitle} from '@/app/Cv/PanelTitle'
+import {theme} from '@/app/theme'
 
 export const Panel = ({
   title,
@@ -49,10 +50,16 @@ export const Panel = ({
             borderColor: 'primary.main',
             backdropFilter: 'blur(35px)',
             transform: 'scale(1.015)',
-            boxShadow: `
-              0 8px 30px color-mix(in srgb, var(--mui-palette-secondary-main) 40%, transparent),
-              0 0 0 1px color-mix(in srgb, var(--mui-palette-secondary-main) 20%, transparent),
-              inset 0 1px 1px rgba(255, 255, 255, 0.1)`
+            boxShadow: 4,
+            // ...theme.applyStyles('dark', {
+            //   boxShadow: `
+            //   0 8px 30px color-mix(in srgb, var(--mui-palette-secondary-main) 40%, transparent),
+            //   0 0 0 1px color-mix(in srgb, var(--mui-palette-secondary-main) 20%, transparent),
+            //   inset 0 1px 1px rgba(255, 255, 255, 0.1)`
+            // }),
+            // ...theme.applyStyles('light', {
+            //   boxShadow: theme.shadows[3],
+            // }),
           },
           fontSize: cssMixins.fontMedium,
           '&:not(:last-of-type)': {

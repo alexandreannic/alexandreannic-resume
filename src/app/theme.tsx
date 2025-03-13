@@ -27,7 +27,6 @@ const generateHexagonSvgUrl = (color: string) => {
 }
 
 export const theme = createTheme({
-  // colorSchemes: {dark: true, light: false},
   defaultColorScheme: 'dark',
   cssVariables: {
     colorSchemeSelector: 'class',
@@ -58,6 +57,7 @@ export const theme = createTheme({
       },
     },
     dark: {
+
       palette: {
         primary: {
           main: '#1DE9B6',
@@ -90,6 +90,13 @@ export const theme = createTheme({
     MuiTypography: {
       defaultProps: {
         component: 'div'
+      }
+    },
+    MuiSwitch: {
+      styleOverrides: {
+        root: {
+          overflow: 'visible',
+        }
       }
     },
     MuiCssBaseline: {
@@ -126,40 +133,13 @@ export const theme = createTheme({
         ':focus': {
           outline: 0,
         },
-
         body: {
           margin: 0,
           padding: 0,
           background: 'none',
           position: 'relative',
           zIndex: 4,
-          // height: '100%',
-          // backgroundColor: '#050a14',
-          // backgroundImage: `linear-gradient(rgba(50, 85, 140, 0.3) 1px, transparent 1px),
-          //           linear-gradient(90deg, rgba(50, 85, 140, 0.3) 1px, transparent 1px)`, // Fixed function name
-          // backgroundSize: '20px 20px',
-          // position: 'relative',
-          // '&::before': {
-          //   content: '""',
-          //   position: 'absolute',
-          //   top: 0,
-          //   left: 0,
-          //   width: '100%',
-          //   height: '100%',
-          //   background: `linear-gradient(to bottom, ${alpha(backgroundStartColor, .7)}, ${alpha(backgroundEndColor, .3)})`,
-          //   // background: `linear-gradient(135deg, rgba(30, 50, 100, 0.4) 0%, rgba(10, 20, 40, 0.1) 100%)`, // Fixed function name
-          // },
         },
-
-
-// body: {
-//           background: `radial-gradient(circle,${lighten(backgroundStartColor, 0.14)} 1px,transparent 1px), transparent`,
-//           // backgroundSize: '16px 16px',
-//           // backgroundImage: generateHexagonSvgUrl(hexagonColor),
-//           // background: t.palette.mode === 'dark'
-//           //   ? `linear-gradient(to bottom, ${backgroundStartColor}, ${backgroundEndColor})`
-//           //   : `linear-gradient(to bottom, #fff, #fff)`,
-//         },
         html: {
           fontSize: fontSize,
           [`@media (max-width:${tabletWidth}px)`]: {
