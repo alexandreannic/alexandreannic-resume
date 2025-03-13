@@ -54,6 +54,7 @@ export const cvEn: Cv = {
         period: '2023 - 2025 (2 years)',
         tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
         links: [
+          {label: 'Demo dashboard', url: 'https://infoportal-ua.drc.ngo/dashboard/protection-monitoring'},
           {label: 'InfoPortal', url: 'https://github.com/DRC-UA/infoportal'},
           {label: 'Kobo SDK', url: 'https://github.com/DRC-UA/kobo-sdk'},
           {label: 'ActivityInfo SDK', url: 'https://github.com/DRC-UA/activityinfo-sdk'}
@@ -270,7 +271,7 @@ export const cvEn: Cv = {
             title: 'Play framework',
             rate: 4,
             content: `
-            Used <code>Scala</code> and <code>Java</code> versions to create SaaS applications, REST and <code>GraphQL</code> API
+            Used both <code>Scala</code> and <code>Java</code> to build REST and <code>GraphQL</code> API
           `
           }
         ]
@@ -346,8 +347,15 @@ export const cvEn: Cv = {
               iconSizeRation: .8,
             },
             title: 'Perl',
-            rate: 3.5,
-          }
+            rate: 4,
+          },
+          {
+            icon: {
+              iconFa: 'fa-brands fa-python',
+            },
+            title: 'Python',
+            rate: 3,
+          },
         ]
       },
       {

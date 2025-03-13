@@ -1,14 +1,10 @@
 import React from 'react'
-import {ProfileLink} from './ProfileLink'
-import {Skill} from './Skill'
 import {cssMixins} from '../../utils/style'
-import {AsideSection} from './AsideSection'
 import {useI18n} from '../../i18n/I18nContext'
 import Logo from '../../utils/Logo'
 import Box from '@mui/material/Box'
 import {AsideLinkCompact} from '@/app/Cv/Aside/AsideLinkCompact'
 
-const avatarSize = '1.66cm'
 
 export const Aside = () => {
   const {m} = useI18n()
@@ -16,13 +12,13 @@ export const Aside = () => {
   return (
     <Box
       component="aside"
-      sx={{width: '7.20cm', marginRight: 1.5}}
+      sx={{width: 320, marginRight: 1.5}}
     >
       {/* Header */}
       <Box sx={{display: 'flex', alignItems: 'center', marginBottom: 2}}>
         <Logo
           sx={{backgroundColor: 'rgba(0,0,0,.4)', backgroundSize: '110%', borderRadius: '50%', marginRight: 1.5}}
-          size={avatarSize}
+          size={100}
           src="avatar.png"
         />
         <Box>

@@ -15,7 +15,7 @@ const Section = ({title, icon, noSeparator, children, sx}: {
     <Box
       sx={{
         width: '100%',
-        mb: 4,
+        mb: 5,
         ...sx
       }}
     >
@@ -27,7 +27,7 @@ const Section = ({title, icon, noSeparator, children, sx}: {
             alignItems: 'center',
             fontSize: cssMixins.fontTitle,
             fontWeight: 500,
-            mb: 1.5,
+            mb: 2,
             lineHeight: 1,
           }}
         >

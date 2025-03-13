@@ -19,7 +19,7 @@ export const Link = ({url, label, icon}: Cv.Link) => {
       alignItems: 'center'
     }}>
       {icon && (
-        <MixIcon icon={icon} sxColor="text.primary" size="inherit" sx={{mr: .5}}/>
+        <MixIcon icon={icon} sxColor="text.primary" sizeInherit sx={{mr: .5}}/>
       )}
       {label}
       <Icon color="disabled" fontSize="inherit" sx={{ml: .5}}>open_in_new</Icon>

@@ -1,11 +1,11 @@
 import {SxProps, Theme} from '@mui/system'
 
 export const cssMixins = {
-  fontSmall: '0.9rem',
-  fontBig: '1.1rem',
-  fontTitle: '1.4rem',
-  fontMedium: '1rem',
-  fontMainTitle: '1.5rem',
+  fontSmall: '1rem',
+  fontBig: '1.15rem',
+  fontTitle: '1.5rem',
+  fontMedium: '1.1rem',
+  fontMainTitle: '1.7rem',
   lineHeight: 1.48,
   radius: 16,
 }
