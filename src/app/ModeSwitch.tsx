@@ -14,7 +14,7 @@ export const ModeSwitch = () => {
     return null
   }
   return (
-    <MaterialUISwitch value={mode === 'light'} onChange={_ => setMode(_.target.checked ? 'dark' : 'light')}/>
+    <MaterialUISwitch value={mode === 'light'} onChange={_ => setMode(mode === 'light' ? 'dark' : 'light')}/>
   )
 }
 
