@@ -4,6 +4,12 @@ import Typography from '@mui/material/Typography'
 import {SxProps, Theme} from '@mui/system'
 import {cssMixins} from '../utils/style'
 
+export const sanitizeId = (_: string) => _
+  .replaceAll(/\s+/g, '_')
+  .replaceAll(/èéê/g, 'e')
+  .replaceAll(/àáâ/g, 'a')
+  .toLowerCase()
+
 const Section = ({title, icon, noSeparator, children, sx}: {
   title: string;
   icon?: string;
@@ -13,6 +19,7 @@ const Section = ({title, icon, noSeparator, children, sx}: {
 }) => {
   return (
     <Box
+      id={sanitizeId(title)}
       sx={{
         width: '100%',
         mb: 5,

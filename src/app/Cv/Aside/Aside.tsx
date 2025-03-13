@@ -4,6 +4,9 @@ import {useI18n} from '../../i18n/I18nContext'
 import Logo from '../../utils/Logo'
 import Box from '@mui/material/Box'
 import {AsideLinkCompact} from '@/app/Cv/Aside/AsideLinkCompact'
+import {AsideMenu} from '@/app/Cv/Aside/AsideMenu'
+import {sanitizeId} from '@/app/Cv/Section'
+import {Divider} from '@mui/material'
 
 
 export const Aside = () => {
@@ -12,9 +15,12 @@ export const Aside = () => {
   return (
     <Box
       component="aside"
-      sx={{width: 320, marginRight: 1.5}}
+      sx={{
+        position: 'fixed',
+        width: 320,
+        marginRight: 1.5
+      }}
     >
-      {/* Header */}
       <Box sx={{display: 'flex', alignItems: 'center', marginBottom: 2}}>
         <Logo
           sx={{backgroundColor: 'rgba(0,0,0,.4)', backgroundSize: '110%', borderRadius: '50%', marginRight: 1.5}}
@@ -29,26 +35,18 @@ export const Aside = () => {
         </Box>
       </Box>
 
-      {/* Contact Links */}
+      <Divider sx={{my: 2}}/>
+
       <AsideLinkCompact/>
 
-      {/* Skills */}
-      {/*{m.skills.map((s, i) => (*/}
-      {/*  <AsideSection title={s.title} key={i}>*/}
-      {/*    {s.content.map((c, j) => (*/}
-      {/*      <Skill key={j} logoStr={c.logoStr} logo={c.logo} logoFa={c.logoFa} title={c.title} rate={c.rate}>*/}
-      {/*        {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}*/}
-      {/*      </Skill>*/}
-      {/*    ))}*/}
-      {/*  </AsideSection>*/}
-      {/*))}*/}
+      <Divider sx={{my: 2}}/>
 
-      {/* Various Articles */}
-      {/*<AsideSection title={m.various.label}>*/}
-      {/*  {m.various.articles.map((v, i) => (*/}
-      {/*    <Box sx={{marginBottom: 0.5}} key={i} dangerouslySetInnerHTML={{__html: v}}/>*/}
-      {/*  ))}*/}
-      {/*</AsideSection>*/}
+      <AsideMenu sx={{mt: 1}} sections={[
+        m.skills.label,
+        m.work.label,
+        m.education.label,
+        m.projects.label,
+      ].map(_ => ({id: sanitizeId(_), title: _}))}/>
     </Box>
   )
 }

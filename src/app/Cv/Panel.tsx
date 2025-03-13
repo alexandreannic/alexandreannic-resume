@@ -60,6 +60,7 @@ export const Panel = ({
             // mb: dense ? 1 : 1.5,
           },
           '& code': {
+            fontFamily: 'inherit',
             color: 'text.primary',
             fontWeight: 500,
           },

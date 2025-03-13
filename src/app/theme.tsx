@@ -1,12 +1,12 @@
 'use client'
 
 import {createTheme} from '@mui/material/styles'
-import {darken} from '@mui/material'
+import {darken, lighten} from '@mui/material'
 
 // const backgroundStartColor = '#001a3a'// darken('#031525', .4)
 // const backgroundEndColor = '#002a5e'//lighten('#031525', .1)
 // material
-const fontSize = 16
+const fontSize = 15
 const backgroundStartColor = darken('#031525', .4)
 // const backgroundEndColor = lighten('#031525', .1)
 const backgroundEndColor = 'rgb(15, 23, 42)'
@@ -34,15 +34,15 @@ export const theme = createTheme({
     light: {
       palette: {
         primary: {
-          main: '#00cf9d',
-          light: '#A7FFE4',
-          dark: '#00dca5',
-          contrastText: '#0A192F',
+          main: '#0b57d0',
+          light: lighten('#0b57d0', .5),
+          dark: darken('#0b57d0', .5),
+          contrastText: '#FFFFFF',
         },
         secondary: {
-          main: '#00c3ec',
-          light: '#9cedff',
-          dark: '#00d2f8',
+          main: '#0b57d0',
+          light: lighten('#0b57d0', .5),
+          dark: darken('#0b57d0', .5),
           contrastText: '#FFFFFF',
         },
         // text: {

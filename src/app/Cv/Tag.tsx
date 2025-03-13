@@ -2,6 +2,7 @@
 import React from 'react'
 import Box from '@mui/material/Box'
 import {alpha, keyframes} from '@mui/system'
+import {cssAlpha} from '@/app/utils/style'
 
 const fadeInSlide = keyframes`
   0% {
@@ -16,13 +17,13 @@ const fadeInSlide = keyframes`
 
 const pulse = keyframes`
   0% {
-    box-shadow: 0 0 0 0 ${alpha('#64FFDA', 0.4)};
+    box-shadow: 0 0 0 0 ${cssAlpha('--mui-palette-primary-main', 0.4)};
   }
   70% {
-    box-shadow: 0 0 0 6px ${alpha('#64FFDA', 0)};
+    box-shadow: 0 0 0 6px ${cssAlpha('--mui-palette-primary-main', 0)};
   }
   100% {
-    box-shadow: 0 0 0 0 ${alpha('#64FFDA', 0)};
+    box-shadow: 0 0 0 0 ${cssAlpha('--mui-palette-primary-main', 0)};
   }
 `
 
@@ -33,21 +34,15 @@ export const Tag = ({label, index = 0}: {label?: string; index?: number}) => {
     <Box
       sx={{
         display: 'inline-flex',
-        backgroundColor: alpha('#64FFDA', 0.1),
+        backgroundColor: cssAlpha('--mui-palette-primary-main', .08),
         color: 'primary.main',
-        p: .5,
-        pr: 1.5,
-        pl: 1.5,
+        py: .25,
+        px: 1.5,
         borderRadius: 50,
-        opacity: 0, // Start invisible
+        opacity: 0,
         animation: `${fadeInSlide} 0.5s ease-out forwards, ${pulse} 1.5s 2`,
         animationDelay: `${animationDelay}, ${animationDelay}`,
-        // Add hover effect
         transition: 'transform 0.2s, background-color 0.2s',
-        '&:hover': {
-          transform: 'scale(1.05)',
-          backgroundColor: alpha('#64FFDA', 0.2),
-        },
         '&:not(:last-of-type)': {
           mr: 1,
         }
