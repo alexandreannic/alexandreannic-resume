@@ -24,7 +24,7 @@ export const Aside = () => {
       <Box sx={{display: 'flex', alignItems: 'center', marginBottom: 2}}>
         <Logo
           sx={{backgroundColor: 'rgba(0,0,0,.4)', backgroundSize: '110%', borderRadius: '50%', marginRight: 1.5}}
-          size={100}
+          size={90}
           src="avatar.png"
         />
         <Box>

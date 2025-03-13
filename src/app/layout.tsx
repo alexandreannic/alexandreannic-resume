@@ -36,7 +36,6 @@ export default function RootLayout(props: {children: React.ReactNode}) {
     <AppRouterCacheProvider options={{enableCssLayer: true}}>
       <ThemeProvider defaultMode="dark" theme={theme}>
         <CssBaseline enableColorScheme/>
-        <ModeSwitch/>
         {props.children}
       </ThemeProvider>
     </AppRouterCacheProvider>

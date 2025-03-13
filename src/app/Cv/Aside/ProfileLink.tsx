@@ -23,9 +23,14 @@ export const ProfileLink = ({
   const body = (
     <Box
       sx={{
+        transition: 'all 300ms ease-in-out',
         fontSize: cssMixins.fontMedium,
         display: 'flex',
         alignItems: 'center',
+        color: 'text.secondary',
+        '&:hover': {
+          color: href ? 'text.primary' : undefined,
+        },
         '&:not(:last-of-type)': {
           paddingBottom: 1,
         },
@@ -39,7 +44,6 @@ export const ProfileLink = ({
             minWidth: size,
             textAlign: 'center',
             display: 'inline-block',
-            color: 'text.secondary',
           }}
         >
           {icon}
@@ -54,7 +58,6 @@ export const ProfileLink = ({
             minWidth: size,
             textAlign: 'center',
             display: 'inline-block',
-            color: 'text.secondary',
           }}
         />
       )}

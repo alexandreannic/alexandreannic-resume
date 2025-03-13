@@ -22,7 +22,7 @@ const MaterialUISwitch = styled(Switch)(({theme}) => ({
   width: 62,
   height: 34,
   padding: 7,
-  transform: 'rotate(90deg)',
+  // transform: 'rotate(90deg)',
   '& .MuiSwitch-switchBase': {
     margin: 1,
     padding: 0,
