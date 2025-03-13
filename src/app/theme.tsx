@@ -2,6 +2,8 @@
 
 import {createTheme} from '@mui/material/styles'
 import {darken, lighten} from '@mui/material'
+import {tabletWidth} from '@/app/utils/style'
+import {asideWidthCompact} from '@/app/Cv/Aside/Aside'
 
 // const backgroundStartColor = '#001a3a'// darken('#031525', .4)
 // const backgroundEndColor = '#002a5e'//lighten('#031525', .1)
@@ -160,6 +162,9 @@ export const theme = createTheme({
 //         },
         html: {
           fontSize: fontSize,
+          [`@media (max-width:${tabletWidth}px)`]: {
+            fontSize: fontSize - 1,
+          },
           background: 'none',
           '&::before': {
             zIndex: 1,

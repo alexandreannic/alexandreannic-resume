@@ -14,8 +14,7 @@ export const AsideLinkCompact = () => {
       <ProfileLink icon="email">
         <a href="mailto:alexandre.annic1@gmail.com">alexandre.annic1@gmail.com</a>
       </ProfileLink>
-      <Box sx={{display: 'flex', mt: 1, alignItems: 'center', justifyContent: 'space-around'}}>
-
+      <Box sx={{maxWidth: 400, display: 'flex', mt: 1, alignItems: 'center', justifyContent: 'space-around'}}>
         <ProfileLink
           size={28} iconFa="stack-overflow"
           href="https://stackoverflow.com/users/5735030/alexandre-annic"

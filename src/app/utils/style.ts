@@ -15,3 +15,6 @@ export const makeSx = <T>(_: { [key in keyof T]: SxProps<Theme> }) => _
 export const cssAlpha = (color: string, ratio: number) => {
   return `color-mix(in srgb, var(${color}) ${ratio * 100}%, transparent)`
 }
+
+export const mobileWidth = 800
+export const tabletWidth = 1000
