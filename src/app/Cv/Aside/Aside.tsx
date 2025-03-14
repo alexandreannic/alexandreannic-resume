@@ -52,6 +52,8 @@ export const Aside = () => {
         </Box>
       </Box>
 
+      <Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{mb: 1, textAlign: 'justify'}}/>
+
       <Divider sx={{my: 2}}/>
 
       <AsideLinkCompact/>

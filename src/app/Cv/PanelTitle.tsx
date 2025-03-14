@@ -20,10 +20,10 @@ export const PanelTitle = ({
       >
         {title}
         {honor && (
-          <Typography component="span">
+          <span style={{fontWeight: 300}}>
             {' '}
             - {honor.toLowerCase()}
-          </Typography>
+          </span>
         )}
       </Typography>
       <Typography sx={{float: 'right', color: 'text.disabled'}}>

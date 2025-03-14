@@ -30,7 +30,7 @@ export const MixIcon = ({
     textAlign: 'center',
     fontFamily: 'monospace',
     display: 'inline-block',
-    minWidth: size * 1.5,
+    minWidth: size * 1.2,
     color: sxColor,
     fontSize: sizeInherit ? `inherit` : `${size * (icon.iconSizeRation ?? 1)}px !important`,
     ...sx,

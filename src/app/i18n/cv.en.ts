@@ -1,13 +1,14 @@
 import {Cv} from '@/app/i18n/Cv'
 
 export const cvEn: Cv = {
-  job: 'Full-stack Engineer',
+  job: 'Software Engineer',
   location: 'Bogotá, Colombia',
+  summary: `Senior software engineer with more than <b>10 years experience</b>. Committed in building intuitive, high-performance applications, with a strong focus on UX/UI and clean architecture.<br/>Skilled in optimizing performance, ensuring security, and handling large-scale data processing to build robust and efficient systems.`,
   education: {
     label: 'Education',
     articles: [
       {
-        title: `Master's Degree - Science and Software Technology`,
+        title: `Master Degree in Science and Software Technology`,
         honor: 'With high honours',
         period: '2016',
         location: 'UPMC (University Pierre et Marie Curie) - Paris',
@@ -20,7 +21,7 @@ export const cvEn: Cv = {
       `
       },
       {
-        title: 'Bachelor in computer science',
+        title: 'Bachelor in Computer Science',
         honor: 'With high honours',
         period: '2014',
         location: 'UPMC (University Pierre et Marie Curie) - Paris',
@@ -30,7 +31,7 @@ export const cvEn: Cv = {
         Databases (transactions, <code>SQL3</code>, <code>PL/SQL</code>, <code>NoSQL</code>, <code>XPath</code>)`,
       },
       {
-        title: 'DUT of computer science', //  (two-year university degree in technology
+        title: 'DUT of Computer Science', //  (two-year university degree in technology
         period: '2013',
         location: 'IUT d\'Orsay',
         logo: 'logo.jpg',
@@ -49,17 +50,22 @@ export const cvEn: Cv = {
     label: 'Work experiences',
     articles: [
       {
-        title: 'Information Management Coordinator',
-        location: 'Danish Refugee Council (DRC)',
+        title: 'Information Management Coordinator in Humanitarian Sector',
+        location: 'Danish Refugee Council (DRC) - Ukraine',
         period: '2023 - 2025 (2 years)',
         tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
         links: [
           {label: 'Demo dashboard', url: 'https://infoportal-ua.drc.ngo/dashboard/protection-monitoring'},
           {label: 'InfoPortal', url: 'https://github.com/DRC-UA/infoportal'},
-          {label: 'Kobo SDK', url: 'https://github.com/DRC-UA/kobo-sdk'},
-          {label: 'ActivityInfo SDK', url: 'https://github.com/DRC-UA/activityinfo-sdk'}
+          // {label: 'Kobo SDK', url: 'https://github.com/DRC-UA/kobo-sdk'},
+          // {label: 'ActivityInfo SDK', url: 'https://github.com/DRC-UA/activityinfo-sdk'}
         ],
         content: `
+          <b>Context</b>: DRC is one of the largest international NGOs, with Ukraine as its biggest mission. 
+          Traditional Information Management, relying on manual effort, couldn't scale.<br/>
+          Built <b>InfoPortal</b>, a platform integrating multiple external data sources to enhance reporting, 
+          improve program monitoring, ensure data protection, and streamline information management. 
+          <b>Engaged key stakeholders</b> to drive adoption across missions and <b>built a team</b> to ensure sustainability. 
         `
       },
 //       {
@@ -76,11 +82,12 @@ export const cvEn: Cv = {
 //       },
       {
         title: 'Software Engineer',
-        location: 'beta.gouv, French Ministry of Economics - Paris',
+        location: 'French Ministry of Economics, beta.gouv - Paris',
         period: '2020 - 2022 (2 years)',
         content: `
-          Developed SignalConso application related to Consumer Affairs and Fraud Prevention. Revamped client app from scratch.
-          Built on a <code>Scala</code> Rest API, <code>Node</code> and <code>React</code> applications.
+          Developed the <b>SignalConso</b> application to connect consumer complaints and feedbacks with companies, overseen by <b>Consumer Affairs and Fraud Prevention</b>.
+          Handled <b>100,000 monthly consumer reports</b>, involving all <b>major French companies</b>, with a <b>satisfaction rate of 93%</b>.
+          Improved <code>Scala</b> API and rebuilt client app from scratch and <b>leading UX/UI decisions</b>.
         `,
         links: [
           {url: 'https://signal.conso.gouv.fr', label: 'signal.conso.gouv'},
@@ -93,10 +100,10 @@ export const cvEn: Cv = {
         location: 'Mediarithmics - Paris',
         period: '2019 - 2020 (1 year)',
         content: `
-          Developed <code>Node/TypeScript</code> applications streaming GB of daily data.
-          Allow, through an <code>React</code> UI, to build and monitor "pipelines" of microservices in <code>Microsoft Azure</code>,
-          linked by queues, orchestrated with <code>k8s (Docker)</code>.<br/>
-          Developed <code>TypeScript</code> libraries, test coverage close to 100% with <code>Mocha</code>.
+          Developed <code>Node/TypeScript</code> applications <b>streaming GB of daily data</b>.
+          Allow, through an <code>React</code> UI, to <b>build and monitor pipelines of microservices</b> in <code>Microsoft Azure</code>,
+          <b>linked by queues, orchestrated with <code>k8s (Docker)</code></b>.<br/>
+<!--          Developed <code>TypeScript</code> libraries, test coverage close to 100% with <code>Mocha</code>.-->
         `,
         tags: ['k8s', 'Docker', 'TypeScript', 'React'],
       },
@@ -106,10 +113,10 @@ export const cvEn: Cv = {
         location: 'Particeep - Paris',
         period: '2016 - 2019 (3 years)',
         content: `
-          Led front team and created several <code>React</code> and <code>Angular</code> applications from scratch.<br/>
-          Contributed to the evolution of the REST and <code>GraphQL</code> API in <code>Scala</code> with <code>PostgresSQL</code>.<br/>
+          Contributed to the evolution of the <b>REST and <code>GraphQL</code> API in <code>Scala</code> with <code>PostgresSQL</code></b>.<br/>
+          <b>Led the creation of multiple</b> <code>React</code> and <code>Angular</code> applications from scatch.<br/>
           Developed the API SDK for <code>JavaScript</code>, <code>PHP</code> and <code>Scala</code>.<br/>
-          Built functional and end to end tests with <code>Selenium</code>, <code>Mocha</code> and <code>Protractor</code>.<br/>
+          Built functional and e2e tests with <code>Selenium</code>, <code>Mocha</code> and <code>Protractor</code>.<br/>
           Implemented CI with <code>Jenkins</code>.<br/>
         `,
         tags: ['Java', 'Scala', 'Angular', 'AngularJs', 'React', 'PHP', 'PSQL'],
@@ -124,7 +131,7 @@ export const cvEn: Cv = {
         and <code>MySQL</code> such as appointments calendar, real-time chat, statistics.<br/>
         Developed websites in <code>PHP</code> for small businesses and associations.
       `,
-        tags: ['Java', 'JavaScript', 'JQuery',]
+        tags: ['Java', 'PHP', 'JavaScript', 'JQuery',]
       },
       // {
       //   logo: 'upmc.png',
@@ -141,10 +148,10 @@ export const cvEn: Cv = {
         location: 'LRI (Computer Research Laboratory) - Orsay',
         period: '2013 (3 months)',
         content: `
-        Worked on the Grid Observatory project related to the European Grid Infrastructure.
-        Reconstructed a flow with <code>Perl</code> and <code>MySQL</code> of +200Go/month from 250 sources of inconsistent grid usage traces to make
-        them workable for researchers.
-      `,
+          Worked on the <b>Grid Observatory</b> project within the <b>European Grid Infrastructure</b>, collecting vast amounts of data from high-energy physics experiments at the LHC.
+          Reconstructed a flow of +200Go/month from 250 sources of inconsistent grid usage traces to make them workable for researchers.
+        `,
+        tags: ['Perl', 'Bash', 'MySQL']
       },
     ]
   },
@@ -189,7 +196,7 @@ export const cvEn: Cv = {
       },
       {
         title: 'TypeScript Utils',
-        content: 'Lightweight TypeScript utility library offering a collection of essential functions to simplify common coding tasks.' +
+        content: 'Lightweight <code>TypeScript</code> utility library offering a collection of essential functions to simplify common coding tasks.' +
           'Designed for type-safety, efficiency, readability, and maintainability.',
         links: [
           {url: 'https://github.com/alexandreannic/ts-utils'}
@@ -197,7 +204,7 @@ export const cvEn: Cv = {
       },
       {
         title: 'React Hooks Lib',
-        content: '',
+        content: 'Comprehensive suite of custom <code>React</code> hooks with clear, consistent APIs and robust <code>TypeScript</code> inference.',
         links: [
           {url: 'https://github.com/alexandreannic/react-hooks-lib'}
         ]
@@ -211,14 +218,14 @@ export const cvEn: Cv = {
       // },
       {
         title: 'KoboToolbox SDK',
-        content: 'A TypeScript SDK for seamlessly interacting with the KoboToolbox API, abstracting its complexities and bypassing his bugs.',
+        content: 'A <code>TypeScript</code> SDK for seamlessly interacting with the KoboToolbox API, abstracting its complexities and bypassing his bugs.',
         links: [
           {url: 'https://github.com/DRC-UA/kobo-sdk'}
         ]
       },
       {
         title: 'ActivityInfo SDK',
-        content: 'TypeScript SDK for interacting with the ActivityInfo API. Features a TypeScript interface builder that simplifies unintelligible request bodies and enables data submission in a human-readable format.',
+        content: '<code>TypeScript</code> SDK for interacting with the ActivityInfo API. Features a <code>TypeScript</code> interface builder that simplifies unintelligible request bodies and enables data submission in a human-readable format.',
         links: [
           {url: 'https://github.com/alexandreannic/activityinfo-sdk'}
         ]

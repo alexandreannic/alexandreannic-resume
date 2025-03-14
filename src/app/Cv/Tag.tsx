@@ -34,8 +34,8 @@ export const Tag = ({label, index = 0}: {label?: string; index?: number}) => {
     <Box
       sx={{
         display: 'inline-flex',
-        backgroundColor: cssAlpha('--mui-palette-primary-main', .08),
-        color: 'primary.main',
+        backgroundColor: cssAlpha('--mui-palette-secondary-main', .08),
+        color: 'secondary.main',
         py: .25,
         px: 1.5,
         borderRadius: 50,
