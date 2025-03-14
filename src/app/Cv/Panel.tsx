@@ -5,7 +5,6 @@ import {cssMixins} from '../utils/style'
 import {SxProps} from '@mui/system'
 import {PanelStep} from '@/app/Cv/PanelStep'
 import {PanelTitle} from '@/app/Cv/PanelTitle'
-import {theme} from '@/app/theme'
 
 export const Panel = ({
   title,
@@ -66,10 +65,15 @@ export const Panel = ({
             pb: dense ? 1 : 1.5,
             // mb: dense ? 1 : 1.5,
           },
-          '& code': {
-            fontFamily: 'inherit',
+          '& b': {
             color: 'text.primary',
             fontWeight: 500,
+          },
+          '& code': {
+            // background: 'rgba(0,0,0,.1)',
+            fontFamily: 'inherit',
+            // color: 'text.primary',
+            // fontWeight: 500,
           },
           // borderBottom: '1px solid',
           // borderColor: 'divider',
@@ -92,7 +96,7 @@ export const Panel = ({
           </Typography>
         )}
         {children && (
-          <Typography sx={{mt: 0.5, color: 'text.secondary', fontSize: cssMixins.fontSmall}}>
+          <Typography sx={{mt: 0.5, height: '100%', color: 'text.secondary', fontSize: cssMixins.fontSmall}}>
             {children}
           </Typography>
         )}

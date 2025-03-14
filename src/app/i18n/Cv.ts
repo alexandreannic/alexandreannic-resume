@@ -3,6 +3,7 @@ import {IconRef} from '@/app/Cv/MixIcon'
 export type Cv = Cv.Cv
 export namespace Cv {
   export type Cv = {
+    summary: string
     job: string
     location: string
     education: Education

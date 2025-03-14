@@ -4,7 +4,6 @@ import {ThemeProvider} from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import {theme} from './theme'
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
-import {ModeSwitch} from '@/app/ModeSwitch'
 import {Ubuntu, Ubuntu_Mono} from 'next/font/google'
 import {Metadata} from 'next'
 import '@fortawesome/fontawesome-free/css/all.min.css'
@@ -12,7 +11,7 @@ import '@fortawesome/fontawesome-free/css/brands.min.css'
 import '@fortawesome/fontawesome-free/css/solid.min.css'
 
 const ubuntu = Ubuntu({
-  weight: '400',
+  weight: ['400', '300'],
   variable: '--font-ubuntu',
   subsets: ['latin'],
 })

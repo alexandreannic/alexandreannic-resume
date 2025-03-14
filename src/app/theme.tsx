@@ -92,6 +92,13 @@ export const theme = createTheme({
         component: 'div'
       }
     },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 40,
+        }
+      }
+    },
     MuiSwitch: {
       styleOverrides: {
         root: {
@@ -168,7 +175,7 @@ export const theme = createTheme({
             left: 0,
             width: '100%',
             height: '100%',
-            background: 'rgba(0, 0, 0, 0.6)',
+            background: 'rgba(0, 0, 0, 0.65)',
             pointerEvents: 'none',
           },
           zIndex: 3,

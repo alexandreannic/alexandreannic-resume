@@ -41,7 +41,10 @@ export const Body = () => {
       </Box>
       <Box sx={{flex: 1,}}>
         <Box sx={{flex: 1, maxWidth: 900, margin: '0 auto'}}>
+          {/*<Section title={m.skills.label}>*/}
+          {/*</Section>*/}
           <Section title={m.skills.label}>
+            {/*<Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{mb: 1}}/>*/}
             <Grid2 container spacing={2}>
               <Grid2 size={{xs: 12, md: 6}}>
                 {m.skills.articles.filter(_ => _.title === 'Framework').map(((s, i) =>
@@ -88,14 +91,14 @@ export const Body = () => {
               <Animated delay={100 + i * 50} key={i}>
                 <Panel isFirst={i === 0} step={e.period} honor={e.honor} title={e.title} subTitle={e.location} logo={e.logo}>
                   <Box dangerouslySetInnerHTML={{__html: e.content}}/>
-                  <Box sx={{mt: 1, fontSize: cssMixins.fontMedium}}>
-                    {e.links?.map(_ =>
-                      <Link key={_.url} url={_.url} icon={_.icon} label={_.label}/>
-                    )}
-                  </Box>
                   <Box sx={{mt: 1}}>
                     {e.tags?.map((_, i) =>
                       <Tag key={_} label={_} index={i}/>
+                    )}
+                  </Box>
+                  <Box sx={{mt: 1, fontSize: cssMixins.fontMedium}}>
+                    {e.links?.map(_ =>
+                      <Link key={_.url} url={_.url} icon={_.icon} label={_.label}/>
                     )}
                   </Box>
                 </Panel>

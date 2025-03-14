@@ -1,7 +1,7 @@
 import {Cv} from '@/app/i18n/Cv'
 import {MixIcon} from '@/app/Cv/MixIcon'
-import Box from '@mui/material/Box'
 import Icon from '@mui/material/Icon'
+import {Button} from '@mui/material'
 
 export const Link = ({url, label, icon}: Cv.Link) => {
   if (url.includes('github')) {
@@ -12,17 +12,17 @@ export const Link = ({url, label, icon}: Cv.Link) => {
     icon = {iconFa: 'fa-solid fa-link'}
   }
   return (
-    <Box component="a" href={url} target="_blank" sx={{
+    <Button size="small" component="a" href={url} target="_blank" sx={{
       display: 'inline-flex',
-      px: 1,
-      color: 'text.primary',
+      mr: 1,
+      color: 'primary.main',
       alignItems: 'center'
     }}>
       {icon && (
-        <MixIcon icon={icon} sxColor="text.primary" sizeInherit sx={{mr: .5}}/>
+        <MixIcon icon={icon} sxColor="primary.main" sizeInherit sx={{mr: .5}}/>
       )}
       {label}
       <Icon color="disabled" fontSize="inherit" sx={{ml: .5}}>open_in_new</Icon>
-    </Box>
+    </Button>
   )
 }
