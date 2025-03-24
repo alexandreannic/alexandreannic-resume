@@ -3,7 +3,6 @@ import Logo from '@/app/utils/Logo'
 import React from 'react'
 import {Icon as MuiIcon} from '@mui/material'
 import {SxProps} from '@mui/system'
-import {cssMixins} from '@/app/utils/style'
 
 export type IconRef = {
   iconSizeRation?: number

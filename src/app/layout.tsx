@@ -6,6 +6,7 @@ import {Metadata} from 'next'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import '@fortawesome/fontawesome-free/css/brands.min.css'
 import '@fortawesome/fontawesome-free/css/solid.min.css'
+import {PageTracker} from '@/app/core/analytic'
 
 const ubuntu = Ubuntu({
   weight: ['400', '300'],
@@ -30,6 +31,7 @@ export default function RootLayout(props: {children: React.ReactNode}) {
     <body className={`${ubuntu.variable} ${ubuntu_Mono.variable}`}>
     <InitColorSchemeScript attribute="class"/>
     <AppRouterCacheProvider options={{enableCssLayer: true}}>
+      <PageTracker/>
       {props.children}
     </AppRouterCacheProvider>
     </body>

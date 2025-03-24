@@ -1,5 +1,6 @@
 'use client'
 import * as React from 'react'
+import {useEffect} from 'react'
 import Box from '@mui/material/Box'
 import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
@@ -7,9 +8,15 @@ import MenuItem from '@mui/material/MenuItem'
 import Select from '@mui/material/Select'
 import {styled, useColorScheme} from '@mui/material/styles'
 import {Switch} from '@mui/material'
+import {logEvent} from '@firebase/analytics'
+import {appAnalytics} from '@/app/core/analytic'
 
 export const ModeSwitch = () => {
   const {mode, setMode} = useColorScheme()
+  useEffect(() => {
+    if (!appAnalytics) return
+    logEvent(appAnalytics, 'theme_toggle', {theme: mode})
+  }, [mode])
   if (!mode) {
     return null
   }
