@@ -1,11 +1,11 @@
 import React from 'react'
-import {cssMixins, mobileWidth, tabletWidth} from '../../utils/style'
-import {useI18n} from '../../i18n/I18nContext'
-import Logo from '../../utils/Logo'
+import {cssMixins, mobileWidth, tabletWidth} from '../../../utils/style'
+import {useI18n} from '../../../i18n/I18nContext'
+import Logo from '../../../utils/Logo'
 import Box from '@mui/material/Box'
-import {AsideLinkCompact} from '@/app/Cv/Aside/AsideLinkCompact'
-import {AsideMenu} from '@/app/Cv/Aside/AsideMenu'
-import {sanitizeId} from '@/app/Cv/Section'
+import {AsideLinkCompact} from '@/app/features/Home/Aside/AsideLinkCompact'
+import {AsideMenu} from '@/app/features/Home/Aside/AsideMenu'
+import {sanitizeId} from '@/app/features/Home/Section'
 import {Divider} from '@mui/material'
 
 export const asideWidth = 300
@@ -20,7 +20,6 @@ export const Aside = () => {
       sx={{
         position: 'fixed',
         width: asideWidth,
-        marginRight: 1.5,
         [`@media (max-width:${tabletWidth}px)`]: {
           width: asideWidthCompact,
         },
@@ -52,11 +51,20 @@ export const Aside = () => {
         </Box>
       </Box>
 
-      <Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{mb: 1, textAlign: 'justify'}}/>
-
-      <Divider sx={{my: 2}}/>
-
       <AsideLinkCompact/>
+
+      <Divider sx={{mt: 1, mb: 2}}/>
+
+      <Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{
+        '& p': {
+          mt: 0,
+          mb: 1,
+        },
+        fontSize: cssMixins.fontSmall,
+        mb: 1,
+        textAlign: 'justify'
+      }}/>
+
 
       <Divider sx={{
         my: 2,

@@ -1,10 +1,10 @@
 import React, {ReactNode} from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import {cssMixins} from '../utils/style'
+import {cssMixins} from '../../../utils/style'
 import {SxProps} from '@mui/system'
-import {PanelStep} from '@/app/Cv/PanelStep'
-import {PanelTitle} from '@/app/Cv/PanelTitle'
+import {PanelStep} from '@/app/features/Home/Panel/PanelStep'
+import {PanelTitle} from '@/app/features/Home/Panel/PanelTitle'
 
 export const Panel = ({
   title,
@@ -38,13 +38,12 @@ export const Panel = ({
         sx={{
           // border: '1px solid',
           // borderColor: 'divider',
+          // border: '1px solid transparent',
           padding: 2,
           borderRadius: cssMixins.radius + 'px',
           backgroundColor: 'background.paper',
           backdropFilter: 'blur(15px)',
-          // boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
           transition: 'all 300ms ease-in-out',
-          // border: '1px solid transparent',
           '&:hover': {
             borderColor: 'primary.main',
             backdropFilter: 'blur(35px)',
@@ -67,7 +66,7 @@ export const Panel = ({
           },
           '& b': {
             color: 'text.primary',
-            fontWeight: 500,
+            fontWeight: 600,
           },
           '& code': {
             // background: 'rgba(0,0,0,.1)',

@@ -53,7 +53,7 @@ export const AsideMenu: FC<SidePanelProps> = ({sections, ...props}) => {
     <Box component="nav" {...props}>
       <ul>
         {sections.map((section) => (
-          <li key={section.id} className="mb-2">
+          <li key={section.id}>
             <Box
               onClick={() => scrollToSection(section.id)}
               sx={{
@@ -65,7 +65,7 @@ export const AsideMenu: FC<SidePanelProps> = ({sections, ...props}) => {
                 fontWeight: activeSection === section.id ? 600 : 400,
                 py: 1,
                 px: 2,
-                mb: 1,
+                mb: .5,
                 fontSize: cssMixins.fontBig,
                 color: activeSection === section.id ? 'primary.main' : 'text.secondary',
               }}

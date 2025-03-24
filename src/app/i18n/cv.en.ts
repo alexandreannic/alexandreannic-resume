@@ -3,11 +3,34 @@ import {Cv} from '@/app/i18n/Cv'
 export const cvEn: Cv = {
   job: 'Software Engineer',
   location: 'Bogotá, Colombia',
-  summary: `Senior software engineer with more than <b>10 years experience</b>. Committed in building intuitive, high-performance applications, with a strong focus on UX/UI and clean architecture.<br/>Skilled in optimizing performance, ensuring security, and handling large-scale data processing to build robust and efficient systems.`,
+  links: [
+    {
+      url: 'https://stackoverflow.com/users/5735030',
+      icon: {iconFa: 'fab fa-stack-overflow'},
+      label: 'stackoverflow.com/users/5735030',
+    },
+    {
+      url: 'https://github.com/alexandreannic',
+      icon: {iconFa: 'fab fa-github'},
+      label: 'github.com/alexandreannic',
+    },
+    {
+      url: 'https://www.linkedin.com/in/alexandreannic/',
+      icon: {iconFa: 'fab fa-linkedin'},
+      label: 'linkedin.com/in/alexandreannic',
+    }
+  ],
+  summary: `
+    <p>Passionate software engineer with <b>10+ years of experience</b>. I have a natural appetite for building intuitive, <b>elegant UI</b> and building <b>scalable and secured</b> backends. I code quickly while ensuring clean code through constant refactoring.</p>
+    <p>My time in dynamic startups has allowed me to be proactive, take initiative, and explore many technologies, while my experience in the DRC taught me to navigate complex hierarchies and communicate effectively with non-technical people.</p>
+    <p>Convinced by TypeScript despite Node's shortcomings like multi-threading and chaotic JS ecosystem.</p>`,
   education: {
     label: 'Education',
     articles: [
       {
+        shortTitle: 'Master Degree',
+        shortContent: `Science and Software Technology`,
+        shortLocation: 'UPMC - Paris',
         title: `Master Degree in Science and Software Technology`,
         honor: 'With high honours',
         period: '2016',
@@ -21,9 +44,12 @@ export const cvEn: Cv = {
       `
       },
       {
-        title: 'Bachelor in Computer Science',
+        title: 'Bachelor Degree in Computer Science',
+        shortTitle: 'Bachelor Degree',
+        shortContent: 'Computer Science',
         honor: 'With high honours',
         period: '2014',
+        shortLocation: 'UPMC - Paris',
         location: 'UPMC (University Pierre et Marie Curie) - Paris',
         content: `
         Algorithmic (complexity, data structure, recursion) -
@@ -32,6 +58,8 @@ export const cvEn: Cv = {
       },
       {
         title: 'DUT of Computer Science', //  (two-year university degree in technology
+        shortTitle: 'DUT (2-year diploma)', //  (two-year university degree in technology
+        shortContent: 'Computer Science',
         period: '2013',
         location: 'IUT d\'Orsay',
         logo: 'logo.jpg',
@@ -50,22 +78,21 @@ export const cvEn: Cv = {
     label: 'Work experiences',
     articles: [
       {
-        title: 'Information Management Coordinator in Humanitarian Sector',
+        title: 'Information Management Coordinator',
         location: 'Danish Refugee Council (DRC) - Ukraine',
         period: '2023 - 2025 (2 years)',
         tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
         links: [
           {label: 'Demo dashboard', url: 'https://infoportal-ua.drc.ngo/dashboard/protection-monitoring'},
-          {label: 'InfoPortal', url: 'https://github.com/DRC-UA/infoportal'},
+          {label: 'GitHub', url: 'https://github.com/DRC-UA/infoportal'},
           // {label: 'Kobo SDK', url: 'https://github.com/DRC-UA/kobo-sdk'},
           // {label: 'ActivityInfo SDK', url: 'https://github.com/DRC-UA/activityinfo-sdk'}
         ],
         content: `
           <b>Context</b>: DRC is one of the largest international NGOs, with Ukraine as its biggest mission. 
           Traditional Information Management, relying on manual effort, couldn't scale.<br/>
-          Built <b>InfoPortal</b>, a platform integrating multiple external data sources to enhance reporting, 
-          improve program monitoring, ensure data protection, and streamline information management. 
-          <b>Engaged key stakeholders</b> to drive adoption across missions and <b>built a team</b> to ensure sustainability. 
+          Developed <b>InfoPortal</b>, a platform that harmonizes external data sources to enable fluid data manipulation, analysis, protection, and automated reporting to cluster systems.<br/> 
+          <b>Engaged key stakeholders</b> to drive adoption across missions. <b>Built and train a team</b> to ensure sustainability. 
         `
       },
 //       {
@@ -87,7 +114,7 @@ export const cvEn: Cv = {
         content: `
           Developed the <b>SignalConso</b> application to connect consumer complaints and feedbacks with companies, overseen by <b>Consumer Affairs and Fraud Prevention</b>.
           Handled <b>100,000 monthly consumer reports</b>, involving all <b>major French companies</b>, with a <b>satisfaction rate of 93%</b>.
-          Improved <code>Scala</b> API and rebuilt client app from scratch and <b>leading UX/UI decisions</b>.
+          Improved <code>Scala</b> API, rebuilt client app from scratch and <b>leading UX/UI decisions</b>.
         `,
         links: [
           {url: 'https://signal.conso.gouv.fr', label: 'signal.conso.gouv'},
@@ -100,7 +127,7 @@ export const cvEn: Cv = {
         location: 'Mediarithmics - Paris',
         period: '2019 - 2020 (1 year)',
         content: `
-          Developed <code>Node/TypeScript</code> applications <b>streaming GB of daily data</b>.
+          Developed <code>Node/TypeScript</code> applications <b>streaming dozen of GBs of data</b>.
           Allow, through an <code>React</code> UI, to <b>build and monitor pipelines of microservices</b> in <code>Microsoft Azure</code>,
           <b>linked by queues, orchestrated with <code>k8s (Docker)</code></b>.<br/>
 <!--          Developed <code>TypeScript</code> libraries, test coverage close to 100% with <code>Mocha</code>.-->
@@ -397,8 +424,8 @@ export const cvEn: Cv = {
   various: {
     label: 'Various',
     articles: [
-      'Diploma for youth leaders and workers (BAFA)',
-      `<div style="white-space: nowrap">Daily sport: Crossfit, climbing, running</div>`,
+      `<b>Daily sport</b>: Crossfit, mountaineering, climbing, running, kick-boxing.</div>`,
+      '<b>BAFA</b>: Youth Work Diploma.',
       'Driving licence',
     ]
   }

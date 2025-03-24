@@ -8,6 +8,7 @@ export const cssMixins = {
   fontMainTitle: '1.7rem',
   lineHeight: 1.48,
   radius: 16,
+  radiusSmall: 4,
 }
 
 export const makeSx = <T>(_: { [key in keyof T]: SxProps<Theme> }) => _
@@ -18,3 +19,9 @@ export const cssAlpha = (color: string, ratio: number) => {
 
 export const mobileWidth = 800
 export const tabletWidth = 1000
+
+export const shortUrl = (url: string) => url
+  .replace('http://', '')
+  .replace('https://', '')
+  .replace(/\/$/g, '')
+  .replace('www.', '')

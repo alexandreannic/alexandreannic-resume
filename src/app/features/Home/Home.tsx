@@ -1,18 +1,18 @@
 import React from 'react'
 import {Aside, asideWidth, asideWidthCompact} from './Aside/Aside'
 import Section from './Section'
-import {Panel} from './Panel'
-import {cssMixins, mobileWidth, tabletWidth} from '../utils/style'
-import {useI18n} from '../i18n/I18nContext'
+import {Panel} from '@/app/features/Home/Panel/Panel'
+import {cssMixins, mobileWidth, tabletWidth} from '../../utils/style'
+import {useI18n} from '../../i18n/I18nContext'
 import Box from '@mui/material/Box'
-import {Skill} from '@/app/Cv/Aside/Skill'
-import {Tag} from '@/app/Cv/Tag'
-import {Link} from '@/app/Cv/Link'
-import {Animated} from '@/app/Cv/Animated'
-import {Project} from '@/app/Cv/Project'
+import {Skill} from '@/app/features/Home/Skill'
+import {Tag} from '@/app/features/Home/Tag'
+import {Link} from '@/app/features/Home/Link'
+import {Animated} from '@/app/features/Home/Animated'
+import {Project} from '@/app/features/Home/Project'
 import {Grid2} from '@mui/material'
 
-export const Body = () => {
+export const Home = () => {
   const {m} = useI18n()
   return (
     <Box sx={{
@@ -39,10 +39,8 @@ export const Body = () => {
       }}>
         <Aside/>
       </Box>
-      <Box sx={{flex: 1,}}>
+      <Box sx={{flex: 1, ml: 2}}>
         <Box sx={{flex: 1, maxWidth: 900, margin: '0 auto'}}>
-          {/*<Section title={m.skills.label}>*/}
-          {/*</Section>*/}
           <Section title={m.skills.label}>
             {/*<Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{mb: 1}}/>*/}
             <Grid2 container spacing={2}>

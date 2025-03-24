@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import React from 'react'
-import {AnimatedText} from '@/app/Cv/AnimatedText'
+import {AnimatedText} from '@/app/features/Home/AnimatedText'
 
 export const PanelStep = ({isFirst, label}: {label: string, isFirst?: boolean}) => {
   return (

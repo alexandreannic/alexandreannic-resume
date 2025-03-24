@@ -1,11 +1,10 @@
 import React, {ReactNode} from 'react'
 import Box from '@mui/material/Box'
-import Icon from '@mui/material/Icon'
-import {cssMixins} from '../../utils/style'
+import {cssMixins} from '../../../utils/style'
+import {IconRef, MixIcon} from '@/app/features/Home/MixIcon'
 
 export const ProfileLink = ({
   icon,
-  iconFa,
   size = 19,
   children,
   href,
@@ -16,8 +15,7 @@ export const ProfileLink = ({
   target?: string
   href?: string
   rel?: string
-  icon?: string;
-  iconFa?: string;
+  icon?: IconRef;
   children?: ReactNode;
 }) => {
   const body = (
@@ -36,31 +34,7 @@ export const ProfileLink = ({
         },
       }}
     >
-      {icon ? (
-        <Icon
-          sx={{
-            mr: 1.5,
-            fontSize: `${size}px !important`,
-            minWidth: size,
-            textAlign: 'center',
-            display: 'inline-block',
-          }}
-        >
-          {icon}
-        </Icon>
-      ) : (
-        <Box
-          component="i"
-          className={`fab fa-${iconFa}`}
-          sx={{
-            mr: 1.5,
-            fontSize: `${size}px !important`,
-            minWidth: size,
-            textAlign: 'center',
-            display: 'inline-block',
-          }}
-        />
-      )}
+      {icon && <MixIcon icon={icon} size={size}/>}
       {children}
     </Box>
   )

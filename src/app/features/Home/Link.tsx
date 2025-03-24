@@ -1,5 +1,5 @@
 import {Cv} from '@/app/i18n/Cv'
-import {MixIcon} from '@/app/Cv/MixIcon'
+import {MixIcon} from '@/app/features/Home/MixIcon'
 import Icon from '@mui/material/Icon'
 import {Button} from '@mui/material'
 

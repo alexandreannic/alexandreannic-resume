@@ -3,6 +3,7 @@ import Logo from '@/app/utils/Logo'
 import React from 'react'
 import {Icon as MuiIcon} from '@mui/material'
 import {SxProps} from '@mui/system'
+import {cssMixins} from '@/app/utils/style'
 
 export type IconRef = {
   iconSizeRation?: number
@@ -27,10 +28,10 @@ export const MixIcon = ({
 }) => {
   const common: SxProps = {
     mr: 1.5,
+    display: 'inline-flex !important',
+    alignItems: 'center',
     textAlign: 'center',
-    fontFamily: 'monospace',
-    display: 'inline-block',
-    minWidth: size * 1.2,
+    minWidth: !sizeInherit ? size * 1.2 : undefined,
     color: sxColor,
     fontSize: sizeInherit ? `inherit` : `${size * (icon.iconSizeRation ?? 1)}px !important`,
     ...sx,
@@ -57,6 +58,7 @@ export const MixIcon = ({
     return (
       <Box
         sx={{
+          fontFamily: 'monospace',
           ...common,
         }}
       >{iconText}</Box>

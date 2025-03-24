@@ -1,8 +1,5 @@
 import * as React from 'react'
 import {AppRouterCacheProvider} from '@mui/material-nextjs/v15-appRouter'
-import {ThemeProvider} from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import {theme} from './theme'
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
 import {Ubuntu, Ubuntu_Mono} from 'next/font/google'
 import {Metadata} from 'next'
@@ -33,10 +30,7 @@ export default function RootLayout(props: {children: React.ReactNode}) {
     <body className={`${ubuntu.variable} ${ubuntu_Mono.variable}`}>
     <InitColorSchemeScript attribute="class"/>
     <AppRouterCacheProvider options={{enableCssLayer: true}}>
-      <ThemeProvider defaultMode="dark" theme={theme}>
-        <CssBaseline enableColorScheme/>
-        {props.children}
-      </ThemeProvider>
+      {props.children}
     </AppRouterCacheProvider>
     </body>
     </html>

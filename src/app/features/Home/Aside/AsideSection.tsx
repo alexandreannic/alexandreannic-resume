@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react'
 import Box from '@mui/material/Box'
-import {cssMixins} from '../../utils/style'
+import {cssMixins} from '../../../utils/style'
 
 export const AsideSection = ({
   children,

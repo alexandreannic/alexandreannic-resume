@@ -20,7 +20,7 @@ const popIn = keyframes`
   }
 `
 
-export const Rate = ({rate}: {rate: number}) => {
+export const Rate = ({rate, fontSize = 16}: {fontSize?: number, rate: number}) => {
   const hasHalf = rate % 1 !== 0
   const integer = Math.trunc(rate)
   const [visibleStars, setVisibleStars] = useState(0)
@@ -49,7 +49,7 @@ export const Rate = ({rate}: {rate: number}) => {
       <Icon
         key={`${type}-${index}`}
         sx={{
-          fontSize: '16px !important',
+          fontSize: `${fontSize}px !important`,
           opacity: isVisible ? 1 : 0,
           animation: isVisible ? `${popIn} 0.3s ease forwards` : 'none',
           transform: 'scale(1)', // Ensures the transform works properly with animation
@@ -72,7 +72,7 @@ export const Rate = ({rate}: {rate: number}) => {
       {mapFor(5 - integer - (hasHalf ? 1 : 0), (i) => (
         <Icon
           key={`star_border-${i}`}
-          sx={{fontSize: '16px !important'}}
+          sx={{fontSize: `${fontSize}px !important`}}
         >
           star_border
         </Icon>

@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography'
 import {cssMixins, makeSx} from '../../utils/style'
 import Logo from '../../utils/Logo'
 import {Rate} from './Rate'
-import {MixIcon, IconRef} from '@/app/Cv/MixIcon'
+import {MixIcon, IconRef} from '@/app/features/Home/MixIcon'
 
 const logoSize = 22
 
@@ -33,7 +33,12 @@ export const Skill = ({
   children: ReactNode;
 }) => {
   return (
-    <Box sx={sx.root}>
+    <Box sx={{
+      '&:last-of-type .skill-text': {
+        pb: 0,
+      },
+      ...sx.root
+    }}>
       <Box sx={sx.head}>
         <MixIcon icon={icon} size={logoSize} sxColor="secondary.main"/>
         <Box

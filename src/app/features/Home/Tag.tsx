@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Box from '@mui/material/Box'
-import {alpha, keyframes, Theme, useTheme} from '@mui/system'
+import {alpha, BoxProps, keyframes, Theme, useTheme} from '@mui/system'
 import {cssAlpha} from '@/app/utils/style'
 
 const fadeInSlide = keyframes`
@@ -17,15 +17,21 @@ const fadeInSlide = keyframes`
 
 const pulse = (t: Theme) => keyframes`
   0% {
-    box-shadow: 0 0 0 0 ${alpha(t.palette.primary.main, 0.4)};
+    box-shadow: 0 0 0 0 ${alpha(t.palette.secondary.main, 0.4)};
   }
   70% {
-    box-shadow: 0 0 0 6px ${alpha(t.palette.primary.main, 0)};
+    box-shadow: 0 0 0 6px ${alpha(t.palette.secondary.main, 0)};
   }
   100% {
-    box-shadow: 0 0 0 0 ${alpha(t.palette.primary.main, 0)};
+    box-shadow: 0 0 0 0 ${alpha(t.palette.secondary.main, 0)};
   }
 `
+
+export const TagContainer = ({sx, ...props}: BoxProps) => {
+  return (
+    <Box sx={{mb: -.5, ...sx}} {...props}/>
+  )
+}
 
 export const Tag = ({label, index = 0}: {label?: string; index?: number}) => {
   const animationDelay = `${1 + index * 0.1}s`
@@ -43,6 +49,7 @@ export const Tag = ({label, index = 0}: {label?: string; index?: number}) => {
         animation: `${fadeInSlide} 0.5s ease-out forwards, ${pulse(t)} 1.5s 2`,
         animationDelay: `${animationDelay}, ${animationDelay}`,
         transition: 'transform 0.2s, background-color 0.2s',
+        mb: .5,
         '&:not(:last-of-type)': {
           mr: 1,
         }
