@@ -383,13 +383,13 @@ export const cvEn: Cv = {
             title: 'Perl',
             rate: 4,
           },
-          // {
-          //   icon: {
-          //     iconFa: 'fa-brands fa-python',
-          //   },
-          //   title: 'Python',
-          //   rate: 3,
-          // },
+          {
+            icon: {
+              iconFa: 'fa-brands fa-python',
+            },
+            title: 'Python',
+            rate: 3,
+          },
         ]
       },
       {

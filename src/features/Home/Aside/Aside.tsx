@@ -19,7 +19,10 @@ export const Aside = () => {
       component="aside"
       sx={{
         position: 'fixed',
+        top: 16,
+        bottom: 0,
         width: asideWidth,
+        overflowY: 'scroll',
         [`@media (max-width:${tabletWidth}px)`]: {
           width: asideWidthCompact,
         },
@@ -53,19 +56,6 @@ export const Aside = () => {
 
       <AsideLinkCompact/>
 
-      <Divider sx={{mt: 1, mb: 2}}/>
-
-      <Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{
-        '& p': {
-          mt: 0,
-          mb: .5,
-        },
-        fontSize: cssMixins.fontSmall,
-        mb: 1,
-        textAlign: 'justify'
-      }}/>
-
-
       <Divider sx={{
         my: 2,
         [`@media (max-width:${mobileWidth}px)`]: {
@@ -84,6 +74,22 @@ export const Aside = () => {
         m.education.label,
         m.projects.label,
       ].map(_ => ({id: sanitizeId(_), title: _}))}/>
+
+      <Divider sx={{mt: 1, mb: 2}}/>
+
+      <Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{
+        '& p': {
+          mt: 0,
+          mb: .5,
+        },
+        fontSize: cssMixins.fontSmall,
+        mb: 1,
+        textAlign: 'justify'
+      }}/>
+
+      {m.various.articles.map(_ =>
+        <Box dangerouslySetInnerHTML={{__html: _}} sx={{mb: .5}}/>
+      )}
     </Box>
   )
 }

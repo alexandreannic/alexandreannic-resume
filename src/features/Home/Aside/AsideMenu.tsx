@@ -63,10 +63,10 @@ export const AsideMenu: FC<SidePanelProps> = ({sections, ...props}) => {
                 borderRadius: 50,
                 border: 'none',
                 fontWeight: activeSection === section.id ? 600 : 400,
-                py: 1,
-                px: 2,
+                py: .5,
+                px: 1,
                 mb: .5,
-                fontSize: cssMixins.fontBig,
+                // fontSize: cssMixins.fontBig,
                 color: activeSection === section.id ? 'primary.main' : 'text.secondary',
               }}
             >

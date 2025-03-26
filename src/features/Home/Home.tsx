@@ -39,7 +39,13 @@ export const Home = () => {
       }}>
         <Aside/>
       </Box>
-      <Box sx={{flex: 1, ml: 2}}>
+      <Box sx={{
+        flex: 1,
+        ml: 2,
+        [`@media (max-width:${mobileWidth}px)`]: {
+          ml: 0,
+        },
+      }}>
         <Box sx={{flex: 1, maxWidth: 900, margin: '0 auto'}}>
           <Section title={m.skills.label}>
             {/*<Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{mb: 1}}/>*/}
@@ -114,7 +120,9 @@ export const Home = () => {
                 step={e.period}
                 subTitle={e.location}
                 logo={e.logo}
-              />
+              >
+                <Box dangerouslySetInnerHTML={{__html: e.content}}/>
+              </Panel>
             ))}
           </Section>
 
