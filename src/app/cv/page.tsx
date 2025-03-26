@@ -1,7 +1,7 @@
 'use client'
-import {Cv} from '@/app/features/Cv/Cv'
+import {Cv} from '@/features/Cv/Cv'
 import {ThemeProvider} from '@mui/material/styles'
-import {makeTheme} from '@/app/core/theme'
+import {makeTheme} from '@/core/theme'
 import CssBaseline from '@mui/material/CssBaseline'
 import * as React from 'react'
 

@@ -6,7 +6,7 @@ import {Metadata} from 'next'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import '@fortawesome/fontawesome-free/css/brands.min.css'
 import '@fortawesome/fontawesome-free/css/solid.min.css'
-import {PageTracker} from '@/app/core/analytic'
+import {PageTracker} from '@/core/analytic'
 
 const ubuntu = Ubuntu({
   weight: ['400', '300'],

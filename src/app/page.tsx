@@ -1,5 +1,5 @@
-import {Home} from '@/app/features/Home/Home'
-import {defaultTheme} from '@/app/core/theme'
+import {Home} from '@/features/Home/Home'
+import {defaultTheme} from '@/core/theme'
 import CssBaseline from '@mui/material/CssBaseline'
 import * as React from 'react'
 import {ThemeProvider} from '@mui/material/styles'
