@@ -41,7 +41,7 @@ export const Home = () => {
       </Box>
       <Box sx={{
         flex: 1,
-        ml: 2,
+        ml: 1,
         [`@media (max-width:${mobileWidth}px)`]: {
           ml: 0,
         },

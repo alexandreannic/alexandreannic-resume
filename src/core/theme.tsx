@@ -14,6 +14,9 @@ export const makeTheme = ({fontSize = 15, spacing = 8}: {spacing?: number, fontS
   colorSchemes: {
     light: {
       palette: {
+        text: {
+          // primary: 'rgb(66, 69, 68)',
+        },
         primary: {
           main: '#0b57d0',
           light: lighten('#0b57d0', .5),
@@ -31,6 +34,8 @@ export const makeTheme = ({fontSize = 15, spacing = 8}: {spacing?: number, fontS
         //   secondary: '#333333',
         // },
         background: {
+          // paper: '#fff',
+          // default: 'rgb(246, 248, 252)',
           default: '#fff',
           paper: 'rgb(246, 248, 252)',
         },
@@ -123,7 +128,8 @@ export const makeTheme = ({fontSize = 15, spacing = 8}: {spacing?: number, fontS
           fontSize,
           margin: 0,
           padding: 0,
-          background: 'none',
+          background: 'background.default',
+          // background: 'none',
           position: 'relative',
           zIndex: 4,
         },

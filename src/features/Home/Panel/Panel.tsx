@@ -87,7 +87,7 @@ export const Panel = ({
             sx={{
               display: 'flex',
               alignItems: 'center',
-              color: 'secondary.main',
+              color: 'text.disabled',
               fontSize: cssMixins.fontSmall,
             }}
           >

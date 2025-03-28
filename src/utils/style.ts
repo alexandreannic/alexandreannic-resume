@@ -5,7 +5,7 @@ export const cssMixins = {
   fontBig: '1.2rem',
   fontTitle: '1.5rem',
   fontMedium: '1.1rem',
-  fontMainTitle: '1.7rem',
+  fontMainTitle: '1.6rem',
   lineHeight: 1.48,
   radius: 16,
   radiusSmall: 4,

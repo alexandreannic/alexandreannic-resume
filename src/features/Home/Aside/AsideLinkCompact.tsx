@@ -10,8 +10,8 @@ export const AsideLinkCompact = () => {
   const {m} = useI18n()
   return (
     <AsideSection>
-      <ProfileLink icon={{iconMat: 'location_on'}}>{m.location}</ProfileLink>
-      <ProfileLink icon={{iconMat: 'email'}}>
+      <ProfileLink iconColor="text.disabled" icon={{iconMat: 'location_on'}}>{m.location}</ProfileLink>
+      <ProfileLink iconColor="text.disabled" icon={{iconMat: 'email'}}>
         <a href="mailto:alexandre.annic1@gmail.com">alexandre.annic1@gmail.com</a>
       </ProfileLink>
       <Box sx={{maxWidth: 400, display: 'flex', mt: 1, alignItems: 'center', justifyContent: 'space-around'}}>

@@ -51,7 +51,7 @@ export const AsideMenu: FC<SidePanelProps> = ({sections, ...props}) => {
 
   return (
     <Box component="nav" {...props}>
-      <ul>
+      <ul style={{paddingLeft: 14}}>
         {sections.map((section) => (
           <li key={section.id}>
             <Box

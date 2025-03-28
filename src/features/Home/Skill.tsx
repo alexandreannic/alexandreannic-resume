@@ -2,11 +2,10 @@ import React, {ReactNode} from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import {cssMixins, makeSx} from '@/utils/style'
-import Logo from '@/utils/Logo'
 import {Rate} from './Rate'
-import {MixIcon, IconRef} from '@/features/Home/MixIcon'
+import {IconRef, MixIcon} from '@/features/Home/MixIcon'
 
-const logoSize = 22
+const logoSize = 18
 
 const sx = makeSx({
   root: {

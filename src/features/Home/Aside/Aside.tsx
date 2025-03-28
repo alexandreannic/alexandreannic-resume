@@ -8,7 +8,7 @@ import {AsideMenu} from '@/features/Home/Aside/AsideMenu'
 import {sanitizeId} from '@/features/Home/Section'
 import {Divider} from '@mui/material'
 
-export const asideWidth = 300
+export const asideWidth = 306
 export const asideWidthCompact = 260
 
 export const Aside = () => {
@@ -20,9 +20,11 @@ export const Aside = () => {
       sx={{
         position: 'fixed',
         top: 16,
+        pr: 1,
         bottom: 0,
         width: asideWidth,
-        overflowY: 'scroll',
+        overflowY: 'auto',
+        overflowX: 'hidden',
         [`@media (max-width:${tabletWidth}px)`]: {
           width: asideWidthCompact,
         },
@@ -48,7 +50,7 @@ export const Aside = () => {
         />
         <Box>
           <Box sx={{fontSize: cssMixins.fontMainTitle, textAlign: 'center'}}>Alexandre Annic</Box>
-          <Box sx={{color: 'primary.main', fontSize: '1.2em', fontWeight: 500}}>
+          <Box sx={{color: 'text.secondary', fontSize: '1.2em', fontWeight: 500}}>
             {m.job}
           </Box>
         </Box>
@@ -57,7 +59,7 @@ export const Aside = () => {
       <AsideLinkCompact/>
 
       <Divider sx={{
-        my: 2,
+        my: 1,
         [`@media (max-width:${mobileWidth}px)`]: {
           display: 'none',
         },
@@ -78,6 +80,7 @@ export const Aside = () => {
       <Divider sx={{mt: 1, mb: 2}}/>
 
       <Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{
+        color: 'text.secondary',
         '& p': {
           mt: 0,
           mb: .5,
@@ -88,8 +91,7 @@ export const Aside = () => {
       }}/>
 
       {m.various.articles.map(_ =>
-        <Box dangerouslySetInnerHTML={{__html: _}} sx={{mb: .5}}/>
-      )}
+        <Box dangerouslySetInnerHTML={{__html: _}} sx={{color: 'text.secondary', mb: .5}}/>)}
     </Box>
   )
 }

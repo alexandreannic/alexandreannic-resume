@@ -9,8 +9,10 @@ export const ProfileLink = ({
   children,
   href,
   target,
+  iconColor,
   rel,
 }: {
+  iconColor?: string
   size?: number
   target?: string
   href?: string
@@ -34,7 +36,7 @@ export const ProfileLink = ({
         },
       }}
     >
-      {icon && <MixIcon icon={icon} size={size}/>}
+      {icon && <MixIcon sxColor={iconColor} icon={icon} size={size}/>}
       {children}
     </Box>
   )

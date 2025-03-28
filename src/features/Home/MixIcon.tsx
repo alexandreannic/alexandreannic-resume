@@ -31,6 +31,8 @@ export const MixIcon = ({
     alignItems: 'center',
     textAlign: 'center',
     minWidth: !sizeInherit ? size * 1.2 : undefined,
+    width: !sizeInherit ? size * 1.2 : undefined,
+    height: !sizeInherit ? size * 1.2 : undefined,
     color: sxColor,
     fontSize: sizeInherit ? `inherit` : `${size * (icon.iconSizeRation ?? 1)}px !important`,
     ...sx,
@@ -42,6 +44,10 @@ export const MixIcon = ({
     iconImgSrc,
     iconText
   } = icon
+  if (iconImgSrc)
+    return (
+      <Logo src={iconImgSrc} sx={common}/>
+    )
   if (iconFa) {
     return (
       <Box
@@ -71,10 +77,6 @@ export const MixIcon = ({
       >
         {iconMat}
       </MuiIcon>
-    )
-  if (iconImgSrc)
-    return (
-      <Logo src={iconImgSrc} sx={common}/>
     )
   return <></>
 }
