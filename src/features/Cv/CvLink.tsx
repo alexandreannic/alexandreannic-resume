@@ -17,7 +17,7 @@ export const CvLink = ({url, label, icon}: Cv.Link) => {
       textTransform: 'none',
       mr: 1,
       mb: .5,
-      fontSize: cssMixins.fontMedium,
+      fontSize: cssMixins.fontSmall,
       color: 'primary.main',
       alignItems: 'center',
       backgroundColor: cssAlpha('--mui-palette-primary-main', .08),

@@ -17,17 +17,17 @@ export const Cv = () => {
   return (
     <Pdf>
       <PdfSlide format="vertical">
-        <Box sx={{p: 2, display: 'flex'}}>
-          <Box sx={{width: 255, mr: 2.5,}}>
-            <Box sx={{display: 'flex', alignItems: 'center', mb: 2}}>
-              <Logo
-                sx={{backgroundColor: 'rgba(0,0,0,.4)', mb: -.5, backgroundSize: '110%', borderRadius: '50%', marginRight: 1.5}}
-                size={55}
-                src="avatar.png"
-              />
+        <Box sx={{px: 3, py: 2, display: 'flex'}}>
+          <Box sx={{width: 250, mr: 2.5,}}>
+            <Box sx={{display: 'flex', alignItems: 'center', mb: 1}}>
+              {/*<Logo*/}
+              {/*  sx={{backgroundColor: 'rgba(0,0,0,.4)', mb: -.5, backgroundSize: '110%', borderRadius: '50%', marginRight: 1.5}}*/}
+              {/*  size={55}*/}
+              {/*  src="avatar.png"*/}
+              {/*/>*/}
               <Box>
                 <Box sx={{fontSize: cssMixins.fontTitle}}>Alexandre Annic</Box>
-                <Box sx={{color: 'primary.main', fontSize: cssMixins.fontBig, fontWeight: 500}}>
+                <Box sx={{color: 'text.secondary', fontSize: cssMixins.fontBig, fontWeight: 500}}>
                   {m.job}
                 </Box>
               </Box>
@@ -41,7 +41,17 @@ export const Cv = () => {
               }}/>
               {m.links.map(_ => <CvSideLink link={_}/>)}
             </Box>
-            <Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{color: 'text.primary', textAlign: 'justify', mb: 1.5}}/>
+            <Box
+              dangerouslySetInnerHTML={{__html: m.summary}}
+              sx={{
+                '& p': {
+                  mt: 0,
+                  mb: .5,
+                },
+                color: 'text.primary',
+                textAlign: 'justify',
+                mb: 1.5
+              }}/>
 
             {m.skills.articles.map(s =>
               <CvSection title={s.title}>

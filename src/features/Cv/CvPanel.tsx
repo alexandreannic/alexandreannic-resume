@@ -80,9 +80,8 @@ export const CvPanel = ({
       <Box sx={{display: 'flex', alignItems: 'start', justifyContent: 'space-between'}}>
         <Box>
           {title && (
-            <CvPanelTitle title={title} tag={tag}/>
-          )
-          }
+            <CvPanelTitle title={title} tag={tag} sx={{mt: -.5}}/>
+          )}
           {
             subTitle && (
               <Typography
