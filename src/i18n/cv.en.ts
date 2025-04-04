@@ -21,9 +21,16 @@ export const cvEn: Cv = {
     }
   ],
   summary: `
-    <p>Passionate software engineer with <b>10+ years of experience</b>. Skilled in building <b>intuitive UI</b> and <b>scalable, secured</b> backends. Fast coder with a focus on clean, maintainable code.</p>
-    <p>My time in dynamic startups has allowed me to be proactive, take initiative, and explore many technologies, while my experience in the DRC taught me to navigate complex hierarchies and effective communication.</p>
-    <p>Convinced by TypeScript despite Node's shortcomings like multi-threading and chaotic JS ecosystem.</p>`,
+    <p>
+      Passionate software engineer with <b>10+ years of experience</b>.
+      During my academic years, I focused on <b>algorithms, distributed systems, and network protocols</b>. Skilled at building <b>intuitive UI</b>, I have a strong grasp of <b>security</b> principles, and enjoy tackling <b>scalability</b> challenges.
+<!--      Fast coder with a focus on clean, maintainable code.-->
+    </p>
+    <p><b>French</b> citizen, currently <b>living in Colombia</b>, where my partner works in humanitarian aid. I am seeking a remote position and am fully <b>open to regular travel</b>.</p>
+    <p>I am a self-motivated person who is always eager to improve.</p>
+<!--    <p>My time in dynamic startups has allowed me to be proactive, take initiative, and explore many technologies, while my experience in the DRC taught me to navigate complex hierarchies and effective communication.</p>-->
+<!--    <p>Convinced by TypeScript despite Node's shortcomings and chaotic JS ecosystem.</p>-->
+  `,
   education: {
     label: 'Education',
     articles: [
@@ -127,10 +134,9 @@ export const cvEn: Cv = {
         location: 'Mediarithmics - Paris',
         period: '2019 - 2020 (1 year)',
         content: `
-          Developed <code>Node/TypeScript</code> applications <b>streaming dozen of GBs of data</b>.
-          Allow, through an <code>React</code> UI, to <b>build and monitor pipelines of microservices</b> in <code>Microsoft Azure</code>,
-          <b>linked by queues, orchestrated with <code>k8s (Docker)</code></b>.<br/>
-<!--          Developed <code>TypeScript</code> libraries, test coverage close to 100% with <code>Mocha</code>.-->
+          Developed a cloud application in Node/TypeScript to <b>build and monitor microservice pipelines linked by queues</b>, with a powerful React UI. The system <b>ingested large volumes of data from major French companies</b> to deliver advanced analytics.
+          Microservices could be built in TypeScript using a lightweight framework and deployed to the app library for use in pipelines.
+          Pipelines were deployed using <b>Kubernetes</b>.
         `,
         tags: ['k8s', 'Docker', 'TypeScript', 'React'],
       },
@@ -254,7 +260,7 @@ export const cvEn: Cv = {
         title: 'ActivityInfo SDK',
         content: '<code>TypeScript</code> SDK for interacting with the ActivityInfo API. Features a <code>TypeScript</code> interface builder that simplifies unintelligible request bodies and enables data submission in a human-readable format.',
         links: [
-          {url: 'https://github.com/alexandreannic/activityinfo-sdk'}
+          {url: 'https://github.com/DRC-UA/activityinfo-sdk'}
         ]
       },
     ]
@@ -350,15 +356,6 @@ export const cvEn: Cv = {
           },
           {
             icon: {
-              iconImgSrc: 'dev/csharp.png',
-              iconFa: 'fa-solid fa-hashtag',
-
-            },
-            title: 'C#',
-            rate: 2.5,
-          },
-          {
-            icon: {
               iconImgSrc: 'dev/php.png',
               iconFa: 'fab fa-php',
             },
@@ -373,6 +370,15 @@ export const cvEn: Cv = {
             },
             title: 'C/C++',
             rate: 3,
+          },
+          {
+            icon: {
+              iconImgSrc: 'dev/csharp.png',
+              iconFa: 'fa-solid fa-hashtag',
+
+            },
+            title: 'C#',
+            rate: 2.5,
           },
           {
             icon: {
@@ -425,8 +431,8 @@ export const cvEn: Cv = {
     label: 'Various',
     articles: [
       `<b>French</b>: Native speaker.`,
-      `<b>English</b>: Fluent, worked in English environment.`,
-      `<b>Daily sport</b>: Crossfit, Mountaineering, Climbing, Running.</div>`,
+      `<b>English</b>: Fluent, professional experience.`,
+      `<b>Daily sport</b>: Crossfit, Climbing, Running.</div>`,
       '<b>BAFA</b>: Youth Work Diploma.',
       '<b>Driving licence</b>',
     ]

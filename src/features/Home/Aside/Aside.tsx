@@ -83,7 +83,7 @@ export const Aside = () => {
         // color: 'text.secondary',
         '& p': {
           mt: 0,
-          mb: .5,
+          mb: 1,
         },
         fontSize: cssMixins.fontSmall,
         mb: 1,
