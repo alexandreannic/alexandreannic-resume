@@ -51,6 +51,19 @@ export const Home = () => {
             {/*<Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{mb: 1}}/>*/}
             <Grid2 container spacing={2}>
               <Grid2 size={{xs: 12, md: 6}}>
+                {m.skills.articles.filter(_ => _.title === 'Languages').map(((s, i) =>
+                    <Animated delay={200} key={i}>
+                      <Panel title={s.title}>
+                        {s.content.map((c, j) => (
+                          <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
+                            {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
+                          </Skill>
+                        ))}
+                      </Panel>
+                    </Animated>
+                ))}
+              </Grid2>
+              <Grid2 size={{xs: 12, md: 6}}>
                 {m.skills.articles.filter(_ => _.title === 'Framework').map(((s, i) =>
                     <Animated key={i}>
                       <Panel title={s.title} sx={{mb: 2}}>
@@ -64,19 +77,6 @@ export const Home = () => {
                 ))}
                 {m.skills.articles.filter(_ => _.title === 'Persistence').map(((s, i) =>
                     <Animated delay={100} key={i}>
-                      <Panel title={s.title}>
-                        {s.content.map((c, j) => (
-                          <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
-                            {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
-                          </Skill>
-                        ))}
-                      </Panel>
-                    </Animated>
-                ))}
-              </Grid2>
-              <Grid2 size={{xs: 12, md: 6}}>
-                {m.skills.articles.filter(_ => _.title === 'Languages').map(((s, i) =>
-                    <Animated delay={200} key={i}>
                       <Panel title={s.title}>
                         {s.content.map((c, j) => (
                           <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>

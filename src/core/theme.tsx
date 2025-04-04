@@ -5,7 +5,7 @@ import {tabletWidth} from '@/utils/style'
 
 const backgroundStartColor = darken('#031525', .4)
 
-export const makeTheme = ({fontSize = 15, spacing = 8}: {spacing?: number, fontSize?: number} = {}) => createTheme({
+export const makeTheme = ({fontSize = 14, spacing = 8}: {spacing?: number, fontSize?: number} = {}) => createTheme({
   defaultColorScheme: 'dark',
   cssVariables: {
     colorSchemeSelector: 'class',

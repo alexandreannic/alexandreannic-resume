@@ -14,10 +14,10 @@ export const AsideLinkCompact = () => {
       <ProfileLink iconColor="text.disabled" icon={{iconMat: 'email'}}>
         <a href="mailto:alexandre.annic1@gmail.com">alexandre.annic1@gmail.com</a>
       </ProfileLink>
-      <Box sx={{maxWidth: 400, display: 'flex', mt: 1, alignItems: 'center', justifyContent: 'space-around'}}>
+      <Box sx={{maxWidth: 400, display: 'flex', mt: 1, mb: -1, alignItems: 'center', justifyContent: 'space-around'}}>
         {m.links.map(link =>
           <ProfileLink
-            size={28}
+            size={26}
             icon={link.icon}
             key={link.url}
             href={link.url}

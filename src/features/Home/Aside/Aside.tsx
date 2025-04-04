@@ -59,7 +59,7 @@ export const Aside = () => {
       <AsideLinkCompact/>
 
       <Divider sx={{
-        my: 1,
+        mb: 1,
         [`@media (max-width:${mobileWidth}px)`]: {
           display: 'none',
         },
@@ -80,7 +80,7 @@ export const Aside = () => {
       <Divider sx={{mt: 1, mb: 2}}/>
 
       <Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{
-        color: 'text.secondary',
+        // color: 'text.secondary',
         '& p': {
           mt: 0,
           mb: .5,
@@ -91,7 +91,7 @@ export const Aside = () => {
       }}/>
 
       {m.various.articles.map(_ =>
-        <Box dangerouslySetInnerHTML={{__html: _}} sx={{color: 'text.secondary', mb: .5}}/>)}
+        <Box dangerouslySetInnerHTML={{__html: _}} sx={{mb: .5}}/>)}
     </Box>
   )
 }
