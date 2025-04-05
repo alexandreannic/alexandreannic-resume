@@ -2,7 +2,7 @@ import {Cv} from '@/i18n/Cv'
 
 export const cvEn: Cv = {
   job: 'Software Engineer',
-  location: 'Bogotá, Colombia',
+  location: 'Bogotá, Colombia (French citizen)',
   links: [
     {
       url: 'https://stackoverflow.com/users/5735030',
@@ -82,7 +82,7 @@ export const cvEn: Cv = {
     ]
   },
   work: {
-    label: 'Work experiences',
+    label: 'Work Experiences',
     articles: [
       {
         title: 'Information Management Coordinator',
@@ -99,6 +99,7 @@ export const cvEn: Cv = {
           <b>Context</b>: DRC is one of the largest international NGOs, with Ukraine as its biggest mission. 
           Traditional Information Management, relying on manual effort, couldn't scale.<br/>
           Developed <b>InfoPortal</b>, a platform that harmonizes external data sources to enable fluid data manipulation, analysis, protection, and automated reporting to cluster systems.<br/> 
+          Transformed processes that took weeks of work by dozens of teams into a <b>single click</b>.<br/>
           <b>Engaged key stakeholders</b> to drive adoption across missions. <b>Built and train a team</b> to ensure sustainability. 
         `
       },
@@ -130,7 +131,7 @@ export const cvEn: Cv = {
         tags: ['Scala', 'TypeScript', 'Angular', 'React', 'PSQL']
       },
       {
-        title: 'Big Data engineer',
+        title: 'Big Data Engineer',
         location: 'Mediarithmics - Paris',
         period: '2019 - 2020 (1 year)',
         content: `
@@ -142,9 +143,9 @@ export const cvEn: Cv = {
       },
       {
         logo: 'particeep.jpg',
-        title: 'Software engineer',
+        title: 'Software Engineer',
         location: 'Particeep - Paris',
-        period: '2016 - 2019 (3 years)',
+        period: '2016 - 2019 (4 years)',
         content: `
           Contributed to the evolution of the <b>REST and <code>GraphQL</code> API in <code>Scala</code> with <code>PostgresSQL</code></b>.<br/>
           <b>Led the creation of multiple</b> <code>React</code> and <code>Angular</code> applications from scatch.<br/>
@@ -156,7 +157,7 @@ export const cvEn: Cv = {
       },
       {
         logo: 'activa.png',
-        title: 'Software developer',
+        title: 'Software Developer',
         location: 'Activa Informatique - Paris',
         period: 'Summers 2013, 2014 and 2015',
         content: `

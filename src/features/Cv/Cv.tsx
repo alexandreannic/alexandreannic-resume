@@ -11,20 +11,22 @@ import {CvSection} from '@/features/Cv/CvSection'
 import {CvSideLink} from '@/features/Cv/CvSideLink'
 import {CvLink} from '@/features/Cv/CvLink'
 import {TagContainer} from '@/features/Home/Tag'
+import {cvFr} from '@/i18n/cv.fr'
 
 export const Cv = () => {
-  const {m} = useI18n()
+  // const {m} = useI18n()
+  const m = cvFr
   return (
     <Pdf>
       <PdfSlide format="vertical">
         <Box sx={{px: 3, py: 2, display: 'flex'}}>
           <Box sx={{width: 250, mr: 2.5,}}>
             <Box sx={{display: 'flex', alignItems: 'center', mb: 1}}>
-              {/*<Logo*/}
-              {/*  sx={{backgroundColor: 'rgba(0,0,0,.4)', mb: -.5, backgroundSize: '110%', borderRadius: '50%', marginRight: 1.5}}*/}
-              {/*  size={55}*/}
-              {/*  src="avatar.png"*/}
-              {/*/>*/}
+              <Logo
+                sx={{backgroundColor: 'rgba(0,0,0,.4)', mb: 0, backgroundSize: '110%', borderRadius: '50%', marginRight: 1.5}}
+                size={55}
+                src="avatar.png"
+              />
               <Box>
                 <Box sx={{fontSize: cssMixins.fontTitle}}>Alexandre Annic</Box>
                 <Box sx={{color: 'text.secondary', fontSize: cssMixins.fontBig, fontWeight: 500}}>
