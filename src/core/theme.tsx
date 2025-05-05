@@ -15,10 +15,10 @@ export const makeTheme = ({fontSize = 14, spacing = 8}: {spacing?: number, fontS
     light: {
       palette: {
         text: {
-          // primary: 'rgb(66, 69, 68)',
+          primary: 'rgb(66, 69, 68)',
         },
         primary: {
-          main: '#0b57d0',
+          main: '#0071cd',
           light: lighten('#0b57d0', .5),
           dark: darken('#0b57d0', .5),
           contrastText: '#FFFFFF',

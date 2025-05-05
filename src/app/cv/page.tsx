@@ -9,7 +9,7 @@ export default function CvPage() {
   return (
     <ThemeProvider defaultMode="dark" theme={makeTheme({
       fontSize: 12.5,
-      spacing: 6,
+      spacing: 7,
     })}>
       <CssBaseline enableColorScheme/>
       <Cv/>

@@ -61,7 +61,12 @@ export const Rate = ({rate, fontSize = 16}: {fontSize?: number, rate: number}) =
   }
 
   return (
-    <Box sx={{color: 'primary.main', display: 'flex', alignItems: 'center'}}>
+    <Box sx={{
+      color: '#fbbd05',
+      // color: 'primary.main',
+      display: 'flex',
+      alignItems: 'center'
+    }}>
       {/* Full stars */}
       {mapFor(integer, (i) => getStarIcon(i, 'star'))}
 

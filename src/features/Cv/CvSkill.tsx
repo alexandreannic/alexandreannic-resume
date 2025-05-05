@@ -50,7 +50,9 @@ export const CvSkill = ({
           sx={{
             display: 'flex',
             color: 'text.primary',
-            justifyContent: 'space-between',
+            textAlign: 'right',
+            justifyContent: 'flex-end',
+            pr: 2,
             alignItems: 'center',
             flex: 1,
             fontWeight: 500,

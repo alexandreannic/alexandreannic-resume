@@ -15,18 +15,16 @@ export const cvFr: Cv = {
       label: 'github.com/alexandreannic',
     },
     {
-      url: 'https://www.linkedin.com/in/alexandreannic/',
+      url: ' ',
       icon: {iconFa: 'fab fa-linkedin'},
       label: 'linkedin.com/in/alexandreannic',
     }
   ],
   summary: `
-    <p>
       Ingénieur logiciel passionné avec <b>plus de 10 ans d'expérience</b>.
       Durant mes études, je me suis spécialisé en <b>algorithmes, systèmes distribués et protocoles réseau</b>. Compétent dans la création d'<b>interfaces intuitives</b>, j’ai une solide compréhension des principes de <b>sécurité</b> et j’apprécie relever les défis de <b>scalabilité</b>.
-    </p>
-    Actuellement <b>résidant en Colombie</b>, où ma compagne travaille dans l’humanitaire. Je recherche un poste en <b>télétravail</b>.
-    <p>Je suis autonome, toujours motivée à progresser.</p>
+    <b>Résidant en Colombie</b>, où ma compagne travaille dans l’humanitaire. Je recherche un poste en <b>télétravail</b>.
+    Je suis autonome, toujours motivée à progresser.
   `,
   education: {
     label: 'Formation',
@@ -89,13 +87,15 @@ export const cvFr: Cv = {
         tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
         links: [
           {label: 'Démo dashboard', url: 'https://infoportal-ua.drc.ngo/dashboard/protection-monitoring'},
-          {label: 'GitHub', url: 'https://github.com/DRC-UA/infoportal'},
+          {label: 'GitHub', url: 'https://github.com/DRC-UA'},
         ],
         content: `
           DRC, l’une des plus grandes ONG internationales, et l’Ukraine sa plus importante mission. La gestion traditionnelle des données ne pouvait pas passer à l’échelle.<br/>
-          Développement <b>InfoPortal</b>, une plateforme qui harmonise les sources de données externes permettant une manipulation fluide, leur analyse, leur protection et le reporting automatique aux clusters.<br/> 
-          Transformation des processus prenant des semaines à plusieurs équipes en un simple <b>clic</b>.
-          Implication le siège et les principaux acteurs</b> pour pousser l’adoption dans les autres missions. <b>Construit et formé une équipe</b> pour assurer la pérennité.
+          <ul>
+          <li>Développement <b>InfoPortal</b>, une plateforme qui harmonise les sources de données externes permettant une manipulation fluide, leur analyse, leur protection et le reporting automatique aux clusters.<br/></li> 
+          <li>Transformation des processus prenant des semaines aux équipes en un simple <b>clic</b>.</li>
+          <li>Implication le siège et les principaux acteurs</b> pour pousser l’adoption dans les autres missions. <b>Construit et formé une équipe</b> pour assurer la pérennité.</li>
+          </ul>
         `
       },
       {
@@ -103,9 +103,11 @@ export const cvFr: Cv = {
         location: 'Ministère de l’Économie, beta.gouv - Paris',
         period: '2020 - 2022 (2 ans)',
         content: `
-          Développement de l’application <b>SignalConso</b>, qui met en relation les signalements des consommateurs avec les entreprises, sous la supervision de la <b>Répression des fraudes</b>.
-          Traitement de <b>10 000 signalements mensuels</b>, concernant <b>toutes les grandes entreprises françaises</b>, avec un <b>taux de satisfaction de 93%</b>.
-          Développement de l’API <code>Scala</code>, refonte de l’app. front et <b>lead les décisions UX/UI</b>.
+          <ul>
+          <li>Développement de l’application <b>SignalConso</b>, qui met en relation les signalements des consommateurs avec les entreprises, sous la supervision de la <b>Répression des fraudes</b>.</li>
+          <li>Traitement de <b>10 000 signalements mensuels</b>, incluant <b>toutes les grandes entreprises françaises</b>, avec un <b>taux de satisfaction de 93%</b>.</li>
+          <li>Développement de l’API <code>Scala</code>, <b>lead technique et UI/UX</b> de l’application front.</li>
+          </ul>
         `,
         links: [
           {url: 'https://signal.conso.gouv.fr', label: 'signal.conso.gouv'},
@@ -118,9 +120,11 @@ export const cvFr: Cv = {
         location: 'Mediarithmics - Paris',
         period: '2019 - 2020 (1 an)',
         content: `
-          Développement d’une application cloud en Node/TypeScript pour <b>créer et monitorer des pipelines de microservices</b> connectés par des <b>queues</b> et piloté par une interface React.
-          Le système <b>ingérait de grands volumes de données d’entreprises françaises</b> pour fournir des analyses avancées.
-          Les microservices étaient créés en TypeScript et déployés via <b>K8s</b>.
+          <ul>
+         <li>Développement d’une application cloud en Node/TypeScript pour <b>créer et monitorer des pipelines de microservices</b> liés par des <b>queues</b> et piloté par une interface React.</li>
+         <li>Le système <b>ingérait de grands volumes de données d’entreprises françaises</b> pour fournir des analyses avancées.</li>
+         <li>Les microservices étaient créés en TypeScript et déployés via <b>K8s</b>.</li>
+          </ul>
         `,
         tags: ['k8s', 'Docker', 'TypeScript', 'React'],
       },
@@ -130,11 +134,12 @@ export const cvFr: Cv = {
         location: 'Particeep - Paris',
         period: '2016 - 2019 (4 ans)',
         content: `
-          Contribution à l’évolution de l’<b>API REST et <code>GraphQL</code> en <code>Scala</code> avec <code>PostgreSQL</code></b>.<br/>
-          <b>Responsable de la création de plusieurs</b> applications en <code>React</code> et <code>Angular</code>.<br/>
-          Développement du SDK API pour <code>JavaScript</code>, <code>PHP</code> et <code>Scala</code>.<br/>
-          Tests fonctionnels et e2e (<code>Selenium</code>, <code>Mocha</code>, <code>Protractor</code>).
-          <b>CI</b> avec <code>Jenkins</code>.
+          <ul>
+          <li>Contribution à l’évolution de l’<b>API REST et <code>GraphQL</code> en <code>Scala</code> avec <coe>PostgreSQL</coe></b>.<br/></li>
+          <li><b>Responsable de la création de plusieurs</b> applications en <code>React</code> et <cod>Angular</cod>.<br/></li>
+          <li>Développement du SDK API pour <code>JavaScript</code>, <code>PHP</code> et <code>Scala</code>.<br/></li>
+          <li>Tests fonctionnels et e2e (<code>Seleniu</code>, <code>Mocha</code>, <code>Protractor</code>) et <b>CI</b> avec <code>Jenkins</code>.</li>
+          </ul>
         `,
         tags: ['Java', 'Scala', 'Angular', 'AngularJs', 'React', 'PHP', 'PSQL'],
       },
@@ -144,8 +149,7 @@ export const cvFr: Cv = {
         location: 'Activa Informatique - Paris',
         period: 'Été 2013, 2014 et 2015',
         content: `
-          Développement de fonctionnalités pour une application SaaS en <code>Java</code>, <code>JPA</code>, <code>JQuery</code> et <code>MySQL</code>: agenda, messagerie instantanée, statistiques.<br/>
-          Création de sites web en <code>PHP</code> pour des PME et associations.
+          Développé des fonctionnalités SaaS (calendrier, chat, tableau de bord) avec Java, PHP, jQuery et MySQL.
         `,
         tags: ['Java', 'PHP', 'JavaScript', 'JQuery']
       },
@@ -154,8 +158,7 @@ export const cvFr: Cv = {
         location: 'LRI (Laboratoire de Recherche en Informatique) - Orsay',
         period: '2013 (3 mois)',
         content: `
-          Participation au projet <b>Grid Observatory</b> au sein de l’<b>European Grid Infrastructure</b>, en lien avec les expériences du LHC en physique des hautes énergies.
-          Reconstitution d’un flux de +200Go/mois à partir de 250 sources de traces d’usage de grille incohérentes, pour les rendre exploitables par les chercheurs.
+          Contribution au projet <b>Grid Observatory</b>, traitant un large flux de données issu du <b>LHC</b>.
         `,
         tags: ['Perl', 'Bash', 'MySQL']
       },
@@ -226,7 +229,7 @@ export const cvFr: Cv = {
               iconImgSrc: 'dev/play.png',
               iconFa: 'fa-solid fa-chevron-right',
             },
-            title: 'Play (Java et Scala)',
+            title: 'Play (Java / Scala)',
             rate: 4,
             content: `
             Utilisé avec <code>Scala</code> et <code>Java</code> pour construire des APIs REST et <code>GraphQL</code>.
@@ -283,7 +286,7 @@ export const cvFr: Cv = {
               iconImgSrc: 'dev/c++.png',
               iconFa: 'fab fa-c',
             },
-            title: 'C/C++',
+            title: 'C / C++',
             rate: 3,
           },
           {
@@ -305,6 +308,7 @@ export const cvFr: Cv = {
           },
           {
             icon: {
+              iconImgSrc: 'dev/python.png',
               iconFa: 'fa-brands fa-python',
             },
             title: 'Python',
@@ -321,7 +325,7 @@ export const cvFr: Cv = {
               iconFa: 'fa-solid fa-database',
             },
             title: 'SQL',
-            rate: 4.5,
+            rate: 5,
           },
           {
             icon: {
@@ -341,7 +345,7 @@ export const cvFr: Cv = {
     articles: [
       `<b>Français</b>: Langue maternelle.`,
       `<b>Anglais</b>: Courant, expérience pro.`,
-      `<b>Sport quotidien</b>: CrossFit, escalade, running.</div>`,
+      `<b>Sport</b>: CrossFit, escalade, running.</div>`,
       '<b>BAFA</b>.',
       '<b>Permis de conduire</b>.',
     ]

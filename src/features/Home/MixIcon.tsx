@@ -44,6 +44,10 @@ export const MixIcon = ({
     iconImgSrc,
     iconText
   } = icon
+  if (iconImgSrc)
+    return (
+      <Logo src={iconImgSrc} sx={common}/>
+    )
   if (iconFa) {
     return (
       <Box
@@ -73,10 +77,6 @@ export const MixIcon = ({
       >
         {iconMat}
       </MuiIcon>
-    )
-  if (iconImgSrc)
-    return (
-      <Logo src={iconImgSrc} sx={common}/>
     )
   return <></>
 }

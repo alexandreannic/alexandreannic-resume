@@ -36,10 +36,15 @@ export const CvPanel = ({
         padding: 2,
         borderRadius: cssMixins.radius + 'px',
         backgroundColor: 'background.paper',
-        backdropFilter: 'blur(15px)',
+        // border: '1px solid',
+        // borderColor: 'divider',
         transition: 'all 300ms ease-in-out',
         fontSize: cssMixins.fontMedium,
         mb: .5,
+        '& ul': {
+          m: 0,
+          paddingLeft: '12px',
+        },
         ...horizontal ? {
           flex: 1,
           '&:not(:last-of-type)': {

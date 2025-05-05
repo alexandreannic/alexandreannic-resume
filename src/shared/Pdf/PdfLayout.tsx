@@ -18,6 +18,9 @@ const generalStyles = (
         },
       },
       '@media print': {
+        'nextjs-portal': {
+          display: 'none',
+        },
         '.gm-fullscreen-control': {
           display: 'none',
         },

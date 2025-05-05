@@ -21,13 +21,11 @@ export const cvEn: Cv = {
     }
   ],
   summary: `
-    <p>
       Passionate software engineer with <b>10+ years of experience</b>.
-      During my academic years, I focused on <b>algorithms, distributed systems, and network protocols</b>. Skilled at building <b>intuitive UI</b>, I have a strong grasp of <b>security</b> principles, and enjoy tackling <b>scalability</b> challenges.
+      During my academic years, I focused on algorithms and distributed systems. Skilled at building <b>intuitive UI</b>, I have a strong grasp of <b>security</b> principles, and enjoy tackling <b>scalability</b> challenges.
 <!--      Fast coder with a focus on clean, maintainable code.-->
-    </p>
-    <p><b>French</b> citizen, currently <b>living in Colombia</b>, where my partner works in humanitarian aid. I am seeking a remote position and am fully <b>open to regular travel</b>.</p>
-    <p>I am a self-motivated person who is always eager to improve.</p>
+    <b>French</b> citizen, <b>living in Colombia</b>, where my partner works in humanitarian aid. I am seeking a remote position and am fully <b>open to regular travel</b>.
+    I am a self-motivated person who is always eager to improve.
 <!--    <p>My time in dynamic startups has allowed me to be proactive, take initiative, and explore many technologies, while my experience in the DRC taught me to navigate complex hierarchies and effective communication.</p>-->
 <!--    <p>Convinced by TypeScript despite Node's shortcomings and chaotic JS ecosystem.</p>-->
   `,
@@ -91,16 +89,18 @@ export const cvEn: Cv = {
         tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
         links: [
           {label: 'Demo dashboard', url: 'https://infoportal-ua.drc.ngo/dashboard/protection-monitoring'},
-          {label: 'GitHub', url: 'https://github.com/DRC-UA/infoportal'},
+          {label: 'GitHub', url: 'https://github.com/DRC-UA'},
           // {label: 'Kobo SDK', url: 'https://github.com/DRC-UA/kobo-sdk'},
           // {label: 'ActivityInfo SDK', url: 'https://github.com/DRC-UA/activityinfo-sdk'}
         ],
         content: `
           <b>Context</b>: DRC is one of the largest international NGOs, with Ukraine as its biggest mission. 
           Traditional Information Management, relying on manual effort, couldn't scale.<br/>
-          Developed <b>InfoPortal</b>, a platform that harmonizes external data sources to enable fluid data manipulation, analysis, protection, and automated reporting to cluster systems.<br/> 
-          Transformed processes that took weeks of work by dozens of teams into a <b>single click</b>.<br/>
-          <b>Engaged key stakeholders</b> to drive adoption across missions. <b>Built and train a team</b> to ensure sustainability. 
+          <ul>
+          <li>Built <b>InfoPortal</b>, a platform that harmonizes external data sources to enable fluid data manipulation, analysis, security, and automated reporting to cluster.</li> 
+          <li>Transformed processes that took weeks of work by teams into a <b>single click</b>.</li>
+          <li><b>Engaged key stakeholders</b> to drive adoption across missions. <b>Built and train a team</b> to ensure sustainability.</li> 
+          </ul>
         `
       },
 //       {
@@ -120,9 +120,11 @@ export const cvEn: Cv = {
         location: 'French Ministry of Economics, beta.gouv - Paris',
         period: '2020 - 2022 (2 years)',
         content: `
-          Developed the <b>SignalConso</b> application to connect consumer complaints and feedbacks with companies, overseen by <b>Consumer Affairs and Fraud Prevention</b>.
-          Handled <b>100,000 monthly consumer reports</b>, involving all <b>major French companies</b>, with a <b>satisfaction rate of 93%</b>.
-          Developed <code>Scala</b> API, rebuilt client app from scratch and <b>leading UX/UI decisions</b>.
+          <ul>
+         <li>Developed the <b>SignalConso</b> application to connect consumer complaints and feedbacks with companies, overseen by <b>Consumer Affairs and Fraud Prevention</b>.</li>
+         <li>Handled <b>100,000 monthly consumer reports</b>, involving all <b>major French companies</b>, with a <b>satisfaction rate of 93%</b>.</li>
+         <li>Developed <code>Scala</b> API, <b>technical and UX/UX</b> lead of the client app.</li>
+          </ul>
         `,
         links: [
           {url: 'https://signal.conso.gouv.fr', label: 'signal.conso.gouv'},
@@ -135,9 +137,11 @@ export const cvEn: Cv = {
         location: 'Mediarithmics - Paris',
         period: '2019 - 2020 (1 year)',
         content: `
-          Developed a cloud application in Node/TypeScript to <b>build and monitor microservice pipelines linked by queues</b>, with a powerful React UI. The system <b>ingested large volumes of data from major French companies</b> to deliver advanced analytics.
-          Microservices could be built in TypeScript using a lightweight framework and deployed to the app library for use in pipelines.
-          Pipelines were deployed using <b>Kubernetes</b>.
+          <ul>
+         <li>Developed a cloud application in Node/TypeScript to <b>build and monitor microservice pipelines linked by queues</b>, with a powerful React UI. The system <b>ingested large volumes of data from major French companies</b> to deliver advanced analytics.</li>
+         <li>Microservices could be built in TypeScript using a lightweight framework and deployed to the app library for use in pipelines.</li>
+         <li>Pipelines were deployed using <b>Kubernetes</b>.</li>
+          </ul>
         `,
         tags: ['k8s', 'Docker', 'TypeScript', 'React'],
       },
@@ -147,11 +151,13 @@ export const cvEn: Cv = {
         location: 'Particeep - Paris',
         period: '2016 - 2019 (4 years)',
         content: `
-          Contributed to the evolution of the <b>REST and <code>GraphQL</code> API in <code>Scala</code> with <code>PostgresSQL</code></b>.<br/>
-          <b>Led the creation of multiple</b> <code>React</code> and <code>Angular</code> applications from scatch.<br/>
-          Developed the API SDK for <code>JavaScript</code>, <code>PHP</code> and <code>Scala</code>.<br/>
-          Built functional and e2e tests with <code>Selenium</code>, <code>Mocha</code> and <code>Protractor</code>.<br/>
-          Implemented CI with <code>Jenkins</code>.<br/>
+<ul>
+          <li>Contributed to the evolution of the <b>REST and <code>GraphQL</code> API in <code>Scala</code> with <code>PostgresSQL</code></b>.<br/></li>
+          <li><b>Led the creation of multiple</b> <code>React</code> and <code>Angular</code> applications from scatch.<br/></li>
+          <li>Developed the API SDK for <code>JavaScript</code>, <code>PHP</code> and <code>Scala</code>.<br/></li>
+          <li>Built functional and e2e tests with <code>Selenium</code>, <code>Mocha</code> and <code>Protractor</code>.<br/></li>
+          <li>Implemented CI with <code>Jenkins</code>.<br/></li>
+</ul>
         `,
         tags: ['Java', 'Scala', 'Angular', 'AngularJs', 'React', 'PHP', 'PSQL'],
       },
@@ -161,10 +167,8 @@ export const cvEn: Cv = {
         location: 'Activa Informatique - Paris',
         period: 'Summers 2013, 2014 and 2015',
         content: `
-        Developed features on a SaaS application with <code>Java</code>, <code>JPA</code>, <code>JQuery</code>
-        and <code>MySQL</code> such as appointments calendar, real-time chat, statistics.<br/>
-        Developed websites in <code>PHP</code> for small businesses and associations.
-      `,
+          Built SaaS features (calendar, chat, dashboard) using Java, PHP, jQuery, and MySQL.
+        `,
         tags: ['Java', 'PHP', 'JavaScript', 'JQuery',]
       },
       // {
@@ -182,8 +186,8 @@ export const cvEn: Cv = {
         location: 'LRI (Computer Research Laboratory) - Orsay',
         period: '2013 (3 months)',
         content: `
-          Worked on the <b>Grid Observatory</b> project within the <b>European Grid Infrastructure</b>, collecting vast amounts of data from high-energy physics experiments at the LHC.
-          Reconstructed a flow of +200Go/month from 250 sources of inconsistent grid usage traces to make them workable for researchers.
+          Worked on the <b>Grid Observatory</b> project, handling large stream of data from the <b>LHC</b>.
+<!--          Reconstructed a flow of +200Go/month from 250 sources of inconsistent grid usage traces to make them workable for researchers.-->
         `,
         tags: ['Perl', 'Bash', 'MySQL']
       },
@@ -309,7 +313,7 @@ export const cvEn: Cv = {
               iconImgSrc: 'dev/play.png',
               iconFa: 'fa-solid fa-chevron-right',
             },
-            title: 'Play (Java and Scala)',
+            title: 'Play (Java / Scala)',
             rate: 4,
             content: `
             Used both <code>Scala</code> and <code>Java</code> to build REST and <code>GraphQL</code> API
@@ -369,7 +373,7 @@ export const cvEn: Cv = {
               iconFa: 'fab fa-c',
 
             },
-            title: 'C/C++',
+            title: 'C / C++',
             rate: 3,
           },
           {
@@ -392,6 +396,7 @@ export const cvEn: Cv = {
           },
           {
             icon: {
+              iconImgSrc: 'dev/python.png',
               iconFa: 'fa-brands fa-python',
             },
             title: 'Python',
@@ -408,7 +413,7 @@ export const cvEn: Cv = {
               iconFa: 'fa-solid fa-database',
             },
             title: 'SQL',
-            rate: 4.5,
+            rate: 5,
             // content: `
             //   Mainly <code>PostGres</code> anad <code>MySQL</code>. Script <code>PL/SQL</code>
             // `
