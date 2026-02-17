@@ -9,22 +9,23 @@ import {CvSection} from '@/features/Cv/CvSection'
 import {CvSideLink} from '@/features/Cv/CvSideLink'
 import {CvLink} from '@/features/Cv/CvLink'
 import {TagContainer} from '@/features/Home/Tag'
-import {cvFr as cvEn} from '@/i18n/cv.fr'
-import Icon from '@mui/material/Icon'
+import {map} from '@axanc/ts-utils'
+import {cvEn} from '@/i18n/cv.en'
 import Logo from '@/utils/Logo'
+import {cvFr} from '@/i18n/cv.fr'
 
 export const Cv = () => {
   // const {m} = useI18n()
-  const m = cvEn
+  const m = cvFr
   return (
     <Pdf>
       <PdfSlide format="vertical">
-        <Box sx={{px: 3, py: 2, display: 'flex'}}>
+        <Box sx={{px: 3, py: 3, display: 'flex'}}>
           <Box sx={{width: 245, mr: 2.5,}}>
             <Box sx={{display: 'flex', alignItems: 'center', mb: 1}}>
               <Logo
                 sx={{backgroundColor: 'rgba(0,0,0,.4)', mb: 0, backgroundSize: '110%', borderRadius: '50%', marginRight: 1.5}}
-                size={55}
+                size={50}
                 src="avatar.png"
               />
               <Box>
@@ -49,12 +50,17 @@ export const Cv = () => {
               <Box
                 dangerouslySetInnerHTML={{__html: m.summary}}
                 sx={{
+                  'b': {
+                    fontWeight: 400,
+                    color: 'black',
+                  },
                   '& p': {
                     mt: 0,
                     mb: .5,
                   },
+                  fontWeight: 400,
                   fontSize: cssMixins.fontSmall,
-                  color: 'text.secondary',
+                  color: 'text.disabled',
                   textAlign: 'justify',
                   mb: 1.5
                 }}/>
@@ -63,7 +69,7 @@ export const Cv = () => {
             {m.skills.articles.map(s =>
               <CvSection title={s.title} sx={{mt: 2}}>
                 {s.content.map((c, j) => (
-                  <CvSkill key={j} icon={c.icon} title={c.title} rate={c.rate} sx={{mb: 1.25}}>
+                  <CvSkill key={j} icon={{...c.icon, iconSizeRation: (c.icon.iconSizeRation ?? 1) * .9}} title={c.title} rate={c.rate} sx={{mb: 1.25}}>
                     {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
                   </CvSkill>
                 ))}
@@ -71,19 +77,20 @@ export const Cv = () => {
             )}
             <CvSection title={m.various.label}>
               {m.various.articles.map(_ =>
-                <Box dangerouslySetInnerHTML={{__html: _}} sx={{mb: .5}}/>
+                <Box dangerouslySetInnerHTML={{__html: _}} sx={{mb: 1}}/>
               )}
             </CvSection>
           </Box>
           <Box sx={{flex: 1}}>
             <CvSection icon="school" title={m.education.label}>
-              <Box sx={{display: 'flex'}}>
+              <Box sx={{display: 'flex', gap: .25}}>
                 {m.education.articles.map((e, i) => (
                   <CvPanel
+                    sx={{flex: 1,}}
                     horizontal
                     isFirst={i === 0}
                     key={i}
-                    title={e.shortTitle}
+                    title={e.title}
                     subTitle={e.shortLocation ?? e.location}
                     logo={e.logo}
                   >
@@ -94,17 +101,28 @@ export const Cv = () => {
               </Box>
             </CvSection>
 
-            <CvSection title={m.work.label} sx={{mt: -1}}>
-              {m.work.articles.map((e, i) => (
-                <CvPanel isFirst={i === 0} step={e.period} honor={e.honor} title={e.title} subTitle={e.shortLocation ?? e.location} logo={e.logo}>
-                  <Box dangerouslySetInnerHTML={{__html: e.content}}/>
-                  <TagContainer sx={{mt: 1, fontSize: cssMixins.fontMedium}}>
-                    {e.links?.map(_ =>
-                      <CvLink key={_.url} url={_.url} icon={_.icon} label={shortUrl(_.url)}/>
+            <CvSection title={m.work.label}>
+              <Box sx={{display: 'flex', flexDirection: 'column', gap: .25}}>
+                {m.work.articles.map((e, i) => (
+                  <CvPanel
+                    isFirst={i === 0}
+                    step={e.period}
+                    honor={e.honor}
+                    title={e.title}
+                    subTitle={(map(e.shortLocation ?? e.location, loc => loc) ?? '') + (e.remote ? ` (${e.remote})` : '')}
+                    logo={e.logo}
+                  >
+                    {e.content && (
+                      <Box dangerouslySetInnerHTML={{__html: e.content}}/>
                     )}
-                  </TagContainer>
-                </CvPanel>
-              ))}
+                    <TagContainer sx={{mt: 1, fontSize: cssMixins.fontMedium}}>
+                      {e.links?.map(_ =>
+                        <CvLink key={_.url} url={_.url} icon={_.icon} label={shortUrl(_.url)}/>
+                      )}
+                    </TagContainer>
+                  </CvPanel>
+                ))}
+              </Box>
             </CvSection>
           </Box>
         </Box>

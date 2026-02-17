@@ -66,7 +66,7 @@ export const Panel = ({
           },
           '& b': {
             color: 'text.primary',
-            fontWeight: 600,
+            fontWeight: 500,
           },
           '& code': {
             // background: 'rgba(0,0,0,.1)',

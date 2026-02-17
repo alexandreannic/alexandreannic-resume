@@ -38,7 +38,7 @@ export const Project = ({
           }}/>
         )}
         <PanelTitle title={title}/>
-        <Box sx={{flex: 1}} dangerouslySetInnerHTML={{__html: content}}/>
+        {content && <Box sx={{flex: 1}} dangerouslySetInnerHTML={{__html: content}}/>}
         <Box sx={{mt: 1}}>
           {project.links?.map(_ =>
             <Link label={_.label} key={_.url} url={_.url}/>

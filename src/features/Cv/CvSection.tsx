@@ -30,6 +30,7 @@ export const CvSection = ({title, icon, noSeparator, children, sx, titleSx,}: {
             fontSize: cssMixins.fontTitle,
             fontWeight: 500,
             mb: 1,
+            // ml: 1.5,
             lineHeight: 1,
             ...titleSx,
           }}

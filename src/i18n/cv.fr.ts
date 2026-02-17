@@ -2,7 +2,7 @@ import {Cv} from '@/i18n/Cv'
 
 export const cvFr: Cv = {
   job: 'Ingénieur logiciel',
-  location: 'Bogotá, Colombie (nat. française)',
+  location: 'Paris, France',
   links: [
     {
       url: 'https://stackoverflow.com/users/5735030',
@@ -15,65 +15,49 @@ export const cvFr: Cv = {
       label: 'github.com/alexandreannic',
     },
     {
-      url: ' ',
+      url: 'https://www.linkedin.com/in/alexandreannic/',
       icon: {iconFa: 'fab fa-linkedin'},
       label: 'linkedin.com/in/alexandreannic',
     }
   ],
   summary: `
-      Ingénieur logiciel passionné avec <b>plus de 10 ans d'expérience</b>.
-      Durant mes études, je me suis spécialisé en <b>algorithmes, systèmes distribués et protocoles réseau</b>. Compétent dans la création d'<b>interfaces intuitives</b>, j’ai une solide compréhension des principes de <b>sécurité</b> et j’apprécie relever les défis de <b>scalabilité</b>.
-    <b>Résidant en Colombie</b>, où ma compagne travaille dans l’humanitaire. Je recherche un poste en <b>télétravail</b>.
-    Je suis autonome, toujours motivée à progresser.
+    Ingénieur logiciel senior avec <b>plus de 10 ans d’expérience</b>, spécialisé en <b>TypeScript et React</b> et à l’aise avec de nombreux langages et frameworks.
+    Expérience en <b>lead technique</b> et <b>management d’équipe</b>, avec une forte attention portée aux interfaces élégantes et intuitives ainsi qu’aux systèmes distribués scalables.
   `,
   education: {
     label: 'Formation',
     articles: [
       {
         shortTitle: 'Master',
-        shortContent: 'Science et technologie du logiciel',
-        shortLocation: 'UPMC - Paris',
-        title: `Master en science et technologie du logiciel`,
-        honor: 'Avec mention bien',
+        shortContent: `Science et Technologie du Logiciel`,
+        shortLocation: 'UPMC, Shanghai #40 mondial',
+        title: `Master Science et Informatique`,
+        honor: 'Mention Bien',
         period: '2016',
         location: 'UPMC (Université Pierre et Marie Curie) - Paris',
         logo: 'upmc.png',
         content: `
-          Algorithmique (compression, hash, géométrie 2D) -
-          Programmation multithreadée et distribuée
-          (<code>Scala</code>, <code>OCaml</code>, <code>Java</code>, <code>C</code>) -
-          Applications web (sécurité, traçabilité)
-        `
-      },
-      {
-        title: 'Licence en informatique',
-        shortTitle: 'Licence',
-        shortContent: 'Informatique',
-        honor: 'Avec mention bien',
-        period: '2014',
-        shortLocation: 'UPMC - Paris',
-        location: 'UPMC (Université Pierre et Marie Curie) - Paris',
-        content: `
-          Algorithmique (complexité, structures de données, récursivité) -
-          POO - Design patterns -
-          Bases de données (transactions, <code>SQL3</code>, <code>PL/SQL</code>, <code>NoSQL</code>, <code>XPath</code>)
-        `,
+        Algorithmique (compression, hash, géométrie 2D) –
+        Programmation distribuée et multithread
+        (<code>Scala</code>, <code>OCaml</code>, <code>Java</code>, <code>C</code>) –
+        Applications web (sécurité, tracking)
+      `
       },
       {
         title: 'DUT Informatique',
-        shortTitle: 'DUT (Bac+2)',
+        shortTitle: 'DUT',
         shortContent: 'Informatique',
         period: '2013',
-        location: 'IUT d\'Orsay',
+        location: 'IUT d’Orsay, Shanghai #13 mondial',
         logo: 'logo.jpg',
         content: `
-          Architecture Unix, bash, scripting -
-          POO en <code>Java</code>, <code>C++</code> -
-          <code>SQL</code> -
-          Programmation système en <code>C</code> (pipe, signal, fork, thread) -
-          Réseaux (DHCP, DNS, firewall) -
-          Architecture des ordinateurs
-        `,
+        Architecture Unix, bash, scripting –
+        POO <code>Java</code>, <code>C++</code> –
+        <code>SQL</code> –
+        Programmation système en <code>C</code> (pipe, signal, fork, thread) –
+        Réseaux (DHCP, DNS, Firewall) –
+        Architecture des ordinateurs
+      `,
       },
     ]
   },
@@ -81,32 +65,47 @@ export const cvFr: Cv = {
     label: 'Expériences professionnelles',
     articles: [
       {
+        title: 'Fondateur de NexusPortal',
+        period: '2025 - 2026 (1 an)',
+        tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
+        links: [
+          {label: 'NexusPortal', url: 'https://www.nexusportal.app/'},
+        ],
+        content: `
+          Création de NexusPortal, une plateforme SaaS <b>modernisant les workflows de gestion de l’information</b> dans le secteur humanitaire, basée sur l’expérience acquise chez DRC Ukraine.
+        `
+      },
+      {
         title: 'Information Management Coordinator',
-        location: 'Danish Refugee Council (DRC) - Ukraine',
+        location: 'Danish Refugee Council (DRC) - Ukraine, Kyiv',
+        remote: 'Présentiel',
         period: '2023 - 2025 (2 ans)',
         tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
         links: [
-          {label: 'Démo dashboard', url: 'https://infoportal-ua.drc.ngo/dashboard/protection-monitoring'},
-          {label: 'GitHub', url: 'https://github.com/DRC-UA'},
+          {label: 'Demo dashboard', url: 'https://infoportal-ua.drc.ngo/dashboard/protection-monitoring'},
+          {label: 'github.com/DRC-UA', url: 'https://github.com/DRC-UA'},
         ],
         content: `
-          DRC, l’une des plus grandes ONG internationales, et l’Ukraine sa plus importante mission. La gestion traditionnelle des données ne pouvait pas passer à l’échelle.<br/>
+          <b>Contexte</b> : DRC est l’une des plus grandes ONG internationales, l’Ukraine sa plus importante mission.
+          La gestion des données, très manuelle, ne passait pas à l’échelle.
           <ul>
-          <li>Développement <b>InfoPortal</b>, une plateforme qui harmonise les sources de données externes permettant une manipulation fluide, leur analyse, leur protection et le reporting automatique aux clusters.<br/></li> 
-          <li>Transformation des processus prenant des semaines aux équipes en un simple <b>clic</b>.</li>
-          <li>Implication le siège et les principaux acteurs</b> pour pousser l’adoption dans les autres missions. <b>Construit et formé une équipe</b> pour assurer la pérennité.</li>
+          <li>Création de <b>InfoPortal</b>, plateforme harmonisant les sources de données pour permettre <b>analyse, sécurité et reporting automatisé</b>.</li>
+          <li>Automatisation de processus nécessitant des semaines de travail en <b>un clic</b>.</li>
+          <li><b>Pilotage du déploiement</b> pour garantir l’adoption de la solution.</li> 
+          <li><b>Création et formation d’une équipe</b> pour assurer la soutenabilité</b>.</li>
           </ul>
         `
       },
       {
-        title: 'Ingénieur logiciel',
-        location: 'Ministère de l’Économie, beta.gouv - Paris',
+        title: 'Software Engineer',
+        location: 'Ministère de l’Économie (beta.gouv) - Paris',
+        remote: 'Télétravail',
         period: '2020 - 2022 (2 ans)',
         content: `
           <ul>
-          <li>Développement de l’application <b>SignalConso</b>, qui met en relation les signalements des consommateurs avec les entreprises, sous la supervision de la <b>Répression des fraudes</b>.</li>
-          <li>Traitement de <b>10 000 signalements mensuels</b>, incluant <b>toutes les grandes entreprises françaises</b>, avec un <b>taux de satisfaction de 93%</b>.</li>
-          <li>Développement de l’API <code>Scala</code>, <b>lead technique et UI/UX</b> de l’application front.</li>
+         <li>Développement de <b>SignalConso</b>, reliant les réclamations consommateurs aux entreprises sous l’égide de la <b>DGCCRF</b>.</li>
+         <li><b>100k signalements mensuels</b>, impliquant les <b>principales entreprises françaises</b>, avec <b>93% de satisfaction</b>.</li>
+         <li>Développement de l’API <code>Scala</code> et <b>lead technique & UX/UI</b> du front.</li>
           </ul>
         `,
         links: [
@@ -116,83 +115,76 @@ export const cvFr: Cv = {
         tags: ['Scala', 'TypeScript', 'Angular', 'React', 'PSQL']
       },
       {
-        title: 'Ingénieur Big Data',
+        title: 'Big Data Engineer',
+        remote: 'Présentiel',
         location: 'Mediarithmics - Paris',
         period: '2019 - 2020 (1 an)',
         content: `
-          <ul>
-         <li>Développement d’une application cloud en Node/TypeScript pour <b>créer et monitorer des pipelines de microservices</b> liés par des <b>queues</b> et piloté par une interface React.</li>
-         <li>Le système <b>ingérait de grands volumes de données d’entreprises françaises</b> pour fournir des analyses avancées.</li>
-         <li>Les microservices étaient créés en TypeScript et déployés via <b>K8s</b>.</li>
-          </ul>
+         Développement d’une application cloud Node/TypeScript pour gérer des pipelines de <b>microservices</b> déployés sur <b>Kubernetes</b>, piloté via une interface <b>React</b>.
+         Le système <b>ingérait des TBs de données de grandes entreprises françaises</b> (Fnac-Darty, TF1, etc.) pour produire des analyses avancées.
         `,
         tags: ['k8s', 'Docker', 'TypeScript', 'React'],
       },
       {
-        logo: 'particeep.jpg',
-        title: 'Ingénieur logiciel',
+        title: 'Software Engineer',
         location: 'Particeep - Paris',
         period: '2016 - 2019 (4 ans)',
+        remote: 'On-Site',
         content: `
-          <ul>
-          <li>Contribution à l’évolution de l’<b>API REST et <code>GraphQL</code> en <code>Scala</code> avec <coe>PostgreSQL</coe></b>.<br/></li>
-          <li><b>Responsable de la création de plusieurs</b> applications en <code>React</code> et <cod>Angular</cod>.<br/></li>
-          <li>Développement du SDK API pour <code>JavaScript</code>, <code>PHP</code> et <code>Scala</code>.<br/></li>
-          <li>Tests fonctionnels et e2e (<code>Seleniu</code>, <code>Mocha</code>, <code>Protractor</code>) et <b>CI</b> avec <code>Jenkins</code>.</li>
-          </ul>
+<ul>
+          <li>Évolution d’API <b>REST et <code>GraphQL</code> en <code>Scala</code></b>.</li>
+          <li>Création de plusieurs applications <code>React</code> et <code>Angular</code>.</li>
+          <li>Développement de SDK API <code>JavaScript</code>, <code>PHP</code> et <code>Scala</code>.</li>
+          <li>Tests fonctionnels et e2e (<code>Selenium</code>, <code>Mocha</code>, <code>Protractor</code>).</li>
+          <li>Mise en place de CI avec <code>Jenkins</code>.</li>
+</ul>
         `,
-        tags: ['Java', 'Scala', 'Angular', 'AngularJs', 'React', 'PHP', 'PSQL'],
+        tags: ['Java', 'Scala', 'Angular', 'React', 'PHP', 'PSQL'],
       },
       {
-        logo: 'activa.png',
-        title: 'Développeur logiciel',
+        title: 'Software Developer',
+        remote: 'Remote',
         location: 'Activa Informatique - Paris',
-        period: 'Été 2013, 2014 et 2015',
+        period: 'Été 2013, 2014, 2015',
         content: `
-          Développé des fonctionnalités SaaS (calendrier, chat, tableau de bord) avec Java, PHP, jQuery et MySQL.
+          Développement de fonctionnalités SaaS en Java, PHP, jQuery et MySQL.
         `,
         tags: ['Java', 'PHP', 'JavaScript', 'JQuery']
       },
-      {
-        title: 'Stage en recherche informatique',
-        location: 'LRI (Laboratoire de Recherche en Informatique) - Orsay',
-        period: '2013 (3 mois)',
-        content: `
-          Contribution au projet <b>Grid Observatory</b>, traitant un large flux de données issu du <b>LHC</b>.
-        `,
-        tags: ['Perl', 'Bash', 'MySQL']
-      },
+      // {
+      //   title: 'Stage en recherche informatique',
+      //   remote: 'Présentiel',
+      //   location: 'LRI - Orsay',
+      //   period: '2013 (3 mois)',
+      //   content: `
+      //     Travail sur le projet <b>Grid Observatory</b>, traitement de flux massifs issus du <b>LHC</b>.
+      //   `,
+      //   tags: ['Perl', 'Bash', 'MySQL']
+      // },
     ]
   },
   projects: {
     label: 'Projets personnels',
     articles: [
+      {title: 'MX - MUI Extension', content: ''},
+      {title: 'Form Editor', content: ''},
+      {title: 'DRC Periodic Review', content: ''},
+      {title: 'Redux DataTable', content: ''},
       {
-        title: 'MX - Extension MUI',
-        content: '',
-        imgName: 'mx.png',
-        links: [
-          {url: 'https://github.com/alexandreannic/mui-extension'},
-          {label: 'Démo', url: 'https://mui-extension.firebaseapp.com/'},
-        ],
+        title: 'TypeScript Utils',
+        content: 'Bibliothèque utilitaire <code>TypeScript</code> légère facilitant les tâches courantes avec un fort accent sur la lisibilité et la maintenabilité.',
       },
       {
-        title: 'Form Editor',
-        content: '',
-        imgName: 'form-editor.png',
-        links: [
-          {url: 'https://github.com/alexandreannic/form-editor'},
-          {label: 'Démo', url: 'https://angular-form-editor.firebaseapp.com/'},
-        ],
+        title: 'React Hooks Lib',
+        content: 'Suite complète de hooks <code>React</code> avec API cohérentes et inférence <code>TypeScript</code> robuste.',
       },
       {
-        title: 'DRC Periodic Review',
-        content: '',
-        imgName: 'periodic-review.png',
-        links: [
-          {url: 'https://github.com/alexandreannic/periodic-review-survey'},
-          {label: 'Démo', url: 'https://drc...'},
-        ],
+        title: 'KoboToolbox SDK',
+        content: 'SDK <code>TypeScript</code> facilitant l’intégration avec l’API KoboToolbox.',
+      },
+      {
+        title: 'ActivityInfo SDK',
+        content: 'SDK <code>TypeScript</code> pour l’API ActivityInfo avec générateur d’interfaces.',
       },
     ]
   },
@@ -200,7 +192,7 @@ export const cvFr: Cv = {
     label: 'Compétences',
     articles: [
       {
-        title: 'Frameworks',
+        title: 'Framework',
         content: [
           {
             icon: {
@@ -210,7 +202,7 @@ export const cvFr: Cv = {
             title: 'React',
             rate: 5,
             content: `
-            Utilisé dans des applications complexes, notamment avec <code>Redux</code> et <code>TypeScript</code>.
+            Used in large applications including with <code>Redux</code> and <code>TypeScript</code>.
           `
           },
           {
@@ -221,9 +213,20 @@ export const cvFr: Cv = {
             title: 'Angular (2+)',
             rate: 5,
             content: `
-            Utilisé dans des applications complexes, notamment avec <code>NgRx</code>.
+            Used in large applications including with <code>NgRx</code>
           `,
           },
+          // {
+          //   icon: {
+          //     iconFa: 'fab fa-angular',
+          //     iconImgSrc: 'dev/angularjs.png',
+          //   },
+          //   title: 'AngularJS',
+          //   rate: 4,
+          //   content: `
+          //
+          // `
+          // },
           {
             icon: {
               iconImgSrc: 'dev/play.png',
@@ -232,13 +235,13 @@ export const cvFr: Cv = {
             title: 'Play (Java / Scala)',
             rate: 4,
             content: `
-            Utilisé avec <code>Scala</code> et <code>Java</code> pour construire des APIs REST et <code>GraphQL</code>.
+            Used both <code>Scala</code> and <code>Java</code> to build REST and <code>GraphQL</code> API
           `
           }
         ]
       },
       {
-        title: 'Langages',
+        title: 'Languages',
         content: [
           {
             icon: {
@@ -263,12 +266,14 @@ export const cvFr: Cv = {
               iconText: 'λ',
             },
             title: 'Scala',
+            // logoFa: 'fa-solid fa-lambda',
             rate: 4,
           },
           {
             icon: {
               iconImgSrc: 'dev/java.png',
               iconFa: 'fab fa-java',
+
             },
             title: 'Java',
             rate: 4,
@@ -285,6 +290,7 @@ export const cvFr: Cv = {
             icon: {
               iconImgSrc: 'dev/c++.png',
               iconFa: 'fab fa-c',
+
             },
             title: 'C / C++',
             rate: 3,
@@ -293,6 +299,7 @@ export const cvFr: Cv = {
             icon: {
               iconImgSrc: 'dev/csharp.png',
               iconFa: 'fa-solid fa-hashtag',
+
             },
             title: 'C#',
             rate: 2.5,
@@ -317,37 +324,43 @@ export const cvFr: Cv = {
         ]
       },
       {
-        title: 'Persistance',
+        title: 'Persistence',
         content: [
           {
             icon: {
               iconImgSrc: 'dev/sql.png',
               iconFa: 'fa-solid fa-database',
+              iconSizeRation: .8,
             },
             title: 'SQL',
             rate: 5,
+            // content: `
+            //   Mainly <code>PostGres</code> anad <code>MySQL</code>. Script <code>PL/SQL</code>
+            // `
           },
           {
             icon: {
               iconImgSrc: 'dev/nosql.png',
               iconText: '{}',
-              iconSizeRation: .8,
+              iconSizeRation: .9,
             },
+            // logoFa: 'fa-solid fa-brackets-curly',
             title: 'NoSQL',
             rate: 3,
+            // content: `Used document-oriented databases mainly during studies project`
           },
         ]
       }
-    ]
+    ],
   },
   various: {
     label: 'Divers',
     articles: [
-      `<b>Français</b>: Langue maternelle.`,
-      `<b>Anglais</b>: Courant, expérience pro.`,
-      `<b>Sport</b>: CrossFit, escalade, running.</div>`,
-      '<b>BAFA</b>.',
-      '<b>Permis de conduire</b>.',
+      `<b>Français</b> : langue maternelle.`,
+      `<b>Anglais</b> : courant (expérience pro.).`,
+      `<b>Sport</b> : CrossFit, escalade, running.`,
+      `<b>BAFA</b>`,
+      `<b>Permis B</b>`,
     ]
   }
 }

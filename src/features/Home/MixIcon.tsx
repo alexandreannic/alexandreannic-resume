@@ -26,9 +26,9 @@ export const MixIcon = ({
   sizeInherit?: boolean
 }) => {
   const common: SxProps = {
-    mr: 1.5,
     display: 'inline-flex !important',
     alignItems: 'center',
+    mt: .25,
     textAlign: 'center',
     minWidth: !sizeInherit ? size * 1.2 : undefined,
     width: !sizeInherit ? size * 1.2 : undefined,
@@ -46,7 +46,7 @@ export const MixIcon = ({
   } = icon
   if (iconImgSrc)
     return (
-      <Logo src={iconImgSrc} sx={common}/>
+      <Logo src={iconImgSrc} sx={{...common, transform: `scale(${icon.iconSizeRation ?? 1})`}}/>
     )
   if (iconFa) {
     return (

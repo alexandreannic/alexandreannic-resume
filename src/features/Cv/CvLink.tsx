@@ -9,13 +9,12 @@ export const CvLink = ({url, label, icon}: Cv.Link) => {
     if (!label) label = 'GitHub'
   }
   if (!icon) {
-    icon = {iconFa: 'fa-solid fa-link'}
+    icon = {iconMat: 'link'}
   }
   return (
     <Box component="a" href={url} target="_blank" sx={{
       display: 'inline-flex',
       textTransform: 'none',
-      mr: 1,
       mb: .5,
       fontSize: cssMixins.fontSmall,
       color: 'primary.main',
@@ -26,7 +25,7 @@ export const CvLink = ({url, label, icon}: Cv.Link) => {
       borderRadius: 50,
     }}>
       {icon && (
-        <MixIcon icon={icon} sxColor="primary.main" sizeInherit sx={{minWidth: 22, mr: 0}}/>
+        <MixIcon icon={icon} sxColor="primary.main" sizeInherit sx={{minWidth: 18, mr: 0}}/>
       )}
       {label}
     </Box>

@@ -7,19 +7,6 @@ import {IconRef, MixIcon} from '@/features/Home/MixIcon'
 
 const logoSize = 18
 
-const sx = makeSx({
-  root: {
-    '&:not(:last-of-type) .skill-text': {
-      mb: 1,
-      borderBottom: '1px solid',
-      borderColor: 'divider',
-    },
-  },
-  head: {
-    display: 'flex', alignItems: 'center'
-  },
-})
-
 export const Skill = ({
   icon,
   title,
@@ -33,13 +20,17 @@ export const Skill = ({
 }) => {
   return (
     <Box sx={{
+      '&:not(:last-of-type) .skill-text': {
+        mb: 1,
+        borderBottom: '1px solid',
+        borderColor: 'divider',
+      },
       '&:last-of-type .skill-text': {
         pb: 0,
       },
-      ...sx.root
     }}>
-      <Box sx={sx.head}>
-        <MixIcon icon={icon} size={logoSize} sxColor="secondary.main"/>
+      <Box sx={{display: 'flex', alignItems: 'center'}}>
+        <MixIcon icon={icon} size={logoSize} sxColor="secondary.main" sx={{mr: 1.5}}/>
         <Box
           sx={{
             display: 'flex',

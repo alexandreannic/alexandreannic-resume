@@ -29,7 +29,7 @@ const pulse = (t: Theme) => keyframes`
 
 export const TagContainer = ({sx, ...props}: BoxProps) => {
   return (
-    <Box sx={{mb: -.5, ...sx}} {...props}/>
+    <Box sx={{mb: -.5, display: 'flex', gap: .5, flexWrap: 'wrap', alignItems: 'center', ...sx}} {...props}/>
   )
 }
 
@@ -49,10 +49,7 @@ export const Tag = ({label, index = 0}: {label?: string; index?: number}) => {
         animation: `${fadeInSlide} 0.5s ease-out forwards, ${pulse(t)} 1.5s 2`,
         animationDelay: `${animationDelay}, ${animationDelay}`,
         transition: 'transform 0.2s, background-color 0.2s',
-        mb: .5,
-        '&:not(:last-of-type)': {
-          mr: 1,
-        }
+        m: 0,
       }}
     >
       {label}

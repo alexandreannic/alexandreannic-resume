@@ -5,7 +5,17 @@ import {tabletWidth} from '@/utils/style'
 
 const backgroundStartColor = darken('#031525', .4)
 
-export const makeTheme = ({fontSize = 14, spacing = 8}: {spacing?: number, fontSize?: number} = {}) => createTheme({
+export const makeTheme = ({
+  fontSize = 14,
+  spacing = 8,
+  bgDefault = '#fff',
+  bgPaper = 'rgb(246, 248, 252)',
+}: {
+  bgDefault?: string
+  bgPaper?: string
+  spacing?: number
+  fontSize?: number
+} = {}) => createTheme({
   defaultColorScheme: 'dark',
   cssVariables: {
     colorSchemeSelector: 'class',
@@ -36,8 +46,8 @@ export const makeTheme = ({fontSize = 14, spacing = 8}: {spacing?: number, fontS
         background: {
           // paper: '#fff',
           // default: 'rgb(246, 248, 252)',
-          default: '#fff',
-          paper: 'rgb(246, 248, 252)',
+          default: bgDefault,
+          paper: bgPaper,
         },
       },
     },

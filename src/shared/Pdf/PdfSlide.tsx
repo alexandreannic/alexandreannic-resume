@@ -6,7 +6,8 @@ export const PdfSlide = ({
   allowOverflow,
   ...props
 }: {allowOverflow?: boolean; format?: 'horizontal' | 'vertical'} & BoxProps) => {
-  const x = '29.7cm'
+  // const x = '29.7cm'
+  const x = '31.7cm'
   const y = '21.0cm'
   const width = format === 'horizontal' ? x : y
   const height = format === 'horizontal' ? y : x

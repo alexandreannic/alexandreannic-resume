@@ -47,9 +47,10 @@ export namespace Cv {
     honor?: string
     period: string
     tags?: string[]
-    location: string
+    location?: string
+    remote?: string
     logo?: string
-    content: string
+    content?: string
     links?: Link[]
   }
 

@@ -40,7 +40,6 @@ export const CvPanel = ({
         // borderColor: 'divider',
         transition: 'all 300ms ease-in-out',
         fontSize: cssMixins.fontMedium,
-        mb: .5,
         '& ul': {
           m: 0,
           paddingLeft: '12px',
@@ -48,7 +47,6 @@ export const CvPanel = ({
         ...horizontal ? {
           flex: 1,
           '&:not(:last-of-type)': {
-            mr: .5,
             borderTopRightRadius: cssMixins.radiusSmall + 'px',
             borderBottomRightRadius: cssMixins.radiusSmall + 'px',
           },
@@ -69,7 +67,7 @@ export const CvPanel = ({
         },
         '& b': {
           color: 'text.primary',
-          fontWeight: 600,
+          fontWeight: 500,
         },
         '& code': {
           // background: 'rgba(0,0,0,.1)',

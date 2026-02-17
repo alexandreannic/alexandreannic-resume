@@ -80,18 +80,24 @@ export const Aside = () => {
       <Divider sx={{mt: 1, mb: 2}}/>
 
       <Box dangerouslySetInnerHTML={{__html: m.summary}} sx={{
+        fontWeight: 500,
+        color: 'text.disabled',
+        fontSize: '1.1rem',
+        'b': {
+          color: 'text.primary',
+          fontWeight: 500,
+        },
         // color: 'text.secondary',
         '& p': {
           mt: 0,
           mb: 1,
         },
-        fontSize: cssMixins.fontSmall,
-        mb: 1,
+        mb: 2,
         textAlign: 'justify'
       }}/>
 
       {m.various.articles.map(_ =>
-        <Box dangerouslySetInnerHTML={{__html: _}} sx={{mb: .5}}/>)}
+        <Box dangerouslySetInnerHTML={{__html: _}} sx={{mt: 1.5}}/>)}
     </Box>
   )
 }

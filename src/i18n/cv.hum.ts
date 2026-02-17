@@ -1,14 +1,14 @@
 import {Cv} from '@/i18n/Cv'
 
-export const cvEn: Cv = {
-  job: 'Software Engineer',
-  location: 'Paris, France',
+export const cvHum: Cv = {
+  job: 'Software Engineer / IM',
+  location: 'France, Paris',
   links: [
-    {
-      url: 'https://stackoverflow.com/users/5735030',
-      icon: {iconFa: 'fab fa-stack-overflow'},
-      label: 'stackoverflow.com/users/5735030',
-    },
+    // {
+    //   url: 'https://stackoverflow.com/users/5735030',
+    //   icon: {iconFa: 'fab fa-stack-overflow'},
+    //   label: 'stackoverflow.com/users/5735030',
+    // },
     {
       url: 'https://github.com/alexandreannic',
       icon: {iconFa: 'fab fa-github'},
@@ -21,19 +21,19 @@ export const cvEn: Cv = {
     }
   ],
   summary: `
-    Senior Software Engineer with <b>10+ years of experience</b>, specialized in <b>TypeScript and React</b> with strong experience across multiple languages and frameworks. Experienced in <b>technical leadership</b> and <b>team management</b>, with a strong focus on building elegant, intuitive UIs and scalable distributed systems.    
+    Software engineer who transitioned into the humanitarian sector, where a developer background turned out to be highly valuable to solve complex Information Management challenges.
   `,
   education: {
     label: 'Education',
     articles: [
       {
         shortTitle: 'Master Degree',
-        shortContent: `Science and Software Technology`,
-        shortLocation: 'UPMC, Shanghai #40 worldwide',
-        title: `Master's in Software Science`,
+        shortContent: `Software Science and Technology`,
+        shortLocation: 'Pierre and Marie Curie, Shanghai #40 worldwide',
+        title: `Master's in Software Science & Technology`,
         honor: 'With high honours',
         period: '2016',
-        location: 'UPMC (University Pierre et Marie Curie) - Paris',
+        location: 'UPMC (University Pierre et Marie Curie) - Paris, Shanghai #40 worldwide',
         logo: 'upmc.png',
         content: `
         Algorithmic (compression, hash, 2D geometry) -
@@ -42,19 +42,6 @@ export const cvEn: Cv = {
         Web app (security, tracking)
       `
       },
-      // {
-      //   title: 'Bachelor Degree in Computer Science',
-      //   shortTitle: 'Bachelor Degree',
-      //   shortContent: 'Computer Science',
-      //   honor: 'With high honours',
-      //   period: '2014',
-      //   shortLocation: 'UPMC - Paris',
-      //   location: 'UPMC (University Pierre et Marie Curie) - Paris',
-      //   content: `
-      //   Algorithmic (complexity, data structure, recursion) -
-      //   OOP - Designs patterns -
-      //   Databases (transactions, <code>SQL3</code>, <code>PL/SQL</code>, <code>NoSQL</code>, <code>XPath</code>)`,
-      // },
       {
         title: 'DUT of Computer Science', //  (two-year university degree in technology
         shortTitle: 'DUT (2-year diploma)', //  (two-year university degree in technology
@@ -77,17 +64,31 @@ export const cvEn: Cv = {
     label: 'Work Experiences',
     articles: [
       {
-        title: 'Founder of NexusPortal',
-        period: '2025 - 2026 (1 years)',
-        tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
-        links: [
-          {label: 'NexusPortal', url: 'https://www.nexusportal.app/'},
-          // {label: 'Kobo SDK', url: 'https://github.com/DRC-UA/kobo-sdk'},
-          // {label: 'ActivityInfo SDK', url: 'https://github.com/DRC-UA/activityinfo-sdk'}
-        ],
+        title: `Founder of NexusPortal`,
+        period: '2025 - 2026 (1 year)',
+        links: [{label: `NexusPortal`, url: `https://www.nexusportal.app/`}],
         content: `
-          Created NexusPortal, a SaaS platform <b>modernizing information management</b> workflows in the humanitarian sector, built on experience from DRC Ukraine.
-        `
+          Founded and built <b>NexusPortal</b>, a SaaS platform modernising Information Management workflows in the humanitarian sector.
+          <ul>
+            <li>Architected a <b>single source of truth</b> to keep data consistent across complex multi-step workflows.</li>
+            <li>Designed <b>granular role-based access control</b> that is flexible and easy to maintain.</li>
+            <li><b>Automated repetitive data workflows</b>, eliminating manual reconciliation and keeping <b>data always consistent and available</b>.</li>
+            <li>Built as a flexible platform adaptable to multiple systems as <b>Referral, CFM, deduplication, MEAL, reporting</b>.</li>
+            <li><b>Dynamic dashboards</b> engine to quickly generate analytics without manual data preparation.</li>
+          </ul>
+
+<!--          Founded and built NexusPortal, a SaaS platform designed to modernise Information Management workflows in the humanitarian sector.-->
+<!--          <ul>-->
+<!--            <li>Architected a single source of truth approach to keep data consistent across complex multi-step workflows.<li>-->
+<!--            <li>Designed granular role-based permission management flexible and easy to maintain.</li>-->
+<!--            <li>Automated repetitive workflows, eliminating manual reconciliation and computation and keeping data always ready.</li>-->
+<!--            <li>Flexible and easy as it can be used for any system (Referral, CFM, deduplication etc.)</li>-->
+            
+<!--            <li>Keep a single source of truth of data all along complex workflows.</li>-->
+<!--            <li>Allow fine and easily management permissions.</li>-->
+<!--            <li>Avoid repetitive manual tasks by automatizing the workflows and keep data sync.</li>-->
+<!--          </ul> -->
+        `,
       },
       {
         title: 'Information Management Coordinator',
@@ -96,49 +97,49 @@ export const cvEn: Cv = {
         period: '2023 - 2025 (2 years)',
         tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
         links: [
-          {label: 'Demo dashboard', url: 'https://infoportal-ua.drc.ngo/dashboard/protection-monitoring'},
-          // {label: 'GitHub', url: 'https://github.com/DRC-UA'},
+          {label: 'Prot Monito Dashboard', url: 'https://infoportal-ua.drc.ngo/dashboard/protection-monitoring'},
+          {label: 'GitHub', url: 'https://github.com/DRC-UA'},
           // {label: 'Kobo SDK', url: 'https://github.com/DRC-UA/kobo-sdk'},
           // {label: 'ActivityInfo SDK', url: 'https://github.com/DRC-UA/activityinfo-sdk'}
         ],
         content: `
-          <b>Context</b>: DRC is one of the largest international NGOs, with Ukraine as its biggest mission. 
-          Traditional Information Management, relying on manual effort, couldn't scale.<br/>
           <ul>
-          <li>Built <b>InfoPortal</b>, a platform that harmonizes external data sources to enable fluid <b>data manipulation, analysis, security, and automated reporting</b> to cluster.</li> 
-          <li>Transformed processes that took weeks of work by teams into a <b>single click</b>.</li>
-          <li><b>Engaged key stakeholders</b> to drive adoption across missions. <b>Built and train a team</b> to ensure sustainability.</li> 
+            <li>Designed and built <b>InfoPortal</b>, a data platform replacing typical fragile workflows and <b>streamlining</b> IM.</li>          
+            <li>Implementing: <b>Referral System, CFM, Protection Monitoring, MEAL Monitoring, deduplication, donor/cluster reporting</b>.</li>          
+            <li>Replaced manual, multi-week processes to report on <b>activity-info</b> into a <b>single click</b>.</li>          
+<!--            <li>Implemented <b>role-based access control</b> synced with org. permissions.</li>          -->
+            <li>
+              Led stakeholder engagement and drove adoption across mission.          
+              <b>Built and trained</b> IM team to ensure sustainability.
+            </li>
           </ul>
         `
       },
-//       {
-//         title: 'MEAL Officer',
-//         location: 'Première Urgence Internationale - Poland (Ukraine Emergency)',
-//         period: 'April 2022 - May 2022',
-//         content: `
-//           Digitalized forms using Kobo.
-// Training and technical support of the program teams.
-// Created and managed databases and visualisation tools allowing program monitoring and reporting.
-// Set up FCRM mechanisms.
-// Maintained project monitoring tools updated.
-//         `
-//       },
+      {
+        title: 'Information Management Officer',
+        location: 'Première Urgence Int. (PUI) - Poland, Przemyśl',
+        remote: 'On-site',
+        period: '2022 (2 months)',
+        content: `
+          Kick off of a Information Management System on the border with Ukraine.  
+          <ul>
+            <li>Built <b>Kobo</b> forms, <b>Excel</b> databases and <b>PowerBi</b> dashboards. Set up <b>FCRM</b> mechanisms.</li>
+            <li>Training and technical support of the program teams.</li>
+          <ul>
+        `
+      },
       {
         title: 'Software Engineer',
         location: 'French Ministry of Economics, beta.gouv - Paris',
         remote: 'Remote',
         period: '2020 - 2022 (2 years)',
         content: `
-          <ul>
-         <li>Developed the <b>SignalConso</b> application to connect consumer complaints and feedbacks with companies, overseen by <b>Consumer Affairs and Fraud Prevention</b>.</li>
-         <li>Handled <b>100,000 monthly consumer reports</b>, involving all <b>major French companies</b>, with a <b>satisfaction rate of 93%</b>.</li>
-         <li>Developed <code>Scala</b> API, <b>technical and UX/UI</b> lead of the client app.</li>
-          </ul>
+          Developed <b>SignalConso</b>, linking consumer complaints with companies under <b>Consumer Affairs and Fraud Prevention</b>.
         `,
-        links: [
-          {url: 'https://signal.conso.gouv.fr', label: 'signal.conso.gouv'},
-          {url: 'https://github.com/SignalConso', label: 'GitHub'},
-        ],
+        // links: [
+        //   {url: 'https://signal.conso.gouv.fr', label: 'signal.conso.gouv'},
+        //   {url: 'https://github.com/SignalConso', label: 'GitHub'},
+        // ],
         tags: ['Scala', 'TypeScript', 'Angular', 'React', 'PSQL']
       },
       {
@@ -147,8 +148,7 @@ export const cvEn: Cv = {
         location: 'Mediarithmics - Paris',
         period: '2019 - 2020 (1 year)',
         content: `
-         Developed a cloud application in Node/TypeScript to build and monitor pipelines of <b>microservice</b> deployed with <b>Kubernetes</b></b>, built via a <b>React</b> UI. The system <b>ingested TBs of data from major French companies</b> to deliver analytics.
-<!--         <li>Microservices could be built in TypeScript using a lightweight framework and deployed to the app library for use in pipelines.</li>-->
+          Developed a cloud application to <b>build and monitor pipelines of microservices</b>. The system <b>ingested TBs of data from major French companies</b> to deliver advanced analytics.
         `,
         tags: ['k8s', 'Docker', 'TypeScript', 'React'],
       },
@@ -159,27 +159,21 @@ export const cvEn: Cv = {
         location: 'Particeep - Paris',
         period: '2016 - 2019 (4 years)',
         content: `
-<ul>
-          <li>Contributed to the evolution of the <b>REST and <code>GraphQL</code> API in <code>Scala</code></b>.<br/></li>
-          <li><b>Led the creation of multiple</b> <code>React</code> and <code>Angular</code> applications from scatch.<br/></li>
-          <li>Developed the API SDK for <code>JavaScript</code>, <code>PHP</code> and <code>Scala</code>.<br/></li>
-          <li>Built functional and e2e tests with <code>Selenium</code>, <code>Mocha</code> and <code>Protractor</code>.<br/></li>
-          <li>Implemented CI with <code>Jenkins</code>.<br/></li>
-</ul>
+          Contributed and lead the creation of multiple web services.
         `,
         tags: ['Java', 'Scala', 'Angular', 'AngularJs', 'React', 'PHP', 'PSQL'],
       },
-      {
-        logo: 'activa.png',
-        remote: 'Remote',
-        title: 'Software Developer',
-        location: 'Activa Informatique - Paris',
-        period: 'Summers 2013, 2014 and 2015',
-        content: `
-          Built SaaS features (calendar, chat, dashboard) using Java, PHP, jQuery, and MySQL.
-        `,
-        tags: ['Java', 'PHP', 'JavaScript', 'JQuery',]
-      },
+      // {
+      //   logo: 'activa.png',
+      //   remote: 'Remote',
+      //   title: 'Software Developer',
+      //   location: 'Activa Informatique - Paris',
+      //   period: 'Summers 2013, 2014 and 2015',
+      //   content: `
+      //     Built features (calendar, chat, dashboard, etc.) in a SaaS application.
+      //   `,
+      //   tags: ['Java', 'PHP', 'JavaScript', 'JQuery',]
+      // },
       // {
       //   logo: 'upmc.png',
       //   title: 'Master 1 semester project',
@@ -190,13 +184,17 @@ export const cvEn: Cv = {
       //   components, using technologies as Future, Socket, Thread and RMI.
       // `
       // },
-      {
-        title: 'Internship in computer research',
-        remote: 'On-site',
-        location: 'LRI (Computer Research Laboratory) - Orsay',
-        period: '2013 (3 months)',
-        tags: ['Perl', 'Bash', 'MySQL']
-      },
+//       {
+//         title: 'Internship in computer research',
+//         remote: 'On-site',
+//         location: 'LRI (Computer Research Laboratory) - Orsay',
+//         period: '2013 (3 months)',
+//         content: `
+//           Worked on the <b>Grid Observatory</b> project, handling large stream of data from the <b>LHC</b>.
+// <!--          Reconstructed a flow of +200Go/month from 250 sources of inconsistent grid usage traces to make them workable for researchers.-->
+//         `,
+//         tags: ['Perl', 'Bash', 'MySQL']
+//       },
     ]
   },
   projects: {
@@ -342,6 +340,7 @@ export const cvEn: Cv = {
           {
             icon: {
               iconFa: 'fab fa-js',
+              iconSizeRation: .9,
               iconImgSrc: 'dev/javascript.png',
             },
             title: 'JavaScript',
@@ -416,8 +415,8 @@ export const cvEn: Cv = {
           {
             icon: {
               iconImgSrc: 'dev/sql.png',
-              iconFa: 'fa-solid fa-database',
               iconSizeRation: .8,
+              iconFa: 'fa-solid fa-database',
             },
             title: 'SQL',
             rate: 5,
@@ -429,7 +428,6 @@ export const cvEn: Cv = {
             icon: {
               iconImgSrc: 'dev/nosql.png',
               iconText: '{}',
-              iconSizeRation: .9,
             },
             // logoFa: 'fa-solid fa-brackets-curly',
             title: 'NoSQL',
@@ -445,9 +443,8 @@ export const cvEn: Cv = {
     articles: [
       `<b>French</b>: Native speaker.`,
       `<b>English</b>: Fluent, professional experience.`,
-      `<b>Sports</b>: Crossfit, Climbing, Running.</div>`,
+      `<b>Daily sport</b>: Crossfit, Climbing, Running.</div>`,
       '<b>BAFA</b>: Youth Work Diploma.',
-      '<b>Driving licence</b>',
     ]
   }
 }

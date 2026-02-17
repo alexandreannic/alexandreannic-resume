@@ -94,8 +94,8 @@ export const Home = () => {
             {m.work.articles.map((e, i) => (
               <Animated delay={100 + i * 50} key={i}>
                 <Panel isFirst={i === 0} step={e.period} honor={e.honor} title={e.title} subTitle={e.location} logo={e.logo}>
-                  <Box dangerouslySetInnerHTML={{__html: e.content}}/>
-                  <Box sx={{mt: 1}}>
+                  {e.content && <Box dangerouslySetInnerHTML={{__html: e.content}}/>}
+                  <Box sx={{mt: 1, display: 'flex', gap: 1,}}>
                     {e.tags?.map((_, i) =>
                       <Tag key={_} label={_} index={i}/>
                     )}
@@ -121,7 +121,7 @@ export const Home = () => {
                 subTitle={e.location}
                 logo={e.logo}
               >
-                <Box dangerouslySetInnerHTML={{__html: e.content}}/>
+                {e.content && <Box dangerouslySetInnerHTML={{__html: e.content}}/>}
               </Panel>
             ))}
           </Section>
