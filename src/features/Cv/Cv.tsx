@@ -1,7 +1,7 @@
 import {PdfSlide} from '@/shared/Pdf/PdfSlide'
 import {Pdf} from '@/shared/Pdf/PdfLayout'
 import Box from '@mui/material/Box'
-import React from 'react'
+import React, {useEffect} from 'react'
 import {CvPanel} from '@/features/Cv/CvPanel'
 import {CvSkill} from '@/features/Cv/CvSkill'
 import {cssMixins, shortUrl} from '@/utils/style'
@@ -14,20 +14,23 @@ import {cvEn} from '@/i18n/cv.en'
 import Logo from '@/utils/Logo'
 import {cvFr} from '@/i18n/cv.fr'
 
-export const Cv = () => {
+export const Cv = ({lang = 'en'}: {lang?: 'fr' | 'en'}) => {
+  useEffect(() => {
+    document.title = 'alexandre_annic.cv.se.' + lang
+  }, [lang])
   // const {m} = useI18n()
-  const m = cvFr
+  const m = lang === 'en' ? cvEn : cvFr
   return (
     <Pdf>
       <PdfSlide format="vertical">
-        <Box sx={{px: 3, py: 3, display: 'flex'}}>
+        <Box sx={{px: 2.5, py: 2, display: 'flex'}}>
           <Box sx={{width: 245, mr: 2.5,}}>
             <Box sx={{display: 'flex', alignItems: 'center', mb: 1}}>
-              <Logo
-                sx={{backgroundColor: 'rgba(0,0,0,.4)', mb: 0, backgroundSize: '110%', borderRadius: '50%', marginRight: 1.5}}
-                size={50}
-                src="avatar.png"
-              />
+              {/*<Logo*/}
+              {/*  sx={{backgroundColor: 'rgba(0,0,0,.4)', mb: 0, backgroundSize: '110%', borderRadius: '50%', marginRight: 1.5}}*/}
+              {/*  size={50}*/}
+              {/*  src="avatar3.jpeg"*/}
+              {/*/>*/}
               <Box>
                 <Box sx={{fontSize: cssMixins.fontTitle}}>Alexandre Annic</Box>
                 <Box sx={{color: 'text.secondary', fontSize: cssMixins.fontBig, fontWeight: 500}}>
@@ -45,7 +48,7 @@ export const Cv = () => {
               {m.links.map(_ => <CvSideLink link={_}/>)}
             </Box>
             <div>
-              <Box component="i" className="fa-solid fa-quote-right" sx={{float: 'left', mr: 1.5, color: 'divider', fontSize: 34, transform: 'rotate(180deg)'}}/>
+              <Box component="i" className="fa-solid fa-quote-right" sx={{float: 'left', ml: -1, mr: .5, color: 'divider', fontSize: 34, transform: 'rotate(180deg)'}}/>
               {/*<Icon sx={{float: 'left', ml: '-8px', fontSize: 36, transform: 'rotate(180deg)'}} color="disabled">format_quote</Icon>*/}
               <Box
                 dangerouslySetInnerHTML={{__html: m.summary}}
@@ -67,17 +70,17 @@ export const Cv = () => {
             </div>
 
             {m.skills.articles.map(s =>
-              <CvSection title={s.title} sx={{mt: 2}}>
+              <CvSection title={s.title} sx={{mt: 2}} titleSx={{fontSize: '1rem', textTransform: 'uppercase', color: 'text.secondary'}}>
                 {s.content.map((c, j) => (
-                  <CvSkill key={j} icon={{...c.icon, iconSizeRation: (c.icon.iconSizeRation ?? 1) * .9}} title={c.title} rate={c.rate} sx={{mb: 1.25}}>
+                  <CvSkill key={j} icon={{...c.icon, iconSizeRation: (c.icon.iconSizeRation ?? 1) * .9}} title={c.title} rate={c.rate} sx={{mb: 1}}>
                     {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
                   </CvSkill>
                 ))}
               </CvSection>
             )}
-            <CvSection title={m.various.label}>
+            <CvSection title={m.various.label} titleSx={{fontSize: '1rem', textTransform: 'uppercase', color: 'text.secondary'}}>
               {m.various.articles.map(_ =>
-                <Box dangerouslySetInnerHTML={{__html: _}} sx={{mb: 1}}/>
+                <Box dangerouslySetInnerHTML={{__html: _}} sx={{mb: .5}}/>
               )}
             </CvSection>
           </Box>
@@ -94,8 +97,10 @@ export const Cv = () => {
                     subTitle={e.shortLocation ?? e.location}
                     logo={e.logo}
                   >
-                    <Box sx={{color: 'text.disabled'}}>{e.period}</Box>
-                    {e.honor}
+                    <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+                      <Box sx={{color: 'text.disabled'}}>{e.period}</Box>
+                      <Box>{e.honor}</Box>
+                    </Box>
                   </CvPanel>
                 ))}
               </Box>
@@ -115,7 +120,7 @@ export const Cv = () => {
                     {e.content && (
                       <Box dangerouslySetInnerHTML={{__html: e.content}}/>
                     )}
-                    <TagContainer sx={{mt: 1, fontSize: cssMixins.fontMedium}}>
+                    <TagContainer sx={{mt: 1, mr: -10, fontSize: cssMixins.fontMedium}}>
                       {e.links?.map(_ =>
                         <CvLink key={_.url} url={_.url} icon={_.icon} label={shortUrl(_.url)}/>
                       )}

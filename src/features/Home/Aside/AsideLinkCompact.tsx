@@ -1,13 +1,10 @@
 import {ProfileLink} from '@/features/Home/Aside/ProfileLink'
 import {AsideSection} from '@/features/Home/Aside/AsideSection'
 import React from 'react'
-import {useI18n} from '@/i18n/I18nContext'
 import Box from '@mui/material/Box'
-import {ModeSwitch} from '@/features/Home/ModeSwitch'
-import Icon from '@mui/material/Icon'
+import {Cv} from '@/i18n/Cv'
 
-export const AsideLinkCompact = () => {
-  const {m} = useI18n()
+export const AsideLinkCompact = ({m}: {m: Cv}) => {
   return (
     <AsideSection>
       <ProfileLink iconColor="text.disabled" icon={{iconMat: 'location_on'}}>{m.location}</ProfileLink>
@@ -25,8 +22,6 @@ export const AsideLinkCompact = () => {
             rel="noopener noreferrer"
           />
         )}
-        <Icon color="disabled" sx={{fontSize: 14}}>fiber_manual_record</Icon>
-        <ModeSwitch/>
       </Box>
     </AsideSection>
   )

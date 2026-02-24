@@ -15,7 +15,7 @@ export const CvLink = ({url, label, icon}: Cv.Link) => {
     <Box component="a" href={url} target="_blank" sx={{
       display: 'inline-flex',
       textTransform: 'none',
-      mb: .5,
+      mb: 0,
       fontSize: cssMixins.fontSmall,
       color: 'primary.main',
       alignItems: 'center',

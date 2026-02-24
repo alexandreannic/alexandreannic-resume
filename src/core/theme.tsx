@@ -71,7 +71,7 @@ export const makeTheme = ({
         },
         background: {
           default: backgroundStartColor,
-          paper: 'rgba(255, 255, 255, 0.08)',
+          paper: 'rgba(255,255,255, 0.05)',
         },
       },
     },
@@ -171,7 +171,7 @@ export const makeTheme = ({
             left: 0,
             width: '100%',
             height: '100%',
-            background: 'rgba(0, 0, 0, 0.65)',
+            background: 'rgba(0, 0, 0, 0.75)',
             pointerEvents: 'none',
           },
           zIndex: 3,

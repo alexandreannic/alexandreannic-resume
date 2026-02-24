@@ -77,17 +77,21 @@ export const cvEn: Cv = {
     label: 'Work Experiences',
     articles: [
       {
-        title: 'Founder of NexusPortal',
-        period: '2025 - 2026 (1 years)',
+        title: 'Founder',
+        location: 'NexusPortal',
+        period: '2025 - 2026 (1 year)',
         tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
         links: [
           {label: 'NexusPortal', url: 'https://www.nexusportal.app/'},
-          // {label: 'Kobo SDK', url: 'https://github.com/DRC-UA/kobo-sdk'},
-          // {label: 'ActivityInfo SDK', url: 'https://github.com/DRC-UA/activityinfo-sdk'}
         ],
         content: `
-          Created NexusPortal, a SaaS platform <b>modernizing information management</b> workflows in the humanitarian sector, built on experience from DRC Ukraine.
-        `
+        Built a <code>Node</code>-<code>TypeScript</code> data management platform (collection › transformation › protection › visualization › analysis).
+        <ul>
+        <li>Dynamic <b>dashboard</b> builder • Advanced access control system • XLSForm editor</li>
+        <li>Real-time collaboration via <code>WebSockets</code> (Google Sheets–style)</li>
+        <li><b>Modular <code>TypeScript</code> transformation engine</b> for chainable pipelines</li>
+        </ul>
+      `
       },
       {
         title: 'Information Management Coordinator',
@@ -97,44 +101,32 @@ export const cvEn: Cv = {
         tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
         links: [
           {label: 'Demo dashboard', url: 'https://infoportal-ua.drc.ngo/dashboard/protection-monitoring'},
-          // {label: 'GitHub', url: 'https://github.com/DRC-UA'},
-          // {label: 'Kobo SDK', url: 'https://github.com/DRC-UA/kobo-sdk'},
-          // {label: 'ActivityInfo SDK', url: 'https://github.com/DRC-UA/activityinfo-sdk'}
+          {label: 'github.com/DRC-UA', url: 'https://github.com/DRC-UA'},
         ],
         content: `
-          <b>Context</b>: DRC is one of the largest international NGOs, with Ukraine as its biggest mission. 
-          Traditional Information Management, relying on manual effort, couldn't scale.<br/>
-          <ul>
-          <li>Built <b>InfoPortal</b>, a platform that harmonizes external data sources to enable fluid <b>data manipulation, analysis, security, and automated reporting</b> to cluster.</li> 
-          <li>Transformed processes that took weeks of work by teams into a <b>single click</b>.</li>
-          <li><b>Engaged key stakeholders</b> to drive adoption across missions. <b>Built and train a team</b> to ensure sustainability.</li> 
-          </ul>
-        `
+Created a <code>Node</code>-<code>TypeScript</code>-<code>Next.js</code> platform for one of the <b>largest humanitarian missions</b> worldwide.
+<ul>
+<li>Centralized and standardized large volumes of data from multiple web services (APIs, scraping, SDKs development)</li>
+<li>Adopted across all teams, with fine-grained access control (sensitive data)</li>
+<li>Consolidated <b>dashboards</b> and inter-NGO data sharing</li>
+<li>Integrate a <b>CRM</b> for beneficiary feedback and a <b>Case Management System</b></li>
+<li>Automated critical processes (weeks → <b>one click</b>)</li>
+<li><b>Recruited and trained a team</b> of 4 (developers + IM)</li>
+</ul>
+      `
       },
-//       {
-//         title: 'MEAL Officer',
-//         location: 'Première Urgence Internationale - Poland (Ukraine Emergency)',
-//         period: 'April 2022 - May 2022',
-//         content: `
-//           Digitalized forms using Kobo.
-// Training and technical support of the program teams.
-// Created and managed databases and visualisation tools allowing program monitoring and reporting.
-// Set up FCRM mechanisms.
-// Maintained project monitoring tools updated.
-//         `
-//       },
       {
         title: 'Software Engineer',
-        location: 'French Ministry of Economics, beta.gouv - Paris',
+        location: 'Ministry of Economy (beta.gouv) - Paris',
         remote: 'Remote',
         period: '2020 - 2022 (2 years)',
         content: `
-          <ul>
-         <li>Developed the <b>SignalConso</b> application to connect consumer complaints and feedbacks with companies, overseen by <b>Consumer Affairs and Fraud Prevention</b>.</li>
-         <li>Handled <b>100,000 monthly consumer reports</b>, involving all <b>major French companies</b>, with a <b>satisfaction rate of 93%</b>.</li>
-         <li>Developed <code>Scala</b> API, <b>technical and UX/UI</b> lead of the client app.</li>
-          </ul>
-        `,
+        <ul>
+        <li>Developed <b>SignalConso</b>, a platform connecting <b>consumer complaints</b> with <b>companies</b>, monitored by the <b>DGCCRF</b></li>
+        <li><b>100k monthly reports</b>, involving <b>major French companies</b>, with <b>93% satisfaction rate</b></li>
+        <li>Developed the <code>Scala</code> API and led the <code>Angular</code> → <code>Next.js</code> frontend migration</li>
+        </ul>
+      `,
         links: [
           {url: 'https://signal.conso.gouv.fr', label: 'signal.conso.gouv'},
           {url: 'https://github.com/SignalConso', label: 'GitHub'},
@@ -147,55 +139,46 @@ export const cvEn: Cv = {
         location: 'Mediarithmics - Paris',
         period: '2019 - 2020 (1 year)',
         content: `
-         Developed a cloud application in Node/TypeScript to build and monitor pipelines of <b>microservice</b> deployed with <b>Kubernetes</b></b>, built via a <b>React</b> UI. The system <b>ingested TBs of data from major French companies</b> to deliver analytics.
-<!--         <li>Microservices could be built in TypeScript using a lightweight framework and deployed to the app library for use in pipelines.</li>-->
-        `,
+<ul>
+<li>Built a <code>TypeScript</code> library to standardize large-scale data imports (streams, parsing, retry strategies, error handling, logging).</li>
+<li>
+       Led (team of 3) the development of a cloud-based <code>Node</code>-<code>TypeScript</code>-<code>PSQL</code> application managing <b>microservices pipelines</b> automatically deployed on <code>Kubernetes</code>, orchestrated and monitored via a <code>React</code> interface.
+       The system <b>ingested terabytes of data from major French companies</b> (Fnac-Darty, TF1, etc.) to produce analytics.
+</li>
+</ul>
+      `,
         tags: ['k8s', 'Docker', 'TypeScript', 'React'],
       },
       {
-        logo: 'particeep.jpg',
-        remote: 'On-site',
         title: 'Software Engineer',
         location: 'Particeep - Paris',
         period: '2016 - 2019 (4 years)',
+        remote: 'On-site',
         content: `
 <ul>
-          <li>Contributed to the evolution of the <b>REST and <code>GraphQL</code> API in <code>Scala</code></b>.<br/></li>
-          <li><b>Led the creation of multiple</b> <code>React</code> and <code>Angular</code> applications from scatch.<br/></li>
-          <li>Developed the API SDK for <code>JavaScript</code>, <code>PHP</code> and <code>Scala</code>.<br/></li>
-          <li>Built functional and e2e tests with <code>Selenium</code>, <code>Mocha</code> and <code>Protractor</code>.<br/></li>
-          <li>Implemented CI with <code>Jenkins</code>.<br/></li>
+<li>
+  Developed a <b>financial product management microservices API</b> 
+  (<code>REST</code>/<code>GraphQL</code>-<code>Java</code>-<code>Scala</code>)
+</li>
+<li>
+  <b>Technical Lead</b> for MEDEF Incubator apps + subscription funnel 
+  <code>Scala</code>-<code>React</code>
+</li>
+<li>
+  Developed a <b>crowdfunding platform</b> 
+  <code>Angular</code>-<code>Scala</code>
+</li>
+<li>
+  Created <b>UI Libraries</b>, migration scripts in <code>Python</code>, <b>SDKs</b> 
+  in <code>JS</code>-<code>PHP</code>-<code>Scala</code>
+</li>
+<li>
+  Set up <b>CI</b> with <code>Jenkins</code> and automated tests 
+  <code>Selenium</code>-<code>Mocha</code>-<code>Protractor</code>
+</li>
 </ul>
-        `,
-        tags: ['Java', 'Scala', 'Angular', 'AngularJs', 'React', 'PHP', 'PSQL'],
-      },
-      {
-        logo: 'activa.png',
-        remote: 'Remote',
-        title: 'Software Developer',
-        location: 'Activa Informatique - Paris',
-        period: 'Summers 2013, 2014 and 2015',
-        content: `
-          Built SaaS features (calendar, chat, dashboard) using Java, PHP, jQuery, and MySQL.
-        `,
-        tags: ['Java', 'PHP', 'JavaScript', 'JQuery',]
-      },
-      // {
-      //   logo: 'upmc.png',
-      //   title: 'Master 1 semester project',
-      //   location: 'UPMC (University Pierre et Marie Curie) - Paris',
-      //   period: '2015 (6 months)',
-      //   content: `
-      //   Implemented autoscalling registry inspired by DHT based on an application of distributed
-      //   components, using technologies as Future, Socket, Thread and RMI.
-      // `
-      // },
-      {
-        title: 'Internship in computer research',
-        remote: 'On-site',
-        location: 'LRI (Computer Research Laboratory) - Orsay',
-        period: '2013 (3 months)',
-        tags: ['Perl', 'Bash', 'MySQL']
+      `,
+        tags: ['Java', 'Scala', 'Angular', 'React', 'PHP', 'PSQL'],
       },
     ]
   },
@@ -303,6 +286,13 @@ export const cvEn: Cv = {
             Used in large applications including with <code>NgRx</code>
           `,
           },
+          {
+            icon: {
+              iconImgSrc: 'dev/nextjs.png',
+            },
+            title: 'Next.js',
+            rate: 5,
+          },
           // {
           //   icon: {
           //     iconFa: 'fab fa-angular',
@@ -339,14 +329,14 @@ export const cvEn: Cv = {
             title: 'TypeScript',
             rate: 5,
           },
-          {
-            icon: {
-              iconFa: 'fab fa-js',
-              iconImgSrc: 'dev/javascript.png',
-            },
-            title: 'JavaScript',
-            rate: 5,
-          },
+          // {
+          //   icon: {
+          //     iconFa: 'fab fa-js',
+          //     iconImgSrc: 'dev/javascript.png',
+          //   },
+          //   title: 'JavaScript',
+          //   rate: 5,
+          // },
           {
             icon: {
               iconImgSrc: 'dev/scala.png',
@@ -367,8 +357,18 @@ export const cvEn: Cv = {
           },
           {
             icon: {
+              iconImgSrc: 'dev/graphql.svg',
+              iconFa: 'fab fa-java',
+
+            },
+            title: 'GraphQL',
+            rate: 4,
+          },
+          {
+            icon: {
               iconImgSrc: 'dev/php.png',
               iconFa: 'fab fa-php',
+              iconSizeRation: 1.2,
             },
             title: 'PHP',
             rate: 4,
@@ -382,24 +382,24 @@ export const cvEn: Cv = {
             title: 'C / C++',
             rate: 3,
           },
-          {
-            icon: {
-              iconImgSrc: 'dev/csharp.png',
-              iconFa: 'fa-solid fa-hashtag',
-
-            },
-            title: 'C#',
-            rate: 2.5,
-          },
-          {
-            icon: {
-              iconImgSrc: 'dev/perl.png',
-              iconFa: 'fa-solid fa-code',
-              iconSizeRation: .8,
-            },
-            title: 'Perl',
-            rate: 4,
-          },
+          // {
+          //   icon: {
+          //     iconImgSrc: 'dev/csharp.png',
+          //     iconFa: 'fa-solid fa-hashtag',
+          //
+          //   },
+          //   title: 'C#',
+          //   rate: 2.5,
+          // },
+          // {
+          //   icon: {
+          //     iconImgSrc: 'dev/perl.png',
+          //     iconFa: 'fa-solid fa-code',
+          //     iconSizeRation: .8,
+          //   },
+          //   title: 'Perl',
+          //   rate: 4,
+          // },
           {
             icon: {
               iconImgSrc: 'dev/python.png',
@@ -409,6 +409,15 @@ export const cvEn: Cv = {
             rate: 3,
           },
         ]
+      },
+      {
+        title: 'DevOps',
+        content: [
+          {title: 'Docker', rate: 4.5, icon: {iconImgSrc: 'dev/docker.png'}},
+          {title: 'Kubernetes', rate: 3.5, icon: {iconImgSrc: 'dev/k8s.png'}},
+          {title: 'Jenkins', rate: 4.5, icon: {iconImgSrc: 'dev/jenkins.ico'}},
+          {title: 'Github Actions', rate: 4.5, icon: {iconImgSrc: 'dev/github.png'}},
+        ],
       },
       {
         title: 'Persistence',
@@ -443,11 +452,9 @@ export const cvEn: Cv = {
   various: {
     label: 'Various',
     articles: [
-      `<b>French</b>: Native speaker.`,
-      `<b>English</b>: Fluent, professional experience.`,
-      `<b>Sports</b>: Crossfit, Climbing, Running.</div>`,
-      '<b>BAFA</b>: Youth Work Diploma.',
-      '<b>Driving licence</b>',
+      `<b>French</b>: Native speaker`,
+      `<b>English</b>: Fluent, professional experience`,
+      `BAFA, Driving licence, Crossfit, Chess, mountaineering`,
     ]
   }
 }

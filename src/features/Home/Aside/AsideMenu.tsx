@@ -1,7 +1,6 @@
 'use client'
 import {FC, useEffect, useState} from 'react'
 import Box from '@mui/material/Box'
-import {cssMixins} from '@/utils/style'
 import {BoxProps} from '@mui/system'
 
 interface SectionData {

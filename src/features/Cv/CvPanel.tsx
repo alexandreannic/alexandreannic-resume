@@ -72,8 +72,9 @@ export const CvPanel = ({
         '& code': {
           // background: 'rgba(0,0,0,.1)',
           fontFamily: 'inherit',
+          color: 'primary.main',
           // color: 'text.primary',
-          // fontWeight: 500,
+          fontWeight: 500,
         },
         // borderBottom: '1px solid',
         // borderColor: 'divider',
@@ -100,18 +101,13 @@ export const CvPanel = ({
             )
           }
         </Box>
-        <Box sx
-               ={
-          {
-            color: 'text.disabled', fontSize: cssMixins.fontSmall
-          }
-        }>{
+        <Box sx={{color: 'text.disabled', fontSize: cssMixins.fontSmall}}>{
           step
         }</Box>
       </Box>
       {
         (children || honor) && (
-          <Typography sx={{mt: 0.5, height: '100%', color: 'text.secondary', textAlign: 'justify', fontSize: cssMixins.fontSmall}}>
+          <Typography sx={{mt: 0.5, height: '100%', color: 'text.primary', textAlign: 'justify', fontSize: cssMixins.fontSmall}}>
             {honor}
             {children}
           </Typography>

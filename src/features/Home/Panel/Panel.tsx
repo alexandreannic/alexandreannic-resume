@@ -31,24 +31,24 @@ export const Panel = ({
 }) => {
   return (
     <>
-      {step && (
-        <PanelStep label={step} isFirst={isFirst}/>
-      )}
       <Box
         sx={{
           // border: '1px solid',
           // borderColor: 'divider',
           // border: '1px solid transparent',
+          border: theme => theme.palette.mode === 'dark'
+            ? `1px solid #ffffff14`
+            : undefined,
           padding: 2,
           borderRadius: cssMixins.radius + 'px',
           backgroundColor: 'background.paper',
           backdropFilter: 'blur(15px)',
           transition: 'all 300ms ease-in-out',
           '&:hover': {
-            borderColor: 'primary.main',
-            backdropFilter: 'blur(35px)',
+            // borderColor: 'primary.main',
+            backdropFilter: 'blur(20px)',
             transform: 'scale(1.015)',
-            boxShadow: 4,
+            boxShadow: 2,
             // ...theme.applyStyles('dark', {
             //   boxShadow: `
             //   0 8px 30px color-mix(in srgb, var(--mui-palette-secondary-main) 40%, transparent),
@@ -100,6 +100,9 @@ export const Panel = ({
           </Typography>
         )}
       </Box>
+      {step && (
+        <PanelStep label={step} isFirst={!isFirst}/>
+      )}
     </>
   )
 }

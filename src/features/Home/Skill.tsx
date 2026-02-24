@@ -19,7 +19,7 @@ export const Skill = ({
   children: ReactNode;
 }) => {
   return (
-    <Box sx={{
+    <Box className="Skill" sx={{
       '&:not(:last-of-type) .skill-text': {
         mb: 1,
         borderBottom: '1px solid',

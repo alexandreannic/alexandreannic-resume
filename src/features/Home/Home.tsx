@@ -1,9 +1,9 @@
+'use client'
 import React from 'react'
 import {Aside, asideWidth, asideWidthCompact} from './Aside/Aside'
 import Section from './Section'
 import {Panel} from '@/features/Home/Panel/Panel'
 import {cssMixins, mobileWidth, tabletWidth} from '@/utils/style'
-import {useI18n} from '@/i18n/I18nContext'
 import Box from '@mui/material/Box'
 import {Skill} from '@/features/Home/Skill'
 import {Tag} from '@/features/Home/Tag'
@@ -11,9 +11,10 @@ import {Link} from '@/features/Home/Link'
 import {Animated} from '@/features/Home/Animated'
 import {Project} from '@/features/Home/Project'
 import {Grid2} from '@mui/material'
+import {Lang, useI18n} from '@/i18n/I18nContext'
 
-export const Home = () => {
-  const {m} = useI18n()
+export const Home = ({lang: defaultLang}: {lang?: Lang} = {}) => {
+  const {m, lang, setLang} = useI18n(defaultLang)
   return (
     <Box sx={{
       position: 'relative',
@@ -37,7 +38,7 @@ export const Home = () => {
           width: 'auto',
         },
       }}>
-        <Aside/>
+        <Aside m={m} lang={lang} setLang={setLang}/>
       </Box>
       <Box sx={{
         flex: 1,
@@ -53,6 +54,17 @@ export const Home = () => {
               <Grid2 size={{xs: 12, md: 6}}>
                 {m.skills.articles.filter(_ => _.title === 'Languages').map(((s, i) =>
                     <Animated delay={200} key={i}>
+                      <Panel title={s.title} sx={{mb: 2}}>
+                        {s.content.map((c, j) => (
+                          <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
+                            {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}
+                          </Skill>
+                        ))}
+                      </Panel>
+                    </Animated>
+                ))}
+                {m.skills.articles.filter(_ => _.title === 'Persistence').map(((s, i) =>
+                    <Animated delay={100} key={i}>
                       <Panel title={s.title}>
                         {s.content.map((c, j) => (
                           <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
@@ -75,9 +87,9 @@ export const Home = () => {
                       </Panel>
                     </Animated>
                 ))}
-                {m.skills.articles.filter(_ => _.title === 'Persistence').map(((s, i) =>
-                    <Animated delay={100} key={i}>
-                      <Panel title={s.title}>
+                {m.skills.articles.filter(_ => _.title === 'DevOps').map(((s, i) =>
+                    <Animated key={i}>
+                      <Panel title={s.title} sx={{mb: 2}}>
                         {s.content.map((c, j) => (
                           <Skill key={j} icon={c.icon} title={c.title} rate={c.rate}>
                             {c.content && <Box dangerouslySetInnerHTML={{__html: c.content}}/>}

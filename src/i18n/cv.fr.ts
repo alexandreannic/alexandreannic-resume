@@ -22,7 +22,7 @@ export const cvFr: Cv = {
   ],
   summary: `
     Ingénieur logiciel senior avec <b>plus de 10 ans d’expérience</b>, spécialisé en <b>TypeScript et React</b> et à l’aise avec de nombreux langages et frameworks.
-    Expérience en <b>lead technique</b> et <b>management d’équipe</b>, avec une forte attention portée aux interfaces élégantes et intuitives ainsi qu’aux systèmes distribués scalables.
+    Expérience en <b>lead technique</b> et <b>management d’équipe</b>, avec une forte attention portée à l'UI/UX ainsi qu’aux systèmes distribués scalables.
   `,
   education: {
     label: 'Formation',
@@ -65,14 +65,20 @@ export const cvFr: Cv = {
     label: 'Expériences professionnelles',
     articles: [
       {
-        title: 'Fondateur de NexusPortal',
+        title: 'Fondateur',
+        location: 'NexusPortal',
         period: '2025 - 2026 (1 an)',
         tags: ['TypeScript', 'React', 'NodeJS', 'Github Actions', 'PSQL'],
         links: [
           {label: 'NexusPortal', url: 'https://www.nexusportal.app/'},
         ],
         content: `
-          Création de NexusPortal, une plateforme SaaS <b>modernisant les workflows de gestion de l’information</b> dans le secteur humanitaire, basée sur l’expérience acquise chez DRC Ukraine.
+          Création d'une plateforme <code>Node</code>-<code>TypeScript</code> de gestion des données (collecte › transformation › protection › visualisation › analyze).
+          <ul>
+          <li>Éditeur de <b>dashboards</b> dynamiques • Système d'accès avancé • Éditeur XLSForm</li>
+          <li>Collaboration temps réel via <b>WebSockets</b> (type Google Sheets)</li>
+          <li><b>Moteur de transformations</b> en <code>TypeScript</code> assemblables en pipelines</li>
+          </ul>
         `
       },
       {
@@ -86,26 +92,27 @@ export const cvFr: Cv = {
           {label: 'github.com/DRC-UA', url: 'https://github.com/DRC-UA'},
         ],
         content: `
-          <b>Contexte</b> : DRC est l’une des plus grandes ONG internationales, l’Ukraine sa plus importante mission.
-          La gestion des données, très manuelle, ne passait pas à l’échelle.
-          <ul>
-          <li>Création de <b>InfoPortal</b>, plateforme harmonisant les sources de données pour permettre <b>analyse, sécurité et reporting automatisé</b>.</li>
-          <li>Automatisation de processus nécessitant des semaines de travail en <b>un clic</b>.</li>
-          <li><b>Pilotage du déploiement</b> pour garantir l’adoption de la solution.</li> 
-          <li><b>Création et formation d’une équipe</b> pour assurer la soutenabilité</b>.</li>
-          </ul>
+Création d’une plateforme <code>Node</code>-<code>TypeScript</code>-<code>Next.js</code> pour l’une des plus <b>grandes missions humanitaires</b> au monde.
+<ul>
+<li>Centralisation et normalisation de volumes importants de données issues de multiples web services (APIs, scraping, création de SDKs)</li>
+<li>Adoptée par toutes les équipes, avec gestion fine des accès (données sensibles)</li>
+<li><b>Dashboards</b> consolidés et partage inter-ONG</li>
+<li>Incluant <b>CRM</b> pour les feedback bénéficiaires et <b>Case Management System</b></li>
+<li>Automatisation de processus critiques (semaines → <b>un clic</b>)</li>
+<li><b>Recrutement et formation d’une équipe</b> de 4 (devs + IM)</li>
+</ul>
         `
       },
       {
-        title: 'Software Engineer',
+        title: 'Ingénieur logiciel',
         location: 'Ministère de l’Économie (beta.gouv) - Paris',
         remote: 'Télétravail',
         period: '2020 - 2022 (2 ans)',
         content: `
           <ul>
-         <li>Développement de <b>SignalConso</b>, reliant les réclamations consommateurs aux entreprises sous l’égide de la <b>DGCCRF</b>.</li>
-         <li><b>100k signalements mensuels</b>, impliquant les <b>principales entreprises françaises</b>, avec <b>93% de satisfaction</b>.</li>
-         <li>Développement de l’API <code>Scala</code> et <b>lead technique & UX/UI</b> du front.</li>
+          <li>Développement de <b>SignalConso</b>, une platforme reliant les réclamations <b>consommateurs</b> aux <b>entreprises</b> monitoré par la <b>DGCCRF</b></li>
+          <li><b>100k signalements mensuels</b>, impliquant les <b>principales entreprises françaises</b>, avec <b>93% de satisfaction</b></li>
+          <li>Développement de l’API <code>Scala</code> et <b>lead la refonte <code>Angular</code> → <code>Next.js</code>
           </ul>
         `,
         links: [
@@ -115,42 +122,62 @@ export const cvFr: Cv = {
         tags: ['Scala', 'TypeScript', 'Angular', 'React', 'PSQL']
       },
       {
-        title: 'Big Data Engineer',
+        title: 'Ingénieur Big Data',
         remote: 'Présentiel',
         location: 'Mediarithmics - Paris',
         period: '2019 - 2020 (1 an)',
         content: `
-         Développement d’une application cloud Node/TypeScript pour gérer des pipelines de <b>microservices</b> déployés sur <b>Kubernetes</b>, piloté via une interface <b>React</b>.
-         Le système <b>ingérait des TBs de données de grandes entreprises françaises</b> (Fnac-Darty, TF1, etc.) pour produire des analyses avancées.
+          <ul>
+          <li>Création d’une librairie <code>TypeScript</code> standardisant les imports massifs de données (streams, parsing, retry, error handling, logging).</li>          
+          <li>
+             Lead (équipe de 3) la création d’une application cloud <code>Node</code>-<code>TypeScript</code>-<code>PSQL</code> pour gérer des pipelines de <b>microservices</b> automatiquement déployés sur <code>Kubernetes</code>, piloté et monitoré via une interface <b>React</b>.
+             Le système <b>ingérait des TBs de données de grandes groupes françaises</b> (Fnac-Darty, TF1, etc.) pour l'analytique.
+          </li>
+          </ul>
         `,
         tags: ['k8s', 'Docker', 'TypeScript', 'React'],
       },
       {
-        title: 'Software Engineer',
+        title: 'Ingénieur logiciel',
         location: 'Particeep - Paris',
         period: '2016 - 2019 (4 ans)',
-        remote: 'On-Site',
+        remote: 'Présentiel',
         content: `
-<ul>
-          <li>Évolution d’API <b>REST et <code>GraphQL</code> en <code>Scala</code></b>.</li>
-          <li>Création de plusieurs applications <code>React</code> et <code>Angular</code>.</li>
-          <li>Développement de SDK API <code>JavaScript</code>, <code>PHP</code> et <code>Scala</code>.</li>
-          <li>Tests fonctionnels et e2e (<code>Selenium</code>, <code>Mocha</code>, <code>Protractor</code>).</li>
-          <li>Mise en place de CI avec <code>Jenkins</code>.</li>
+        <ul>
+  <li>
+    Développement d’une <b>API microservices de gestion de produits financiers</b> 
+    (<code>REST</code>/<code>GraphQL</code>-<code>Java</code>-<code>Scala</code>)
+  </li>
+  <li>
+    <b>Lead technique</b> des apps MEDEF Incubateur + Tunnel de souscription 
+    <code>Scala</code>-<code>React</code>
+  </li>
+  <li>
+    Développement d’une plateforme de <b>financement participatif</b> 
+    <code>Angular</code>-<code>Scala</code>
+  </li>
+  <li>
+    Création de <b>libraries UI</b>, scripts de migration <code>Python</code> et de <b>SDKs</b> 
+    en <code>JS</code>-<code>PHP</code>-<code>Scala</code>
+  </li>
+  <li>
+    Mise en place de la <b>CI</b> <code>Jenkins</code> et des tests auto 
+    <code>Selenium</code>-<code>Mocha</code>-<code>Protractor</code>
+  </li>
 </ul>
         `,
         tags: ['Java', 'Scala', 'Angular', 'React', 'PHP', 'PSQL'],
       },
-      {
-        title: 'Software Developer',
-        remote: 'Remote',
-        location: 'Activa Informatique - Paris',
-        period: 'Été 2013, 2014, 2015',
-        content: `
-          Développement de fonctionnalités SaaS en Java, PHP, jQuery et MySQL.
-        `,
-        tags: ['Java', 'PHP', 'JavaScript', 'JQuery']
-      },
+      // {
+      //   title: 'Développeur',
+      //   remote: 'Télétravail',
+      //   location: 'Activa Informatique - Paris',
+      //   period: 'Été 2013, 2014, 2015',
+      //   content: `
+      //     Développement de fonctionnalités SaaS en <code>Java</code>, <code>PHP</code>, <code>jQuery</code> et <code>MySQL</code>.
+      //   `,
+      //   tags: ['Java', 'PHP', 'JavaScript', 'JQuery']
+      // },
       // {
       //   title: 'Stage en recherche informatique',
       //   remote: 'Présentiel',
@@ -164,29 +191,70 @@ export const cvFr: Cv = {
     ]
   },
   projects: {
-    label: 'Projets personnels',
+    label: 'Projets Perso',
     articles: [
-      {title: 'MX - MUI Extension', content: ''},
-      {title: 'Form Editor', content: ''},
-      {title: 'DRC Periodic Review', content: ''},
-      {title: 'Redux DataTable', content: ''},
+      {
+        title: 'MX - MUI Extension',
+        content: '',
+        imgName: 'mx.png',
+        links: [
+          {url: 'https://github.com/alexandreannic/mui-extension'},
+          {label: 'Démo', url: 'https://mui-extension.firebaseapp.com/'},
+        ],
+      },
+      {
+        title: 'Form Editor',
+        content: '',
+        imgName: 'form-editor.png',
+        links: [
+          {url: 'https://github.com/alexandreannic/form-editor'},
+          {label: 'Démo', url: 'https://angular-form-editor.firebaseapp.com/'},
+        ],
+      },
+      {
+        title: 'Revue Périodique DRC',
+        content: '',
+        imgName: 'periodic-review.png',
+        links: [
+          {url: 'https://github.com/alexandreannic/periodic-review-survey'},
+          {label: 'Démo', url: 'https://drc-periodic-review.web.app/'},
+        ],
+      },
+      {
+        title: 'Redux DataTable',
+        content: '',
+        imgName: 'redux-dt.png',
+        links: [
+          {url: 'https://github.com/alexandreannic/redux-datatable'},
+          {label: 'Démo', url: 'https://redux-datatable.web.app/'},
+        ],
+      },
       {
         title: 'TypeScript Utils',
-        content: 'Bibliothèque utilitaire <code>TypeScript</code> légère facilitant les tâches courantes avec un fort accent sur la lisibilité et la maintenabilité.',
+        content:
+          'Bibliothèque utilitaire <code>TypeScript</code> légère offrant une collection de fonctions essentielles pour simplifier les tâches de programmation courantes. ' +
+          'Conçue pour la sécurité des types, l’efficacité, la lisibilité et la maintenabilité.',
+        links: [{url: 'https://github.com/alexandreannic/ts-utils'}],
       },
       {
         title: 'React Hooks Lib',
-        content: 'Suite complète de hooks <code>React</code> avec API cohérentes et inférence <code>TypeScript</code> robuste.',
+        content:
+          'Suite complète de hooks personnalisés <code>React</code> avec des API claires et cohérentes et une inférence <code>TypeScript</code> robuste.',
+        links: [{url: 'https://github.com/alexandreannic/react-hooks-lib'}],
       },
       {
         title: 'KoboToolbox SDK',
-        content: 'SDK <code>TypeScript</code> facilitant l’intégration avec l’API KoboToolbox.',
+        content:
+          'SDK <code>TypeScript</code> pour interagir avec l’API KoboToolbox, en masquant sa complexité et en contournant ses bugs.',
+        links: [{url: 'https://github.com/DRC-UA/kobo-sdk'}],
       },
       {
         title: 'ActivityInfo SDK',
-        content: 'SDK <code>TypeScript</code> pour l’API ActivityInfo avec générateur d’interfaces.',
+        content:
+          'SDK <code>TypeScript</code> pour interagir avec l’API ActivityInfo. Inclut un générateur d’interface <code>TypeScript</code> qui simplifie les corps de requête incompréhensibles et permet d’envoyer des données dans un format lisible.',
+        links: [{url: 'https://github.com/DRC-UA/activityinfo-sdk'}],
       },
-    ]
+    ],
   },
   skills: {
     label: 'Compétences',
@@ -216,6 +284,13 @@ export const cvFr: Cv = {
             Used in large applications including with <code>NgRx</code>
           `,
           },
+          {
+            icon: {
+              iconImgSrc: 'dev/nextjs.png',
+            },
+            title: 'Next.js',
+            rate: 5,
+          },
           // {
           //   icon: {
           //     iconFa: 'fab fa-angular',
@@ -231,6 +306,7 @@ export const cvFr: Cv = {
             icon: {
               iconImgSrc: 'dev/play.png',
               iconFa: 'fa-solid fa-chevron-right',
+              iconSizeRation: .85,
             },
             title: 'Play (Java / Scala)',
             rate: 4,
@@ -252,14 +328,14 @@ export const cvFr: Cv = {
             title: 'TypeScript',
             rate: 5,
           },
-          {
-            icon: {
-              iconFa: 'fab fa-js',
-              iconImgSrc: 'dev/javascript.png',
-            },
-            title: 'JavaScript',
-            rate: 5,
-          },
+          // {
+          //   icon: {
+          //     iconFa: 'fab fa-js',
+          //     iconImgSrc: 'dev/javascript.png',
+          //   },
+          //   title: 'JavaScript',
+          //   rate: 5,
+          // },
           {
             icon: {
               iconImgSrc: 'dev/scala.png',
@@ -280,8 +356,18 @@ export const cvFr: Cv = {
           },
           {
             icon: {
+              iconImgSrc: 'dev/graphql.svg',
+              iconFa: 'fab fa-java',
+
+            },
+            title: 'GraphQL',
+            rate: 4,
+          },
+          {
+            icon: {
               iconImgSrc: 'dev/php.png',
               iconFa: 'fab fa-php',
+              iconSizeRation: 1.2,
             },
             title: 'PHP',
             rate: 4,
@@ -295,24 +381,24 @@ export const cvFr: Cv = {
             title: 'C / C++',
             rate: 3,
           },
-          {
-            icon: {
-              iconImgSrc: 'dev/csharp.png',
-              iconFa: 'fa-solid fa-hashtag',
-
-            },
-            title: 'C#',
-            rate: 2.5,
-          },
-          {
-            icon: {
-              iconImgSrc: 'dev/perl.png',
-              iconFa: 'fa-solid fa-code',
-              iconSizeRation: .8,
-            },
-            title: 'Perl',
-            rate: 4,
-          },
+          // {
+          //   icon: {
+          //     iconImgSrc: 'dev/csharp.png',
+          //     iconFa: 'fa-solid fa-hashtag',
+          //
+          //   },
+          //   title: 'C#',
+          //   rate: 2.5,
+          // },
+          // {
+          //   icon: {
+          //     iconImgSrc: 'dev/perl.png',
+          //     iconFa: 'fa-solid fa-code',
+          //     iconSizeRation: .8,
+          //   },
+          //   title: 'Perl',
+          //   rate: 4,
+          // },
           {
             icon: {
               iconImgSrc: 'dev/python.png',
@@ -322,6 +408,15 @@ export const cvFr: Cv = {
             rate: 3,
           },
         ]
+      },
+      {
+        title: 'DevOps',
+        content: [
+          {title: 'Docker', rate: 4.5, icon: {iconImgSrc: 'dev/docker.png'}},
+          {title: 'Kubernetes', rate: 3.5, icon: {iconImgSrc: 'dev/k8s.png'}},
+          {title: 'Jenkins', rate: 4.5, icon: {iconImgSrc: 'dev/jenkins.ico'}},
+          {title: 'Github Actions', rate: 4.5, icon: {iconImgSrc: 'dev/github.png'}},
+        ],
       },
       {
         title: 'Persistence',
@@ -346,7 +441,7 @@ export const cvFr: Cv = {
             },
             // logoFa: 'fa-solid fa-brackets-curly',
             title: 'NoSQL',
-            rate: 3,
+            rate: 3.5,
             // content: `Used document-oriented databases mainly during studies project`
           },
         ]
@@ -356,11 +451,9 @@ export const cvFr: Cv = {
   various: {
     label: 'Divers',
     articles: [
-      `<b>Français</b> : langue maternelle.`,
-      `<b>Anglais</b> : courant (expérience pro.).`,
-      `<b>Sport</b> : CrossFit, escalade, running.`,
-      `<b>BAFA</b>`,
-      `<b>Permis B</b>`,
+      `<b>Français</b>: langue maternelle`,
+      `<b>Anglais</b>: courant (expérience pro.)`,
+      `BAFA, Crossfit, Échecs, alpinisme, Permis B`,
     ]
   }
 }

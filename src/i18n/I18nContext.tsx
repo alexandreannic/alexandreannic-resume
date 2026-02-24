@@ -1,53 +1,30 @@
+'use client'
 import {cvEn} from './cv.en'
 import {Cv} from '@/i18n/Cv'
+import {useEffect, useState} from 'react'
+import {cvFr} from '@/i18n/cv.fr'
 
-enum Lang {
+export enum Lang {
   fr = 'fr',
   en = 'en',
 }
 
 const defaultLang = Lang.en
 
-// type I18nContext = {
-//   m: typeof cvEn
-//   lang: Lang
-//   changeLang: Dispatch<SetStateAction<Lang>>
-// }
-//
-// const Context = createContext<I18nContext>({} as any)
-//
-// export const I18nContextProvider = ({children}: {children: ReactNode}) => {
-//   const [lang, changeLang] = useState(defaultLang)
-//   return (
-//     <Context.Provider value={{
-//       m: getMessagesByLang(lang),
-//       lang,
-//       changeLang
-//     }}>
-//       {children}
-//     </Context.Provider>
-//   )
-// }
 
-export const useI18n = (): {m: Cv} => {
-  return {m: cvEn}
+export const useI18n = (initialLang?: Lang) => {
+  // Default to 'fr' on SSR
+  const [lang, setLang] = useState<Lang>(initialLang ?? Lang.fr)
+
+  useEffect(() => {
+    // Detect browser language only on client
+    if (typeof window !== 'undefined') {
+      const browserLang = navigator.language.split('-')[0] as Lang
+      if (browserLang === 'en' || browserLang === 'fr') {
+        setLang(browserLang)
+      }
+    }
+  }, [])
+
+  return {m: lang === 'fr' ? cvFr : cvEn, lang, setLang}
 }
-
-// export const useLang = () => {
-//   const {lang} = useContext(Context)
-//   return lang
-// }
-//
-// export const useChangeLang = () => {
-//   const {changeLang} = useContext(Context)
-//   return changeLang
-// }
-//
-// const getMessagesByLang = (lang: Lang) => {
-//   switch (lang) {
-//     case 'fr':
-//       return cvFr
-//     default:
-//       return cvEn
-//   }
-// }
